@@ -39,18 +39,18 @@ export function Header() {
         { label: 'Home Valuation', href: '/sellers/valuation' },
       ],
     },
-    {
-      label: 'Communities',
-      href: '#',
-      dropdown: [
-        { label: 'Las Vegas', href: '/communities/las-vegas' },
-        { label: 'Henderson', href: '/communities/henderson' },
-        { label: 'Green Valley', href: '/communities/green-valley' },
-        { label: 'Summerlin', href: '/communities/summerlin' },
-        { label: 'Anthem', href: '/communities/anthem' },
-        { label: 'Southern Highlands', href: '/communities/southern-highlands' },
-      ],
-    },
+      {
+        label: 'Communities',
+        href: '#',
+        dropdown: [
+          { label: 'Newport Beach', href: '/communities/newport-beach' },
+          { label: 'Irvine', href: '/communities/irvine' },
+          { label: 'Corona Del Mar', href: '/communities/corona-del-mar' },
+          { label: 'Laguna Beach', href: '/communities/laguna-beach' },
+          { label: 'Costa Mesa', href: '/communities/costa-mesa' },
+          { label: 'Huntington Beach', href: '/communities/huntington-beach' },
+        ],
+      },
     {
       label: 'Media',
       href: '#',
@@ -122,6 +122,12 @@ export function Header() {
             >
               {siteConfig.business.phoneFormatted}
             </a>
+            <Link
+              href="/login"
+              className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary transition-colors"
+            >
+              Login
+            </Link>
             <Button href="/contact" size="sm">
               Book Consultation
             </Button>
@@ -187,13 +193,27 @@ export function Header() {
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-neutral-200">
+              <div className="pt-4 border-t border-neutral-200 space-y-2">
                 <a
                   href={`tel:${siteConfig.business.phone}`}
                   className="block px-3 py-2 text-lg font-semibold text-primary"
                 >
                   {siteConfig.business.phoneFormatted}
                 </a>
+                <Link
+                  href="/login"
+                  className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Login
+                </Link>
+                <Link
+                  href="/register"
+                  className="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-primary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Register
+                </Link>
                 <Button href="/contact" className="mt-2 ml-3" size="sm">
                   Book Consultation
                 </Button>

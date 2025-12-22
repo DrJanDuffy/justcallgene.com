@@ -12,7 +12,7 @@ export default function AboutPage() {
             About {siteConfig.business.name}
           </h1>
           <p className="text-xl text-neutral-200">
-            Your Trusted Real Estate Broker in Las Vegas & Henderson
+            Your Trusted Real Estate Broker in Newport Beach, Irvine & Corona Del Mar
           </p>
         </div>
       </section>
@@ -31,12 +31,63 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-neutral-900">
-                Meet {siteConfig.business.agentName}
-              </h2>
+              <div>
+                <h2 className="text-3xl font-bold text-neutral-900 mb-2">
+                  Meet Eugene "Gene" Boyle
+                </h2>
+                <p className="text-lg text-neutral-600 mb-4">
+                  CFO | JD/MBA | Real Estate Broker | Investment Strategist
+                </p>
+              </div>
               <p className="text-lg text-neutral-700 leading-relaxed">
                 {siteConfig.business.bio}
               </p>
+              {siteConfig.business.extendedBio && (
+                <p className="text-lg text-neutral-700 leading-relaxed">
+                  {siteConfig.business.extendedBio}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {/* Education & Background */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-neutral-900 mb-6">Education & Professional Background</h2>
+            <div className="bg-neutral-50 rounded-lg p-6 space-y-4">
+              <div>
+                <h3 className="text-xl font-bold text-neutral-900 mb-2">Education</h3>
+                <ul className="space-y-2 text-neutral-700">
+                  <li className="flex items-start">
+                    <span className="font-semibold mr-2">•</span>
+                    <span>PhD, Clinical Psychology (Forensic Focus) - Fielding Graduate University</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-semibold mr-2">•</span>
+                    <span>JD/MBA in Entrepreneurship - Purdue Global Law School & Babson F.W. Olin Graduate School of Business</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-semibold mr-2">•</span>
+                    <span>BS, Applied Mathematics & Computer Engineering - Tulane University</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-4 border-t border-neutral-200">
+                <h3 className="text-xl font-bold text-neutral-900 mb-2">Notable Experience</h3>
+                <ul className="space-y-2 text-neutral-700">
+                  <li className="flex items-start">
+                    <span className="font-semibold mr-2">•</span>
+                    <span>Chief Financial Officer, Samaritan Pharmaceuticals (AMEX-listed) - Led successful IPO and SEC compliance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-semibold mr-2">•</span>
+                    <span>Investment Strategist - Portfolio optimization for family offices in Irvine Tech Corridor & Orange County markets</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="font-semibold mr-2">•</span>
+                    <span>Navy Veteran - Surface Warfare Officer, Lieutenant (1987-1991)</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -54,6 +105,21 @@ export default function AboutPage() {
               ))}
             </ul>
           </div>
+
+          {/* Professional Highlights */}
+          {siteConfig.business.professionalHighlights && (
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-neutral-900 mb-6">Why Choose Gene?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {siteConfig.business.professionalHighlights.map((highlight, index) => (
+                  <div key={index} className="bg-gradient-to-br from-neutral-50 to-white rounded-lg p-6 border border-neutral-200 shadow-sm">
+                    <h3 className="text-xl font-bold text-neutral-900 mb-3">{highlight.title}</h3>
+                    <p className="text-neutral-700 leading-relaxed">{highlight.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Services */}
           <div className="mb-12">

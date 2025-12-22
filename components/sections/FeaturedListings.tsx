@@ -32,7 +32,7 @@ export function FeaturedListings() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredListings.map((listing) => (
-            <Card key={listing.id} href={`/listings/${listing.id}`}>
+            <Card key={listing.id} href={`/listings/${listing.id}`} className="cursor-pointer">
               <div className="relative aspect-video">
                 <Image
                   src={listing.image}
