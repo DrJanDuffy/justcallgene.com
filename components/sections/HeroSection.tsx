@@ -3,23 +3,34 @@ import { siteConfig } from '@/lib/config';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white overflow-hidden">
+      {/* Animated Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/50 via-neutral-900/80 to-blue-950/50 animate-pulse"></div>
+      
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+      
       {/* Background Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-8">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-up">
             Real Estate{' '}
-            <span className="text-primary-light">BROKER</span>
+            <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">
+              AGENTS & BROKER
+            </span>
             <br />
-            in Las Vegas, NV
+            <span className="text-white">in Orange County, CA</span>
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl lg:text-3xl font-light text-neutral-200 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl lg:text-3xl font-light text-neutral-100 max-w-3xl mx-auto animate-fade-in-up delay-200">
             Helping You Move Forward—The Professional Way
           </p>
           
@@ -46,7 +57,7 @@ export function HeroSection() {
           {/* Scroll Indicator */}
           <div className="pt-16">
             <a
-              href="#meet-broker"
+              href="#meet-agent"
               className="inline-flex flex-col items-center space-y-2 text-neutral-300 hover:text-white transition-colors"
               aria-label="Scroll down"
             >

@@ -70,13 +70,15 @@ export function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-md shadow-soft-lg sticky top-0 z-50 border-b border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Bar */}
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary">{siteConfig.name}</span>
+          <Link href="/" className="flex items-center group">
+            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent group-hover:from-primary-dark group-hover:to-primary transition-all duration-300">
+              {siteConfig.name}
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -85,17 +87,18 @@ export function Header() {
               <div key={item.label} className="relative group">
                 <Link
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary transition-all duration-300 relative group/item"
                   onMouseEnter={() => item.dropdown && setSearchDropdownOpen(true)}
                   onMouseLeave={() => item.dropdown && setSearchDropdownOpen(false)}
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary-dark group-hover/item:w-full transition-all duration-300"></span>
                 </Link>
                 {item.dropdown && (
                   <div
-                    className={`absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 ${
+                    className={`absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-soft-lg py-2 border border-neutral-100 ${
                       searchDropdownOpen ? 'block' : 'hidden'
-                    } group-hover:block`}
+                    } group-hover:block animate-fade-in`}
                     onMouseEnter={() => setSearchDropdownOpen(true)}
                     onMouseLeave={() => setSearchDropdownOpen(false)}
                   >
@@ -103,7 +106,7 @@ export function Header() {
                       <Link
                         key={subItem.label}
                         href={subItem.href}
-                        className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-100"
+                        className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-gradient-to-r hover:from-primary/10 hover:to-blue-50 hover:text-primary transition-all duration-300 rounded-lg mx-2"
                       >
                         {subItem.label}
                       </Link>
@@ -118,8 +121,11 @@ export function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href={`tel:${siteConfig.business.phone}`}
-              className="text-lg font-semibold text-primary hover:text-primary-dark"
+              className="text-lg font-semibold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent hover:from-primary-dark hover:to-primary transition-all duration-300 flex items-center group"
             >
+              <svg className="w-5 h-5 mr-2 text-primary group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
               {siteConfig.business.phoneFormatted}
             </a>
             <Link

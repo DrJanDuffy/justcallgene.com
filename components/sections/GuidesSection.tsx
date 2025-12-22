@@ -35,11 +35,20 @@ export function GuidesSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-50">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white via-neutral-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in-up">
+          <div className="inline-block mb-4">
+            <span className="bg-gradient-to-r from-primary to-primary-dark text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+              Free Resources
+            </span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            GET MY FREE GUIDES BELOW
+            GET MY{' '}
+            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+              FREE GUIDES
+            </span>{' '}
+            BELOW
           </h2>
           <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
             Selling Secrets You Can't Afford To Miss & Your Guide to Purchasing A Home
@@ -51,10 +60,17 @@ export function GuidesSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Buyer's Guide Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-6">
-              Get The Buyer's Guide
-            </h3>
+          <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft-lg p-8 border border-neutral-100 hover:shadow-soft-lg transition-all duration-300">
+            <div className="flex items-center mb-6">
+              <div className="bg-gradient-to-r from-primary to-primary-dark p-3 rounded-xl mr-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-neutral-900">
+                Get The Buyer's Guide
+              </h3>
+            </div>
             <form onSubmit={handleBuyerSubmit} className="space-y-4">
               <div>
                 <label htmlFor="buyer-first-name" className="block text-sm font-medium text-neutral-700 mb-1">
@@ -66,7 +82,7 @@ export function GuidesSection() {
                   required
                   value={buyerFormData.firstName}
                   onChange={(e) => setBuyerFormData({ ...buyerFormData, firstName: e.target.value })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
@@ -78,7 +94,7 @@ export function GuidesSection() {
                   id="buyer-last-name"
                   value={buyerFormData.lastName}
                   onChange={(e) => setBuyerFormData({ ...buyerFormData, lastName: e.target.value })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
@@ -91,7 +107,7 @@ export function GuidesSection() {
                   required
                   value={buyerFormData.email}
                   onChange={(e) => setBuyerFormData({ ...buyerFormData, email: e.target.value })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
@@ -104,7 +120,7 @@ export function GuidesSection() {
                   required
                   value={buyerFormData.phone}
                   onChange={(e) => setBuyerFormData({ ...buyerFormData, phone: e.target.value })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <Button type="submit" variant="primary" className="w-full">
@@ -114,10 +130,17 @@ export function GuidesSection() {
           </div>
 
           {/* Seller's Guide Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-neutral-900 mb-6">
-              Get The Seller's Guide
-            </h3>
+          <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft-lg p-8 border border-neutral-100 hover:shadow-soft-lg transition-all duration-300">
+            <div className="flex items-center mb-6">
+              <div className="bg-gradient-to-r from-primary to-primary-dark p-3 rounded-xl mr-4">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-neutral-900">
+                Get The Seller's Guide
+              </h3>
+            </div>
             <form onSubmit={handleSellerSubmit} className="space-y-4">
               <div>
                 <label htmlFor="seller-first-name" className="block text-sm font-medium text-neutral-700 mb-1">
@@ -129,7 +152,7 @@ export function GuidesSection() {
                   required
                   value={sellerFormData.firstName}
                   onChange={(e) => setSellerFormData({ ...sellerFormData, firstName: e.target.value })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
@@ -141,7 +164,7 @@ export function GuidesSection() {
                   id="seller-last-name"
                   value={sellerFormData.lastName}
                   onChange={(e) => setSellerFormData({ ...sellerFormData, lastName: e.target.value })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
@@ -154,7 +177,7 @@ export function GuidesSection() {
                   required
                   value={sellerFormData.email}
                   onChange={(e) => setSellerFormData({ ...sellerFormData, email: e.target.value })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
@@ -167,7 +190,7 @@ export function GuidesSection() {
                   required
                   value={sellerFormData.phone}
                   onChange={(e) => setSellerFormData({ ...sellerFormData, phone: e.target.value })}
-                  className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <Button type="submit" variant="primary" className="w-full">

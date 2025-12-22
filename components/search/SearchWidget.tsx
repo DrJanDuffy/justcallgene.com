@@ -21,18 +21,25 @@ export function SearchWidget() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-xl font-bold text-neutral-900 mb-4">SEARCH YOUR DREAM HOME</h3>
+    <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft-lg p-6 border border-neutral-100">
+      <div className="flex items-center mb-6">
+        <div className="bg-gradient-to-r from-primary to-primary-dark p-2 rounded-lg mr-3">
+          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold text-neutral-900">SEARCH YOUR DREAM HOME</h3>
+      </div>
       <form onSubmit={handleSearch} className="space-y-4">
         <div>
-          <label htmlFor="search-type" className="block text-sm font-medium text-neutral-700 mb-2">
+          <label htmlFor="search-type" className="block text-sm font-semibold text-neutral-700 mb-2">
             Search Type
           </label>
           <select
             id="search-type"
             value={searchType}
             onChange={(e) => setSearchType(e.target.value as 'address' | 'listingId' | 'map')}
-            className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
           >
             <option value="address">Address Search</option>
             <option value="listingId">Listing ID</option>
@@ -42,7 +49,7 @@ export function SearchWidget() {
 
         {searchType !== 'map' && (
           <div>
-            <label htmlFor="search-query" className="block text-sm font-medium text-neutral-700 mb-2">
+            <label htmlFor="search-query" className="block text-sm font-semibold text-neutral-700 mb-2">
               {searchType === 'listingId' ? 'Listing ID' : 'Address or City'}
             </label>
             <input
@@ -51,7 +58,7 @@ export function SearchWidget() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={searchType === 'listingId' ? 'Enter Listing ID' : 'Enter address or city'}
-              className="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
             />
           </div>
         )}
@@ -66,8 +73,8 @@ export function SearchWidget() {
         </div>
       </form>
 
-      <div className="mt-4 pt-4 border-t border-neutral-200">
-        <p className="text-sm text-neutral-600 text-center">
+      <div className="mt-6 pt-6 border-t border-neutral-200">
+        <p className="text-xs font-semibold text-neutral-500 text-center uppercase tracking-wide">
           QUICK SEARCH
         </p>
       </div>

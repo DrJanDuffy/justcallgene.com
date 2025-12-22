@@ -18,20 +18,35 @@ export function TestimonialsSection() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white via-neutral-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in-up">
+          <div className="inline-block mb-4">
+            <span className="bg-gradient-to-r from-primary to-primary-dark text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+              Client Reviews
+            </span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            What My Clients Say
+            What My{' '}
+            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+              Clients Say
+            </span>
           </h2>
           <p className="text-lg text-neutral-600">Testimonials</p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-neutral-50 rounded-lg p-8 md:p-12 relative">
+          <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 md:p-12 relative shadow-soft-lg border border-neutral-100">
+            {/* Decorative Quote Icon */}
+            <div className="absolute top-6 left-6 opacity-10">
+              <svg className="w-24 h-24 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+            
             {/* Testimonial Content */}
-            <div className="text-center">
-              <div className="relative w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden">
+            <div className="text-center relative z-10">
+              <div className="relative w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-lg">
                 <Image
                   src={currentTestimonial.image}
                   alt={currentTestimonial.name}
@@ -53,11 +68,11 @@ export function TestimonialsSection() {
                 ))}
               </div>
 
-              <p className="text-lg text-neutral-700 italic mb-6">
+              <p className="text-lg md:text-xl text-neutral-700 italic mb-6 leading-relaxed">
                 "{currentTestimonial.text}"
               </p>
 
-              <div>
+              <div className="bg-gradient-to-r from-primary/10 to-blue-50 rounded-xl p-4 inline-block">
                 <p className="text-xl font-bold text-neutral-900">
                   {currentTestimonial.name}
                 </p>
@@ -68,11 +83,11 @@ export function TestimonialsSection() {
             {/* Navigation Arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white shadow-md hover:bg-neutral-100 transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-soft-lg hover:shadow-glow hover:bg-primary hover:text-white transition-all duration-300 group"
               aria-label="Previous testimonial"
             >
               <svg
-                className="w-6 h-6 text-neutral-700"
+                className="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -88,11 +103,11 @@ export function TestimonialsSection() {
 
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white shadow-md hover:bg-neutral-100 transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-soft-lg hover:shadow-glow hover:bg-primary hover:text-white transition-all duration-300 group"
               aria-label="Next testimonial"
             >
               <svg
-                className="w-6 h-6 text-neutral-700"
+                className="w-6 h-6 text-neutral-700 group-hover:text-white transition-colors"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -112,8 +127,10 @@ export function TestimonialsSection() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-primary' : 'bg-neutral-300'
+                  className={`rounded-full transition-all duration-300 ${
+                    index === currentIndex 
+                      ? 'bg-gradient-to-r from-primary to-primary-dark w-8 h-2 shadow-glow' 
+                      : 'bg-neutral-300 w-2 h-2 hover:bg-neutral-400'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />

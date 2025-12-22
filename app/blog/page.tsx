@@ -55,49 +55,65 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Real Estate Blog
+      <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block mb-4">
+            <span className="bg-gradient-to-r from-blue-400 to-primary-light text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+              Blog & Insights
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up">
+            Real Estate{' '}
+            <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">
+              Blog
+            </span>
           </h1>
-          <p className="text-xl text-neutral-200">
-            Insights, tips, and updates about Las Vegas real estate
+          <p className="text-xl md:text-2xl text-neutral-100 max-w-3xl mx-auto animate-fade-in-up">
+            Insights, tips, and updates about Orange County real estate
           </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white via-neutral-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="relative h-48">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {posts.map((post, index) => (
+              <article key={post.id} className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft overflow-hidden hover:shadow-soft-lg transition-all duration-300 border border-neutral-100 hover:-translate-y-1 group animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
+                <div className="relative h-48 overflow-hidden">
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-4 left-4">
-                    <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-primary to-primary-dark text-white px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg">
                       {post.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
-                  <time className="text-sm text-neutral-500">{post.date}</time>
-                  <h2 className="text-xl font-bold text-neutral-900 mt-2 mb-3">
+                  <time className="text-sm text-neutral-500 font-medium">{post.date}</time>
+                  <h2 className="text-xl font-bold text-neutral-900 mt-2 mb-3 group-hover:text-primary transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-neutral-600 mb-4 line-clamp-3">
+                  <p className="text-neutral-600 mb-4 line-clamp-3 leading-relaxed">
                     {post.excerpt}
                   </p>
                   <Link
                     href={`/blog/${post.id}`}
-                    className="text-primary font-semibold hover:text-primary-dark transition-colors inline-flex items-center"
+                    className="text-primary font-semibold hover:text-primary-dark transition-all duration-300 inline-flex items-center group/link"
                   >
                     Read More
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="ml-2 w-5 h-5 transform group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </Link>

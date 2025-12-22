@@ -61,11 +61,14 @@ export default async function CommunityPage({ params }: Props) {
               this community provides an exceptional living experience in the Las Vegas area.
             </p>
 
-            <div className="bg-neutral-50 rounded-lg p-8 mb-8">
+            <div className="bg-gradient-to-br from-primary/10 via-blue-50 to-white rounded-2xl p-8 mb-8 border border-primary/20 shadow-soft">
               <h3 className="text-2xl font-bold text-neutral-900 mb-4">
-                Explore Properties in {community.name}
+                Explore Properties in{' '}
+                <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+                  {community.name}
+                </span>
               </h3>
-              <p className="text-neutral-700 mb-6">
+              <p className="text-neutral-700 mb-6 leading-relaxed">
                 Browse available listings and find your perfect home in this beautiful community.
               </p>
               <Button href="/search" variant="primary">

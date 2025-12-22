@@ -6,19 +6,34 @@ export default function ProbatePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Need to Sell a Probate Property in Las Vegas?
+      <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-block mb-4">
+            <span className="bg-gradient-to-r from-blue-400 to-primary-light text-white px-4 py-1.5 rounded-full text-sm font-semibold">
+              Probate Specialist
+            </span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up">
+            Need to Sell a Probate Property in{' '}
+            <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">
+              Orange County?
+            </span>
           </h1>
-          <p className="text-xl text-neutral-200 mb-8">
+          <p className="text-xl md:text-2xl text-neutral-100 mb-10 max-w-3xl mx-auto animate-fade-in-up">
             Expert probate real estate services to help you navigate the process
           </p>
           <Button
             href="/contact"
             variant="outline"
             size="lg"
-            className="border-white text-white hover:bg-white hover:text-primary"
+            className="border-2 border-white text-white hover:bg-white hover:text-primary shadow-glow hover:shadow-glow-lg"
           >
             Book Free Probate Consultation
           </Button>
@@ -68,15 +83,15 @@ export default function ProbatePage() {
               </li>
             </ul>
 
-            <div className="bg-primary text-white rounded-lg p-8 mt-12">
+            <div className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl p-10 mt-12 shadow-glow-lg">
               <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="mb-6 text-neutral-100">
+              <p className="mb-8 text-lg text-blue-100">
                 Contact me today for a free consultation to discuss your probate property needs.
               </p>
               <Button
                 href="/contact"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary shadow-lg"
               >
                 Schedule Consultation
               </Button>
