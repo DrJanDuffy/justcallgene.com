@@ -10,6 +10,31 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 
+# Block AI crawlers that don't follow robots.txt standards
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
 Sitemap: ${cleanUrl}/sitemap.xml
 `;
 
