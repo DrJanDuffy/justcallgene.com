@@ -14,15 +14,15 @@
 ### 2. **SEO Metadata**
 - ✅ Enhanced keywords targeting Orange County, CA
 - ✅ Page-specific metadata (generateMetadata) on:
-  - Homepage
-  - About page
+  - Homepage (Probate-focused)
+  - About page (Probate-focused)
   - Contact page
   - Probate page
-  - Search page
-  - Blog page
+  - Services page (Probate-only)
+  - Blog page (Probate-focused)
   - Blog post pages
-  - Community pages
-  - Listing pages
+  - Community pages (Probate-focused)
+  - Listing pages (Probate properties)
 - ✅ Canonical URLs on all pages
 - ✅ Open Graph tags with images
 - ✅ Twitter Card metadata
