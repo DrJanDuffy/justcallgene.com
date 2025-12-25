@@ -197,7 +197,7 @@ export const communities: Community[] = [
 
 export const accolades = [
   {
-    title: 'Certified Probate Expert',
+    title: 'Probate Expert',
     icon: '🏆',
   },
   {
@@ -206,7 +206,7 @@ export const accolades = [
     icon: '💰',
   },
   {
-    title: 'Certified Real Estate Probate Specialist',
+    title: 'Real Estate Probate Specialist',
     icon: '✅',
   },
   {
@@ -214,7 +214,7 @@ export const accolades = [
     icon: '🎖️',
   },
   {
-    title: 'Certified Luxury Home Marketing Specialist',
+    title: 'Luxury Home Marketing Specialist',
     icon: '🏠',
   },
   {
