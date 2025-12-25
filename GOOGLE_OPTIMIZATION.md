@@ -82,7 +82,7 @@
    ```
 2. Ensure NAP (Name, Address, Phone) matches exactly:
    - Name: "Just Call Gene"
-   - Address: "1 TECHNOLOGY DRIVE Suite I829, Irvine, CA 92618"
+   - Address: "1 TECHNOLOGY DRIVE Suite I829G, Irvine, CA 92618"
    - Phone: "(949) 555-1234" (update with real number)
 3. Add Google Reviews widget if desired
 4. Link to Google Maps embed on contact page

@@ -61,7 +61,7 @@ export const siteConfig = {
     ],
     // Main Office Address (Broker Office)
     address: {
-      streetAddress: '1 TECHNOLOGY DRIVE Suite I829',
+      streetAddress: '1 TECHNOLOGY DRIVE Suite I829G',
       addressLocality: 'Irvine',
       addressRegion: 'CA',
       postalCode: '92618',
