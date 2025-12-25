@@ -28,19 +28,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `Homes for Sale in ${community.name}, CA - Real Estate Guide`,
-    description: `${community.description} Find homes for sale, market insights, and neighborhood information for ${community.name}, Orange County, CA.`,
+    title: `Probate Properties in ${community.name}, CA | Probate Real Estate Specialist`,
+    description: `${community.description} Probate property sales and probate real estate services in ${community.name}, Orange County, CA. Certified Probate Real Estate Specialists.`,
     keywords: [
-      `homes for sale ${community.name}`,
-      `${community.name} real estate`,
-      `${community.name} homes`,
-      `real estate ${community.name} CA`,
-      `Orange County ${community.name}`,
-      'Orange County real estate',
+      `probate properties ${community.name}`,
+      `probate real estate ${community.name}`,
+      `${community.name} probate sales`,
+      `probate homes ${community.name} CA`,
+      `Orange County probate ${community.name}`,
+      'Orange County probate real estate',
     ],
     openGraph: {
-      title: `Homes for Sale in ${community.name}, CA`,
-      description: `${community.description} Expert real estate services in ${community.name}, Orange County.`,
+      title: `Probate Properties in ${community.name}, CA`,
+      description: `${community.description} Expert probate real estate services in ${community.name}, Orange County.`,
       url: `${siteConfig.url}/communities/${slug}`,
     },
     alternates: {
@@ -96,23 +96,25 @@ export default async function CommunityPage({ params }: Props) {
               {community.description}
             </p>
             <p className="text-base text-neutral-600 leading-relaxed mb-8">
-              Discover the unique charm and opportunities that {community.name} has to offer. 
-              Whether you're looking for a family home, investment property, or luxury estate, 
-              this community provides an exceptional living experience in the Las Vegas area.
+              {community.name} is one of Orange County's premier communities, and we specialize in probate property sales throughout this area. 
+              If you're an executor, administrator, or family member needing to sell an inherited property in {community.name}, 
+              we provide expert probate real estate services with deep knowledge of this community's market dynamics and court requirements.
             </p>
 
             <div className="bg-gradient-to-br from-primary/10 via-blue-50 to-white rounded-2xl p-8 mb-8 border border-primary/20 shadow-soft">
               <h3 className="text-2xl font-bold text-neutral-900 mb-4">
-                Explore Properties in{' '}
+                Probate Property Sales in{' '}
                 <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
                   {community.name}
                 </span>
               </h3>
               <p className="text-neutral-700 mb-6 leading-relaxed">
-                Browse available listings and find your perfect home in this beautiful community.
+                We handle probate property sales throughout {community.name} with expertise in court-ordered sales, 
+                property valuation, and estate transactions. Our deep knowledge of this community's market helps 
+                maximize property values while ensuring compliance with all probate court requirements.
               </p>
-              <Button href="/search" variant="primary">
-                Search Properties
+              <Button href="/contact" variant="primary">
+                Contact Us About Probate Properties
               </Button>
             </div>
 

@@ -6,18 +6,16 @@ export function Footer() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Probate Realtor', href: '/probate' },
-    { label: 'Search homes', href: '/search' },
-    { label: 'map homes', href: '/search/map' },
+    { label: 'Probate Services', href: '/services' },
     { label: 'Contact', href: '/contact' },
     { label: 'sitemap', href: '/sitemap.xml' },
   ];
 
   const resources = [
-    { label: 'Newest Listings', href: '/search' },
-    { label: 'Open houses', href: '/search' },
-    { label: 'Advanced Search', href: '/search/advanced' },
-    { label: 'Home Valuation', href: '/sellers/valuation' },
-    { label: 'Mortgage Calculator', href: '/buyers/mortgage-calculator' },
+    { label: 'Probate Property Valuation', href: '/sellers/valuation' },
+    { label: 'Probate Process Guide', href: '/probate' },
+    { label: 'Our Services', href: '/services' },
+    { label: 'Communities', href: '/communities' },
     { label: 'Contact', href: '/contact' },
   ];
 

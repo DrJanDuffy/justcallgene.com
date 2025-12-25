@@ -15,28 +15,11 @@ export function Header() {
       href: '/probate',
     },
     {
-      label: 'Search',
+      label: 'Probate Services',
       href: '#',
       dropdown: [
-        { label: 'Advanced Search', href: '/search/advanced' },
-        { label: 'Address Search', href: '/search' },
-        { label: 'Map Search', href: '/search/map' },
-        { label: 'Listing ID', href: '/search' },
-      ],
-    },
-    {
-      label: 'Buyers',
-      href: '#',
-      dropdown: [
-        { label: 'Mortgage Calculator', href: '/buyers/mortgage-calculator' },
-      ],
-    },
-    {
-      label: 'Sellers',
-      href: '#',
-      dropdown: [
-        { label: 'Relocation Guide', href: '/sellers/relocation' },
-        { label: 'Home Valuation', href: '/sellers/valuation' },
+        { label: 'Probate Property Valuation', href: '/sellers/valuation' },
+        { label: 'Probate Process Guide', href: '/probate' },
       ],
     },
       {

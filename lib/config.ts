@@ -7,7 +7,7 @@ export const siteConfig = {
   // Site Information
   name: 'Just Call Gene',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://justcallgene.com',
-  description: 'Real Estate Agents & Broker in Orange County, CA - Helping You Move Forward—The Professional Way',
+  description: 'Probate Real Estate Specialist in Orange County, CA - Certified Probate Real Estate Specialists (CPRES) Helping Families Navigate Inherited Property Sales',
   
   // Business Information (NAP - Name, Address, Phone)
   // IMPORTANT: These must match your Google Business Profile exactly
@@ -27,9 +27,6 @@ export const siteConfig = {
           'Real Estate Salesperson License #02282581',
           'Probate Real Estate Specialist (CPRES)',
           'Probate Expert (CPE)',
-          'Commercial Real Estate Certification',
-          'Corporate & Military Relocation Specialist',
-          'Luxury Home Marketing Specialist',
           'Registered U.S. Patent Agent (USPTO #55,018)',
           'Former CFO - AMEX-Listed Company (IPO Experience)',
           'JD/MBA in Entrepreneurship',
@@ -49,8 +46,8 @@ export const siteConfig = {
           addressRegion: 'CA',
           postalCode: '92625',
         },
-        bio: 'As a licensed Real Estate BROKER, I bring extensive experience and expertise to every transaction. Licensed since 2017, I ensure that all clients receive the highest level of professional service and guidance throughout their real estate journey. I oversee our team and maintain the highest standards of professionalism and compliance.',
-        extendedBio: 'With over 7 years as a licensed broker and a commitment to excellence, I provide comprehensive real estate services throughout Orange County. My role as broker ensures that every transaction is handled with the utmost care, attention to detail, and adherence to all regulatory requirements.',
+        bio: 'As a licensed Real Estate BROKER, I bring extensive experience and expertise to every probate transaction. Licensed since 2017, I ensure that all clients receive the highest level of professional service and guidance throughout their probate property sale journey. I oversee our team and maintain the highest standards of professionalism and compliance.',
+        extendedBio: 'With over 7 years as a licensed broker and a commitment to excellence, I provide comprehensive probate real estate services throughout Orange County. My role as broker ensures that every probate transaction is handled with the utmost care, attention to detail, and adherence to all regulatory and court requirements.',
         credentials: [
           'Real Estate Broker License #02012693 (Licensed since 2017)',
           'License Expiration: 11/08/2029',
@@ -92,16 +89,16 @@ export const siteConfig = {
     // Business Type
     type: 'RealEstateAgent',
     
-    // Services offered
+    // Services offered (100% Probate Focus)
     services: [
-      'Real Estate Sales',
-      'Property Valuation',
-      'Home Buying',
-      'Home Selling',
-      'Probate Real Estate',
-      'Corporate Relocation',
-      'Military Relocation',
-      'Luxury Home Marketing',
+      'Probate Real Estate Sales',
+      'Probate Property Valuation',
+      'Court-Ordered Sales',
+      'Probate Property Management',
+      'Estate Property Sales',
+      'Inherited Property Sales',
+      'Probate Transaction Support',
+      'Probate Court Compliance',
     ],
     
     // Bio information (for backward compatibility - uses Eugene's bio)
@@ -117,8 +114,6 @@ export const siteConfig = {
       'Probate Real Estate Specialist (CPRES)',
       'Probate Expert (CPE)',
       'Commercial Real Estate Certification',
-      'Corporate & Military Relocation Specialist',
-      'Luxury Home Marketing Specialist',
       'Registered U.S. Patent Agent (USPTO #55,018)',
       'Former CFO - AMEX-Listed Company (IPO Experience)',
       'JD/MBA in Entrepreneurship',
@@ -141,7 +136,7 @@ export const siteConfig = {
       },
       {
         title: 'Orange County Coastal Market Specialist',
-        description: 'Over 20 years of experience in Newport Beach, Irvine, and Corona Del Mar real estate, from luxury coastal homes to commercial properties and probate transactions.',
+        description: 'Over 20 years of experience in Newport Beach, Irvine, and Corona Del Mar probate real estate, specializing exclusively in probate property sales and court-ordered transactions.',
       },
     ],
   },

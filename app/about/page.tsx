@@ -1,25 +1,25 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata } from 'next';
-import { siteConfig } from '@/lib/config';
+import { Button } from '@/components/ui/Button';
+import { Card } from '@/components/ui/Card';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
-  title: 'About Us - Real Estate Team in Orange County, CA',
-  description: 'Meet Eugene Joseph Boyle (Real Estate Salesperson #02282581) and Kelly Lynn Boyle (Real Estate Broker #02012693). Expert real estate professionals serving Newport Beach, Irvine, and Corona Del Mar with over 20 years of combined experience.',
+  title: 'About Our Real Estate Team | Just Call Gene',
+  description: 'Meet Eugene Joseph Boyle and Kelly Lynn Boyle, Orange County\'s premier real estate team. Over 20 years of experience, $200M+ in sales, specializing in probate real estate, luxury homes, and corporate relocation.',
   keywords: [
-    'real estate agent Orange County',
-    'real estate broker California',
+    'real estate team Orange County',
     'Eugene Boyle realtor',
     'Kelly Boyle broker',
-    'Newport Beach real estate agent',
-    'Irvine real estate',
-    'Corona Del Mar real estate',
+    'Orange County real estate agents',
     'probate real estate specialist',
+    'luxury home marketing',
   ],
   openGraph: {
-    title: 'About Just Call Gene - Real Estate Team in Orange County, CA',
-    description: 'Meet our expert real estate team serving Newport Beach, Irvine, and Corona Del Mar with over 20 years of combined experience.',
+    title: 'About Our Real Estate Team | Just Call Gene',
+    description: 'Meet Orange County\'s premier real estate team with over 20 years of experience and $200M+ in sales.',
     url: `${siteConfig.url}/about`,
   },
   alternates: {
@@ -27,262 +27,259 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+];
+
 export default function AboutPage() {
+  const eugene = siteConfig.business.agents[0];
+  const kelly = siteConfig.business.agents[1];
+
   return (
-    <div className="min-h-screen bg-white">
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: '/' },
-        { name: 'About', url: '/about' },
-      ]} />
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="inline-block mb-4">
-            <span className="bg-gradient-to-r from-blue-400 to-primary-light text-white px-4 py-1.5 rounded-full text-sm font-semibold">
-              About Us
-            </span>
+    <>
+      <BreadcrumbSchema items={breadcrumbItems} />
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 md:py-28 bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
+              About <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">Just Call Gene</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-center text-neutral-100 max-w-3xl mx-auto">
+              Orange County's Premier Probate Real Estate Specialists
+            </p>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up">
-            About{' '}
-            <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">
-              {siteConfig.business.name}
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-neutral-100 max-w-3xl animate-fade-in-up">
-            Your Trusted Real Estate Agents & Broker in Orange County, CA
-          </p>
-        </div>
-      </section>
+        </section>
 
-      {/* Main Content */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Eugene Boyle - Agent */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16 animate-fade-in-up">
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-soft-lg group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-              <Image
-                src="/placeholder-broker.jpg"
-                alt="Eugene Boyle - Real Estate Agent"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 border-4 border-white/50 rounded-2xl"></div>
-            </div>
+        {/* Introduction */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                Just Call Gene represents the pinnacle of probate real estate excellence in Orange County, California. Our team combines decades of experience, specialized probate expertise, and a commitment to client success that has resulted in over $200 million in successful probate property sales. We're not just real estate agents—we're certified Probate Real Estate Specialists (CPRES) and Probate Experts (CPE) dedicated exclusively to helping families navigate probate property sales.
+              </p>
+              
+              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                Founded on principles of integrity, professionalism, and results, Just Call Gene has built a reputation as Orange County's premier probate real estate specialists. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and extensive experience specifically in probate transactions. Our unique combination of financial expertise, legal knowledge, and probate specialization allows us to navigate even the most complex probate situations with confidence and success.
+              </p>
 
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-3xl font-bold text-neutral-900 mb-2">
-                  Eugene "Gene" Boyle
-                </h2>
-                <p className="text-lg text-neutral-600 mb-4">
-                  Real Estate Salesperson | License #02282581 | CFO | JD/MBA | Investment Strategist
-                </p>
-              </div>
-              {siteConfig.business.agents?.[0] && (
-                <>
-                  <p className="text-lg text-neutral-700 leading-relaxed">
-                    {siteConfig.business.agents[0].bio}
-                  </p>
-                  {siteConfig.business.agents[0].extendedBio && (
-                    <p className="text-lg text-neutral-700 leading-relaxed">
-                      {siteConfig.business.agents[0].extendedBio}
-                    </p>
-                  )}
-                </>
-              )}
+              <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6">Our Mission and Values</h2>
+              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                At Just Call Gene, our mission is simple: to provide exceptional probate real estate service that helps families navigate inherited property sales with expertise, compassion, and results. We believe that every family deserves personalized attention, transparent communication, and results-driven service during this difficult time. Whether you're an executor, administrator, or family member navigating a probate transaction, we're committed to making your probate property sale as smooth and successful as possible.
+              </p>
+
+              <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Integrity First</h3>
+              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                We conduct every transaction with the highest ethical standards. Our clients trust us because we're honest, transparent, and always act in their best interests. This commitment to integrity has earned us a reputation as one of Orange County's most trusted real estate teams.
+              </p>
+
+              <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Results-Driven Approach</h3>
+              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                We measure our success by your success. Our track record speaks for itself: over $200 million in sales, hundreds of satisfied clients, and recognition as a top realtor in Orange County. We combine market expertise, strategic thinking, and proven methodologies to deliver results that exceed expectations.
+              </p>
+
+              <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Client-Centered Service</h3>
+              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                Every client is unique, and we tailor our approach to meet your specific needs, timeline, and goals. We take the time to understand your situation, answer your questions, and provide the guidance you need to make informed decisions. Your success is our success, and we're committed to going above and beyond to ensure you achieve your real estate objectives.
+              </p>
             </div>
           </div>
+        </section>
 
-          {/* Kelly Boyle - Broker */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12 animate-fade-in-up">
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-soft-lg group lg:order-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-              <Image
-                src="/placeholder-broker.jpg"
-                alt="Kelly Lynn Boyle - Real Estate Broker"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 border-4 border-white/50 rounded-2xl"></div>
-            </div>
-
-            <div className="space-y-6 lg:order-1">
-              <div>
-                <h2 className="text-3xl font-bold text-neutral-900 mb-2">
-                  Kelly Lynn Boyle
-                </h2>
-                <p className="text-lg text-neutral-600 mb-4">
-                  Real Estate BROKER | License #02012693 | Licensed since 2017
-                </p>
-              </div>
-              {siteConfig.business.agents?.[1] && (
-                <>
-                  <p className="text-lg text-neutral-700 leading-relaxed">
-                    {siteConfig.business.agents[1].bio}
-                  </p>
-                  {siteConfig.business.agents[1].extendedBio && (
-                    <p className="text-lg text-neutral-700 leading-relaxed">
-                      {siteConfig.business.agents[1].extendedBio}
-                    </p>
-                  )}
-                </>
-              )}
-            </div>
-          </div>
-
-          {/* Education & Background - Eugene */}
-          <div className="mb-12 animate-fade-in-up">
-            <h2 className="text-3xl font-bold text-neutral-900 mb-6">
-              Eugene Boyle - Education &{' '}
-              <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-                Professional Background
-              </span>
+        {/* Team Members */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-neutral-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-12">
+              Meet Our <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Team</span>
             </h2>
-            <div className="bg-gradient-to-br from-neutral-50 to-white rounded-2xl p-8 space-y-4 border border-neutral-100 shadow-soft">
-              <div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">Education</h3>
-                <ul className="space-y-2 text-neutral-700">
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
-                    <span>PhD, Clinical Psychology (Forensic Focus) - Fielding Graduate University</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
-                    <span>JD/MBA in Entrepreneurship - Purdue Global Law School & Babson F.W. Olin Graduate School of Business</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
-                    <span>BS, Applied Mathematics & Computer Engineering - Tulane University</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="pt-4 border-t border-neutral-200">
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">Notable Experience</h3>
-                <ul className="space-y-2 text-neutral-700">
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
-                    <span>Chief Financial Officer, Samaritan Pharmaceuticals (AMEX-listed) - Led successful IPO and SEC compliance</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
-                    <span>Investment Strategist - Portfolio optimization for family offices in Irvine Tech Corridor & Orange County markets</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="font-semibold mr-2">•</span>
-                    <span>Navy Veteran - Surface Warfare Officer, Lieutenant (1987-1991)</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
 
-          {/* Credentials - Eugene */}
-          {siteConfig.business.agents?.[0] && (
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">Eugene Boyle - Credentials & Certifications</h2>
-              <ul className="space-y-3">
-                {siteConfig.business.agents[0].credentials.map((credential, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-lg text-neutral-700">{credential}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Credentials - Kelly */}
-          {siteConfig.business.agents?.[1] && (
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">Kelly Lynn Boyle - Credentials & Certifications</h2>
-              <ul className="space-y-3">
-                {siteConfig.business.agents[1].credentials.map((credential, index) => (
-                  <li key={index} className="flex items-start">
-                    <svg className="w-6 h-6 text-primary mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-lg text-neutral-700">{credential}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Professional Highlights */}
-          {siteConfig.business.professionalHighlights && (
-            <div className="mb-12 animate-fade-in-up">
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">
-                Why Choose{' '}
-                <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-                  Our Team?
-                </span>
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {siteConfig.business.professionalHighlights.map((highlight, index) => (
-                  <div key={index} className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-6 border border-neutral-100 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 group">
-                    <div className="flex items-start mb-4">
-                      <div className="bg-gradient-to-r from-primary to-primary-dark p-2 rounded-lg mr-3 group-hover:scale-110 transition-transform duration-300">
-                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <h3 className="text-xl font-bold text-neutral-900 group-hover:text-primary transition-colors">{highlight.title}</h3>
-                    </div>
-                    <p className="text-neutral-700 leading-relaxed">{highlight.description}</p>
+            {/* Eugene Boyle */}
+            <div className="mb-16">
+              <Card variant="elevated" className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+                  <div className="relative aspect-square rounded-2xl overflow-hidden">
+                    <Image
+                      src="/placeholder-broker.jpg"
+                      alt={eugene.name}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Services */}
-          <div className="mb-12 animate-fade-in-up">
-            <h2 className="text-3xl font-bold text-neutral-900 mb-6">
-              Services{' '}
-              <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-                Offered
-              </span>
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {siteConfig.business.services.map((service, index) => (
-                <div key={index} className="bg-gradient-to-br from-white to-neutral-50 rounded-xl p-5 border border-neutral-100 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-0.5 group">
-                  <div className="flex items-center">
-                    <div className="bg-gradient-to-r from-primary/10 to-blue-50 p-2 rounded-lg mr-3 group-hover:from-primary/20 transition-colors">
-                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-3xl font-bold text-neutral-900 mb-2">{eugene.name}</h3>
+                      <p className="text-xl text-primary font-semibold mb-4">{eugene.role}</p>
+                      <p className="text-neutral-600 mb-4">License #02282581 | Expires: {eugene.licenseExpiration}</p>
                     </div>
-                    <p className="text-neutral-700 font-medium group-hover:text-primary transition-colors">{service}</p>
+                    
+                    <div className="prose prose-lg max-w-none">
+                      <p className="text-neutral-700 leading-relaxed mb-4">
+                        {eugene.bio}
+                      </p>
+                      
+                      <p className="text-neutral-700 leading-relaxed mb-6">
+                        {eugene.extendedBio}
+                      </p>
+
+                      <h4 className="text-xl font-bold text-neutral-900 mb-4">Professional Credentials</h4>
+                      <ul className="list-disc list-inside text-neutral-700 space-y-2 mb-6">
+                        {eugene.credentials.map((credential, index) => (
+                          <li key={index}>{credential}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
+              </Card>
+            </div>
+
+            {/* Kelly Boyle */}
+            <div>
+              <Card variant="elevated" className="overflow-hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+                  <div className="relative aspect-square rounded-2xl overflow-hidden lg:order-2">
+                    <Image
+                      src="/placeholder-broker.jpg"
+                      alt={kelly.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="space-y-6 lg:order-1">
+                    <div>
+                      <h3 className="text-3xl font-bold text-neutral-900 mb-2">{kelly.name}</h3>
+                      <p className="text-xl text-primary font-semibold mb-4">{kelly.role}</p>
+                      <p className="text-neutral-600 mb-4">License #02012693 | Expires: {kelly.licenseExpiration}</p>
+                      <p className="text-neutral-600 mb-4">Broker License Issued: {kelly.brokerLicenseIssued}</p>
+                    </div>
+                    
+                    <div className="prose prose-lg max-w-none">
+                      <p className="text-neutral-700 leading-relaxed mb-4">
+                        {kelly.bio}
+                      </p>
+                      
+                      <p className="text-neutral-700 leading-relaxed mb-6">
+                        {kelly.extendedBio}
+                      </p>
+
+                      <h4 className="text-xl font-bold text-neutral-900 mb-4">Professional Credentials</h4>
+                      <ul className="list-disc list-inside text-neutral-700 space-y-2 mb-6">
+                        {kelly.credentials.map((credential, index) => (
+                          <li key={index}>{credential}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Professional Highlights */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-12">
+              Our <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Expertise</span>
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {siteConfig.business.professionalHighlights.map((highlight, index) => (
+                <Card key={index} variant="elevated" className="p-6">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-3">{highlight.title}</h3>
+                  <p className="text-neutral-700">{highlight.description}</p>
+                </Card>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* CTA */}
-          <div className="text-center bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl p-10 shadow-glow-lg animate-fade-in-up">
-            <h2 className="text-3xl font-bold mb-4">Ready to Work Together?</h2>
-            <p className="mb-8 text-lg text-blue-100">Let's discuss your real estate goals</p>
-            <Link
-              href="/contact"
-              className="inline-block bg-white text-primary px-8 py-4 rounded-xl font-semibold hover:bg-neutral-100 hover:scale-105 transition-all duration-300 shadow-lg"
-            >
-              Get In Touch
-            </Link>
+        {/* Why Choose Us */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-neutral-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-12">
+                Why Work With <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Just Call Gene</span> for Probate Sales?
+              </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <Card variant="elevated" className="p-6">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">100% Probate Focus</h3>
+                <p className="text-neutral-700">
+                  Unlike general real estate agents who may handle probate as a side service, probate real estate is our exclusive focus. Every aspect of our business is dedicated to probate property sales, ensuring unmatched expertise and specialization.
+                </p>
+              </Card>
+
+              <Card variant="elevated" className="p-6">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">$200M+ in Probate Sales</h3>
+                <p className="text-neutral-700">
+                  Our track record of success is measured in probate results. Over $200 million in successful probate property sales demonstrates our ability to maximize values and navigate complex probate transactions effectively.
+                </p>
+              </Card>
+
+              <Card variant="elevated" className="p-6">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Certified Probate Specialists</h3>
+                <p className="text-neutral-700">
+                  We hold specialized certifications as Probate Real Estate Specialists (CPRES) and Probate Experts (CPE). These certifications represent additional training and expertise specifically in probate transactions, ensuring we understand court requirements and legal procedures.
+                </p>
+              </Card>
+
+              <Card variant="elevated" className="p-6">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Court Compliance Expertise</h3>
+                <p className="text-neutral-700">
+                  We understand probate court requirements, procedures, and timelines. Our experience with probate courts throughout Orange County helps ensure all filings, documentation, and procedures are handled correctly, avoiding delays and complications.
+                </p>
+              </Card>
+
+              <Card variant="elevated" className="p-6">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Compassionate Family Support</h3>
+                <p className="text-neutral-700">
+                  We understand that probate transactions can be emotionally challenging. We provide compassionate support, clear communication, and professional guidance to help families navigate this difficult time with sensitivity and care.
+                </p>
+              </Card>
+
+              <Card variant="elevated" className="p-6">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Attorney & Executor Coordination</h3>
+                <p className="text-neutral-700">
+                  We work seamlessly with probate attorneys, executors, administrators, and other professionals involved in the probate process. Our experience in multi-party probate transactions ensures effective coordination and communication.
+                </p>
+              </Card>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-r from-primary via-primary-dark to-primary text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Work With Orange County's Premier Probate Real Estate Specialists?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Let's discuss how we can help you navigate your probate property sale.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                href="/contact"
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-primary"
+              >
+                Contact Us Today
+              </Button>
+              <Button
+                href="/probate"
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-primary"
+              >
+                Learn About Probate Process
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
-

@@ -19,22 +19,22 @@ export function FeaturedListings() {
           <div>
             <div className="inline-block mb-3">
               <span className="bg-gradient-to-r from-primary to-primary-dark text-white px-4 py-1.5 rounded-full text-sm font-semibold">
-                Featured Properties
+                Probate Properties
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-2">
               Featured{' '}
               <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-                LISTINGS
+                PROBATE PROPERTIES
               </span>
             </h2>
-            <p className="text-neutral-600">Just Listed</p>
+            <p className="text-neutral-600">Available Probate Listings</p>
           </div>
           <Link
-            href="/search"
+            href="/contact"
             className="group text-primary font-semibold hover:text-primary-dark transition-all duration-300 flex items-center"
           >
-            <span>view all Listings</span>
+            <span>Contact Us About Probate Properties</span>
             <svg className="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -92,10 +92,10 @@ export function FeaturedListings() {
 
         <div className="mt-8 text-center">
           <Link
-            href="/search"
+            href="/contact"
             className="group inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-all duration-300"
           >
-            <span>NEWEST LISTINGS</span>
+            <span>CONTACT US ABOUT PROBATE PROPERTIES</span>
             <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

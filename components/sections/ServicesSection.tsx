@@ -24,59 +24,59 @@ export function ServicesSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* New Home Section */}
-          <div className="bg-white rounded-2xl shadow-soft-lg overflow-hidden group hover:shadow-soft-lg transition-all duration-300 border border-neutral-100 hover:border-primary/20 hover:-translate-y-1">
-            <div className="relative h-64 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
-              <Image
-                src="/placeholder-service-new-home.jpg"
-                alt="Find Your Dream Home"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            <div className="p-8">
-              <h3 className="text-xl font-semibold text-neutral-600 mb-2 uppercase tracking-wide">
-                ARE YOU LOOKING FOR
-              </h3>
-              <h4 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent mb-4">
-                NEW HOME?
-              </h4>
-              <p className="text-neutral-700 mb-6 leading-relaxed">
-                Find your dream home with Gene. Expert guidance, local insights, and personalized service.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/search" variant="primary" className="flex-1">
-                  view all Listings
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Sell Home Section */}
+          {/* Probate Property Valuation Section */}
           <div className="bg-white rounded-2xl shadow-soft-lg overflow-hidden group hover:shadow-soft-lg transition-all duration-300 border border-neutral-100 hover:border-primary/20 hover:-translate-y-1">
             <div className="relative h-64 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
               <Image
                 src="/placeholder-service-sell-home.jpg"
-                alt="Sell Your Home"
+                alt="Probate Property Valuation"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
             <div className="p-8">
               <h3 className="text-xl font-semibold text-neutral-600 mb-2 uppercase tracking-wide">
-                WANT TO SELL
+                NEED A VALUATION FOR
               </h3>
               <h4 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent mb-4">
-                Your Home?
+                Probate Property?
               </h4>
               <p className="text-neutral-700 mb-6 leading-relaxed">
-                Sell your home fast with Gene. Benefit from market expertise, dedicated approach, and strategic marketing.
+                Get an accurate probate property valuation that meets court requirements. Professional valuations for estate tax purposes, distribution planning, and establishing sale prices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/sellers/valuation" variant="primary" className="flex-1">
-                  home valuation
+                  Get Probate Valuation
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Probate Sale Services Section */}
+          <div className="bg-white rounded-2xl shadow-soft-lg overflow-hidden group hover:shadow-soft-lg transition-all duration-300 border border-neutral-100 hover:border-primary/20 hover:-translate-y-1">
+            <div className="relative h-64 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+              <Image
+                src="/placeholder-service-new-home.jpg"
+                alt="Probate Sale Services"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="p-8">
+              <h3 className="text-xl font-semibold text-neutral-600 mb-2 uppercase tracking-wide">
+                NEED TO SELL AN
+              </h3>
+              <h4 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent mb-4">
+                Inherited Property?
+              </h4>
+              <p className="text-neutral-700 mb-6 leading-relaxed">
+                Expert probate real estate services for inherited property sales. Court compliance, compassionate support, and proven results. Certified Probate Real Estate Specialists.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button href="/probate" variant="primary" className="flex-1">
+                  Learn About Probate Sales
                 </Button>
               </div>
             </div>

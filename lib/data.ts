@@ -94,25 +94,25 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     name: 'John Smith',
-    role: 'Home Buyer',
+    role: 'Executor',
     image: '/placeholder-avatar.jpg',
-    text: 'Gene made the entire home buying process seamless. His expertise and attention to detail helped us find our dream home in Newport Beach. Highly recommended!',
+    text: 'Gene made the entire probate property sale process seamless. His expertise in probate court procedures and attention to detail helped us navigate the sale of my father\'s estate in Newport Beach. Highly recommended!',
     rating: 5,
   },
   {
     id: '2',
     name: 'Sarah Johnson',
-    role: 'Home Seller',
+    role: 'Family Member',
     image: '/placeholder-avatar.jpg',
-    text: 'Working with Gene was a pleasure. He sold our home quickly and for top dollar. His marketing strategy and negotiation skills are outstanding.',
+    text: 'Working with Gene on our probate property sale was a pleasure. He sold the inherited property quickly and for top dollar. His probate expertise, marketing strategy, and negotiation skills are outstanding.',
     rating: 5,
   },
   {
     id: '3',
     name: 'Michael Davis',
-    role: 'Investor',
+    role: 'Administrator',
     image: '/placeholder-avatar.jpg',
-    text: 'Gene\'s knowledge of the Orange County market is unmatched. He helped us identify great investment opportunities and navigate the process with ease.',
+    text: 'Gene\'s knowledge of Orange County probate real estate is unmatched. He helped us navigate the complex probate process, ensuring court compliance while maximizing the estate\'s value. His probate expertise made all the difference.',
     rating: 5,
   },
 ];
@@ -120,33 +120,33 @@ export const testimonials: Testimonial[] = [
 export const faqs: FAQ[] = [
   {
     id: '1',
-    question: 'What should I consider when buying a home in Orange County, CA?',
-    answer: 'When buying a home in Orange County, CA, it\'s essential to consider the local amenities, school districts, and community vibe. Popular areas such as Newport Beach, Irvine, and Corona Del Mar offer great schools and recreational opportunities. Partnering with a knowledgeable Realtor can help you navigate these factors effectively.',
+    question: 'What is probate real estate and why do I need a specialist?',
+    answer: 'Probate real estate involves selling property that\'s part of an estate after someone passes away. Unlike traditional real estate sales, probate sales require court approval, specific legal procedures, and compliance with probate timelines. A certified Probate Real Estate Specialist (CPRES) understands these unique requirements and can help ensure the sale proceeds smoothly while maximizing property value.',
   },
   {
     id: '2',
-    question: 'What makes a Real Estate Agent in Orange County, CA the best choice for me?',
-    answer: 'The best Real Estate Agent in Orange County, CA should offer personalized service, a deep understanding of the local market, and a proven track record of successful transactions. Gene\'s expertise in the Orange County area ensures you receive guidance tailored to your needs and preferences.',
+    question: 'How long does a probate property sale take in Orange County?',
+    answer: 'Probate property sales typically take longer than traditional sales due to court requirements. The process can take several months to over a year, depending on the complexity of the estate, court schedules, and whether multiple heirs are involved. A probate specialist can help manage timelines and ensure all court requirements are met efficiently.',
   },
   {
     id: '3',
-    question: 'How can I determine the value of my home in Orange County?',
-    answer: 'To determine your home\'s value in Orange County, consider recent sales of similar properties in your neighborhood, current market trends, and overall economic factors. A qualified real estate agent can provide a comprehensive market analysis, helping you set a competitive price.',
+    question: 'How is a probate property valued for court purposes?',
+    answer: 'Probate properties require professional valuations that meet court requirements. These valuations are used for estate tax purposes, distribution to heirs, and establishing sale prices. We coordinate with certified appraisers to ensure valuations meet legal standards and help maximize estate value.',
   },
   {
     id: '4',
-    question: 'Is it a good time to sell my house in Orange County, CA?',
-    answer: 'The local market conditions typically fluctuate; however, Orange County has seen consistent interest due to its quality of life and amenities. Working with a dedicated real estate agent can help you assess the best time to list based on your personal situation and market analytics.',
+    question: 'Do I need court approval to sell a probate property?',
+    answer: 'Yes, probate property sales typically require court approval before listing and selling. The executor or administrator must file the necessary documentation and obtain court authorization. We help prepare all required documents and coordinate with attorneys to ensure compliance with court procedures.',
   },
   {
     id: '5',
-    question: 'What are the top neighborhoods in Orange County for families?',
-    answer: 'Orange County boasts several family-friendly neighborhoods, including Newport Beach, Irvine, and Corona Del Mar, known for their parks, schools, and community activities. A knowledgeable Real Estate Agent can highlight the best choices that fit your family\'s lifestyle.',
+    question: 'What makes Just Call Gene different from other real estate agents?',
+    answer: 'Just Call Gene is 100% focused on probate real estate—it\'s our exclusive specialty. We\'re certified Probate Real Estate Specialists (CPRES) and Probate Experts (CPE) with extensive experience in Orange County probate courts. Unlike general real estate agents who may handle probate occasionally, probate is our only business, ensuring unmatched expertise and specialization.',
   },
   {
     id: '6',
-    question: 'How long do homes typically stay on the market in Orange County?',
-    answer: 'Homes in Orange County may average a few weeks to a few months on the market, depending on various factors like pricing and demand. The best Real Estate Agent will provide insights on current market conditions, helping you strategize your buying or selling timeline.',
+    question: 'Can probate properties be sold "as-is" in Orange County?',
+    answer: 'Yes, probate properties are typically sold "as-is," meaning the estate won\'t make repairs. This is common in probate sales and buyers understand this. Our probate expertise helps position properties effectively while ensuring proper disclosure and compliance with all legal requirements.',
   },
 ];
 
@@ -202,24 +202,27 @@ export const accolades = [
   },
   {
     title: '$200M+ Sold',
-    subtitle: 'in real estate',
+    subtitle: 'in probate property sales',
     icon: '💰',
   },
   {
-    title: 'Real Estate Probate Specialist',
+    title: 'Certified Probate Real Estate Specialist',
+    subtitle: 'CPRES & CPE Certified',
     icon: '✅',
   },
   {
-    title: 'Corporate & Military Relocation Specialist',
+    title: '100% Probate Focus',
+    subtitle: 'Exclusive probate specialization',
     icon: '🎖️',
   },
   {
-    title: 'Luxury Home Marketing Specialist',
-    icon: '🏠',
+    title: 'Court Compliance Expert',
+    subtitle: 'Probate court procedures',
+    icon: '⚖️',
   },
   {
-    title: 'Top Realtor',
-    subtitle: 'in Orange County by transactions',
+    title: 'Top Probate Specialist',
+    subtitle: 'in Orange County',
     icon: '⭐',
   },
 ];

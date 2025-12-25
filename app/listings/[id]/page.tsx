@@ -32,18 +32,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${formatPrice(listing.price)} - ${listing.address}, ${listing.city}, ${listing.state}`;
-  const description = `${listing.beds} bed, ${listing.baths} bath, ${listing.sqft.toLocaleString()} sqft home for sale in ${listing.city}, ${listing.state}. ${listing.status}. Contact ${siteConfig.business.name} for more information.`;
+  const title = `${formatPrice(listing.price)} - Probate Property ${listing.address}, ${listing.city}, ${listing.state}`;
+  const description = `Probate property: ${listing.beds} bed, ${listing.baths} bath, ${listing.sqft.toLocaleString()} sqft in ${listing.city}, ${listing.state}. ${listing.status}. Probate real estate sale. Contact ${siteConfig.business.name} for probate property information.`;
 
   return {
     title,
     description,
     keywords: [
-      `homes for sale ${listing.city}`,
-      `${listing.city} real estate`,
-      `${listing.address} ${listing.city}`,
-      `property ${listing.city} CA`,
-      'Orange County real estate',
+      `probate properties ${listing.city}`,
+      `probate real estate ${listing.city}`,
+      `${listing.address} probate ${listing.city}`,
+      `probate property ${listing.city} CA`,
+      'Orange County probate real estate',
     ],
     openGraph: {
       title,
@@ -96,13 +96,13 @@ export default async function ListingDetailPage({ params }: Props) {
           {/* Main Content */}
           <div className="lg:col-span-2">
             <Link
-              href="/search"
+              href="/contact"
               className="text-primary hover:text-primary-dark font-semibold inline-flex items-center mb-6"
             >
               <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-              Back to Search
+              Contact Us About Probate Properties
             </Link>
 
             <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
@@ -147,14 +147,14 @@ export default async function ListingDetailPage({ params }: Props) {
             <div className="prose prose-lg max-w-none mb-8">
               <h2 className="text-2xl font-bold text-neutral-900 mb-4">Property Description</h2>
               <p className="text-neutral-700 leading-relaxed">
-                This beautiful property in {listing.city} offers an exceptional opportunity to own a well-maintained home 
+                This probate property in {listing.city}, Orange County offers an opportunity to purchase an inherited property 
                 in a desirable location. The property features {listing.beds} bedrooms and {listing.baths} bathrooms, 
-                with {listing.sqft.toLocaleString()} square feet of living space. Perfect for families or professionals 
-                looking for a comfortable home in the Las Vegas area.
+                with {listing.sqft.toLocaleString()} square feet of living space. This property is being sold as part of 
+                probate proceedings in Orange County, California.
               </p>
               <p className="text-neutral-700 leading-relaxed mt-4">
-                The home is located in a great neighborhood with easy access to shopping, dining, and entertainment. 
-                Don't miss this opportunity to make this house your home!
+                The property is located in a great Orange County neighborhood with easy access to shopping, dining, and entertainment. 
+                Contact us for more information about this probate property sale.
               </p>
             </div>
 

@@ -4,20 +4,20 @@ import Image from 'next/image';
 import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
-  title: 'Real Estate Blog - Orange County Market Insights & Tips',
-  description: 'Expert real estate insights, tips, and market updates for Orange County, CA. Learn about buying, selling, and investing in Newport Beach, Irvine, and Corona Del Mar.',
+  title: 'Probate Real Estate Blog - Orange County Probate Insights & Tips',
+  description: 'Expert probate real estate insights, tips, and updates for Orange County, CA. Learn about probate property sales, court procedures, and probate real estate in Newport Beach, Irvine, and Corona Del Mar.',
   keywords: [
-    'real estate blog',
-    'Orange County real estate news',
-    'home buying tips',
-    'home selling advice',
-    'real estate market updates',
-    'Newport Beach real estate',
-    'Irvine market trends',
+    'probate real estate blog',
+    'Orange County probate news',
+    'probate property tips',
+    'probate sale advice',
+    'probate market updates',
+    'Newport Beach probate real estate',
+    'Irvine probate trends',
   ],
   openGraph: {
-    title: 'Real Estate Blog - Orange County Market Insights',
-    description: 'Expert insights and tips for buying, selling, and investing in Orange County real estate.',
+    title: 'Probate Real Estate Blog - Orange County Probate Insights',
+    description: 'Expert insights and tips for probate property sales in Orange County.',
     url: `${siteConfig.url}/blog`,
   },
   alternates: {
@@ -94,13 +94,13 @@ export default function BlogPage() {
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-up">
-            Real Estate{' '}
+            Probate Real Estate{' '}
             <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">
               Blog
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-neutral-100 max-w-3xl mx-auto animate-fade-in-up">
-            Insights, tips, and updates about Orange County real estate
+            Insights, tips, and updates about probate property sales in Orange County
           </p>
         </div>
       </section>
