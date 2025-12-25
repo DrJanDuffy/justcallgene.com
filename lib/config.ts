@@ -78,6 +78,7 @@ export const siteConfig = {
     phone: '949-555-1234',
     phoneFormatted: '(949) 555-1234',
     email: 'info@justcallgene.com',
+    probateEmail: 'Probate@JustCallGene.com',
     licenseNumber: '02012693',
     // Google Business Profile URL
     googleBusinessProfile: '',

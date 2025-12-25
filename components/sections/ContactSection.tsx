@@ -68,12 +68,25 @@ export function ContactSection() {
                 </div>
                 <h3 className="text-xl font-semibold text-neutral-900">Email Address</h3>
               </div>
-              <a
-                href={`mailto:${siteConfig.business.email}`}
-                className="text-lg font-medium bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent hover:from-primary-dark hover:to-primary transition-all duration-300"
-              >
-                {siteConfig.business.email}
-              </a>
+              <div className="space-y-2">
+                <a
+                  href={`mailto:${siteConfig.business.email}`}
+                  className="block text-lg font-medium bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent hover:from-primary-dark hover:to-primary transition-all duration-300"
+                >
+                  {siteConfig.business.email}
+                </a>
+                {siteConfig.business.probateEmail && (
+                  <div className="pt-2 border-t border-neutral-200">
+                    <p className="text-sm text-neutral-600 mb-1">For Probate Inquiries:</p>
+                    <a
+                      href={`mailto:${siteConfig.business.probateEmail}`}
+                      className="block text-lg font-medium bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent hover:from-primary-dark hover:to-primary transition-all duration-300"
+                    >
+                      {siteConfig.business.probateEmail}
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
 
             <div className="bg-gradient-to-br from-white to-neutral-50 rounded-xl p-6 border border-neutral-100 shadow-soft hover:shadow-soft-lg transition-all duration-300">
