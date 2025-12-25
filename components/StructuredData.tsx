@@ -114,7 +114,7 @@ export function LocalBusinessSchema() {
       addressLocality: broker.mailingAddress?.addressLocality || business.address.addressLocality,
       addressRegion: broker.mailingAddress?.addressRegion || business.address.addressRegion,
       postalCode: broker.mailingAddress?.postalCode || business.address.postalCode,
-      addressCountry: broker.mailingAddress?.addressCountry || business.address.addressCountry,
+      addressCountry: business.brokerMailingAddress?.addressCountry || business.address.addressCountry,
     },
     identifier: {
       '@type': 'PropertyValue',
