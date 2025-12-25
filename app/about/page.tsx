@@ -7,19 +7,19 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
-  title: 'About Our Real Estate Team | Just Call Gene',
-  description: 'Meet Eugene Joseph Boyle and Kelly Lynn Boyle, Orange County\'s premier real estate team. Over 20 years of experience, $200M+ in sales, specializing in probate real estate, luxury homes, and corporate relocation.',
+  title: 'About Our Probate Real Estate Team | Just Call Gene',
+  description: 'Meet Eugene Joseph Boyle and Kelly Lynn Boyle, Orange County\'s premier probate real estate specialists. Certified Probate Real Estate Specialists (CPRES) with over 20 years of experience and $200M+ in probate property sales.',
   keywords: [
-    'real estate team Orange County',
-    'Eugene Boyle realtor',
-    'Kelly Boyle broker',
-    'Orange County real estate agents',
+    'probate real estate team Orange County',
+    'Eugene Boyle probate specialist',
+    'Kelly Boyle probate broker',
+    'Orange County probate real estate agents',
     'probate real estate specialist',
-    'luxury home marketing',
+    'CPRES certified',
   ],
   openGraph: {
-    title: 'About Our Real Estate Team | Just Call Gene',
-    description: 'Meet Orange County\'s premier real estate team with over 20 years of experience and $200M+ in sales.',
+    title: 'About Our Probate Real Estate Specialists | Just Call Gene',
+    description: 'Meet Orange County\'s premier probate real estate specialists with over 20 years of experience and $200M+ in probate property sales.',
     url: `${siteConfig.url}/about`,
   },
   alternates: {
@@ -72,17 +72,17 @@ export default function AboutPage() {
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Integrity First</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                We conduct every transaction with the highest ethical standards. Our clients trust us because we're honest, transparent, and always act in their best interests. This commitment to integrity has earned us a reputation as one of Orange County's most trusted real estate teams.
+                We conduct every probate transaction with the highest ethical standards. Our clients trust us because we're honest, transparent, and always act in their best interests. This commitment to integrity has earned us a reputation as one of Orange County's most trusted probate real estate specialists.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Results-Driven Approach</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                We measure our success by your success. Our track record speaks for itself: over $200 million in sales, hundreds of satisfied clients, and recognition as a top realtor in Orange County. We combine market expertise, strategic thinking, and proven methodologies to deliver results that exceed expectations.
+                We measure our success by your success. Our track record speaks for itself: over $200 million in probate property sales, hundreds of satisfied families, and recognition as Orange County's premier probate real estate specialists. We combine probate expertise, strategic thinking, and proven methodologies to deliver results that exceed expectations.
               </p>
 
-              <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Client-Centered Service</h3>
+              <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Compassionate Service</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Every client is unique, and we tailor our approach to meet your specific needs, timeline, and goals. We take the time to understand your situation, answer your questions, and provide the guidance you need to make informed decisions. Your success is our success, and we're committed to going above and beyond to ensure you achieve your real estate objectives.
+                Every probate situation is unique, and we tailor our approach to meet your specific needs, timeline, and goals. We understand the emotional challenges families face during probate, and we take the time to understand your situation, answer your questions, and provide the guidance you need to make informed decisions. Your success is our success, and we're committed to going above and beyond to ensure you achieve your probate property sale objectives.
               </p>
             </div>
           </div>

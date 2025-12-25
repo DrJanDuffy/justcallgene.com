@@ -20,7 +20,7 @@ export function CoffeeSection() {
           Coffee With <span className="italic text-blue-200">{siteConfig.business.agentName}</span>
         </h2>
         <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-2xl mx-auto animate-fade-in-up">
-          Let's discuss your real estate goals over coffee.
+          Let's discuss your probate property sale over coffee.
         </p>
         <Button
           href="/contact"
@@ -28,7 +28,7 @@ export function CoffeeSection() {
           size="lg"
           className="border-2 border-white text-white hover:bg-white hover:text-primary shadow-glow hover:shadow-glow-lg"
         >
-          Let's Get A Coffee
+          Schedule Probate Consultation
         </Button>
       </div>
     </section>

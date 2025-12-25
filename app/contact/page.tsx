@@ -4,19 +4,19 @@ import { siteConfig } from '@/lib/config';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Real Estate Team in Orange County, CA',
-  description: `Contact ${siteConfig.business.name} at ${siteConfig.business.phoneFormatted}. Real estate experts serving Newport Beach, Irvine, and Corona Del Mar. Get your free consultation today.`,
+  title: 'Contact Probate Real Estate Specialists | Orange County, CA',
+  description: `Contact ${siteConfig.business.name} at ${siteConfig.business.phoneFormatted}. Certified Probate Real Estate Specialists (CPRES) serving Newport Beach, Irvine, and Corona Del Mar. Free probate consultation.`,
   keywords: [
-    'contact real estate agent',
-    'Orange County realtor contact',
-    'Newport Beach real estate agent',
-    'real estate consultation',
-    'home valuation request',
+    'contact probate real estate specialist',
+    'Orange County probate realtor contact',
+    'Newport Beach probate specialist',
+    'probate consultation',
+    'probate property valuation request',
     siteConfig.business.phone,
   ],
   openGraph: {
-    title: 'Contact Just Call Gene - Real Estate Team',
-    description: `Get in touch with our real estate team. Call ${siteConfig.business.phoneFormatted} or email ${siteConfig.business.email} for your free consultation.`,
+    title: 'Contact Just Call Gene - Probate Real Estate Specialists',
+    description: `Get in touch with our probate real estate specialists. Call ${siteConfig.business.phoneFormatted} or email ${siteConfig.business.email} for your free probate consultation.`,
     url: `${siteConfig.url}/contact`,
   },
   alternates: {
@@ -51,7 +51,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-neutral-100 max-w-3xl mx-auto animate-fade-in-up">
-            Get in touch with our team today
+            Contact our probate real estate specialists for your free consultation
           </p>
         </div>
       </section>

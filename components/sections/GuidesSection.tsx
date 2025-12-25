@@ -4,34 +4,34 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 
 export function GuidesSection() {
-  const [buyerFormData, setBuyerFormData] = useState({
+  const [probateProcessFormData, setProbateProcessFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
   });
 
-  const [sellerFormData, setSellerFormData] = useState({
+  const [valuationFormData, setValuationFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
   });
 
-  const handleBuyerSubmit = (e: React.FormEvent) => {
+  const handleProbateProcessSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Placeholder - would integrate with form handler
-    console.log('Buyer guide request:', buyerFormData);
-    alert('Thank you! Your Buyer\'s Guide will be sent shortly.');
-    setBuyerFormData({ firstName: '', lastName: '', email: '', phone: '' });
+    console.log('Probate process guide request:', probateProcessFormData);
+    alert('Thank you! Your Probate Process Guide will be sent shortly.');
+    setProbateProcessFormData({ firstName: '', lastName: '', email: '', phone: '' });
   };
 
-  const handleSellerSubmit = (e: React.FormEvent) => {
+  const handleValuationSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Placeholder - would integrate with form handler
-    console.log('Seller guide request:', sellerFormData);
-    alert('Thank you! Your Seller\'s Guide will be sent shortly.');
-    setSellerFormData({ firstName: '', lastName: '', email: '', phone: '' });
+    console.log('Probate valuation guide request:', valuationFormData);
+    alert('Thank you! Your Probate Property Valuation Guide will be sent shortly.');
+    setValuationFormData({ firstName: '', lastName: '', email: '', phone: '' });
   };
 
   return (
@@ -46,20 +46,19 @@ export function GuidesSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             GET MY{' '}
             <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              FREE GUIDES
-            </span>{' '}
-            BELOW
+              FREE PROBATE GUIDES
+            </span>
           </h2>
           <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-            Selling Secrets You Can't Afford To Miss & Your Guide to Purchasing A Home
+            Probate Process Guide & Probate Property Valuation Guide
           </p>
           <p className="text-base text-neutral-500 mt-2">
-            Simply fill out your information below, and we'll send you a copy covering both how to get more money for your home and how to get more home for your money!
+            Simply fill out your information below, and we'll send you comprehensive guides covering the probate process and how to maximize your probate property value.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Buyer's Guide Form */}
+          {/* Probate Process Guide Form */}
           <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft-lg p-8 border border-neutral-100 hover:shadow-soft-lg transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="bg-gradient-to-r from-primary to-primary-dark p-3 rounded-xl mr-4">
@@ -68,68 +67,68 @@ export function GuidesSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-neutral-900">
-                Get The Buyer's Guide
+                Probate Process Guide
               </h3>
             </div>
-            <form onSubmit={handleBuyerSubmit} className="space-y-4">
+            <form onSubmit={handleProbateProcessSubmit} className="space-y-4">
               <div>
-                <label htmlFor="buyer-first-name" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="probate-first-name" className="block text-sm font-medium text-neutral-700 mb-1">
                   First Name *
                 </label>
                 <input
                   type="text"
-                  id="buyer-first-name"
+                  id="probate-first-name"
                   required
-                  value={buyerFormData.firstName}
-                  onChange={(e) => setBuyerFormData({ ...buyerFormData, firstName: e.target.value })}
+                  value={probateProcessFormData.firstName}
+                  onChange={(e) => setProbateProcessFormData({ ...probateProcessFormData, firstName: e.target.value })}
                   className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
-                <label htmlFor="buyer-last-name" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="probate-last-name" className="block text-sm font-medium text-neutral-700 mb-1">
                   Last Name
                 </label>
                 <input
                   type="text"
-                  id="buyer-last-name"
-                  value={buyerFormData.lastName}
-                  onChange={(e) => setBuyerFormData({ ...buyerFormData, lastName: e.target.value })}
+                  id="probate-last-name"
+                  value={probateProcessFormData.lastName}
+                  onChange={(e) => setProbateProcessFormData({ ...probateProcessFormData, lastName: e.target.value })}
                   className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
-                <label htmlFor="buyer-email" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="probate-email" className="block text-sm font-medium text-neutral-700 mb-1">
                   Email *
                 </label>
                 <input
                   type="email"
-                  id="buyer-email"
+                  id="probate-email"
                   required
-                  value={buyerFormData.email}
-                  onChange={(e) => setBuyerFormData({ ...buyerFormData, email: e.target.value })}
+                  value={probateProcessFormData.email}
+                  onChange={(e) => setProbateProcessFormData({ ...probateProcessFormData, email: e.target.value })}
                   className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
-                <label htmlFor="buyer-phone" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="probate-phone" className="block text-sm font-medium text-neutral-700 mb-1">
                   Phone *
                 </label>
                 <input
                   type="tel"
-                  id="buyer-phone"
+                  id="probate-phone"
                   required
-                  value={buyerFormData.phone}
-                  onChange={(e) => setBuyerFormData({ ...buyerFormData, phone: e.target.value })}
+                  value={probateProcessFormData.phone}
+                  onChange={(e) => setProbateProcessFormData({ ...probateProcessFormData, phone: e.target.value })}
                   className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <Button type="submit" variant="primary" className="w-full">
-                Get The Buyer's Guide
+                Get Probate Process Guide
               </Button>
             </form>
           </div>
 
-          {/* Seller's Guide Form */}
+          {/* Probate Property Valuation Guide Form */}
           <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft-lg p-8 border border-neutral-100 hover:shadow-soft-lg transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="bg-gradient-to-r from-primary to-primary-dark p-3 rounded-xl mr-4">
@@ -138,63 +137,63 @@ export function GuidesSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-neutral-900">
-                Get The Seller's Guide
+                Probate Valuation Guide
               </h3>
             </div>
-            <form onSubmit={handleSellerSubmit} className="space-y-4">
+            <form onSubmit={handleValuationSubmit} className="space-y-4">
               <div>
-                <label htmlFor="seller-first-name" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="valuation-first-name" className="block text-sm font-medium text-neutral-700 mb-1">
                   First Name *
                 </label>
                 <input
                   type="text"
-                  id="seller-first-name"
+                  id="valuation-first-name"
                   required
-                  value={sellerFormData.firstName}
-                  onChange={(e) => setSellerFormData({ ...sellerFormData, firstName: e.target.value })}
+                  value={valuationFormData.firstName}
+                  onChange={(e) => setValuationFormData({ ...valuationFormData, firstName: e.target.value })}
                   className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
-                <label htmlFor="seller-last-name" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="valuation-last-name" className="block text-sm font-medium text-neutral-700 mb-1">
                   Last Name
                 </label>
                 <input
                   type="text"
-                  id="seller-last-name"
-                  value={sellerFormData.lastName}
-                  onChange={(e) => setSellerFormData({ ...sellerFormData, lastName: e.target.value })}
+                  id="valuation-last-name"
+                  value={valuationFormData.lastName}
+                  onChange={(e) => setValuationFormData({ ...valuationFormData, lastName: e.target.value })}
                   className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
-                <label htmlFor="seller-email" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="valuation-email" className="block text-sm font-medium text-neutral-700 mb-1">
                   Email *
                 </label>
                 <input
                   type="email"
-                  id="seller-email"
+                  id="valuation-email"
                   required
-                  value={sellerFormData.email}
-                  onChange={(e) => setSellerFormData({ ...sellerFormData, email: e.target.value })}
+                  value={valuationFormData.email}
+                  onChange={(e) => setValuationFormData({ ...valuationFormData, email: e.target.value })}
                   className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <div>
-                <label htmlFor="seller-phone" className="block text-sm font-medium text-neutral-700 mb-1">
+                <label htmlFor="valuation-phone" className="block text-sm font-medium text-neutral-700 mb-1">
                   Phone *
                 </label>
                 <input
                   type="tel"
-                  id="seller-phone"
+                  id="valuation-phone"
                   required
-                  value={sellerFormData.phone}
-                  onChange={(e) => setSellerFormData({ ...sellerFormData, phone: e.target.value })}
+                  value={valuationFormData.phone}
+                  onChange={(e) => setValuationFormData({ ...valuationFormData, phone: e.target.value })}
                   className="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 bg-white hover:border-primary/50"
                 />
               </div>
               <Button type="submit" variant="primary" className="w-full">
-                Get The Seller's Guide
+                Get Valuation Guide
               </Button>
             </form>
           </div>

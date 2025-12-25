@@ -118,7 +118,7 @@ export function Header() {
               Login
             </Link>
             <Button href="/contact" size="sm">
-              Book Consultation
+              Probate Consultation
             </Button>
           </div>
 
@@ -204,7 +204,7 @@ export function Header() {
                   Register
                 </Link>
                 <Button href="/contact" className="mt-2 ml-3" size="sm">
-                  Book Consultation
+                  Probate Consultation
                 </Button>
               </div>
             </nav>

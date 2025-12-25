@@ -14,12 +14,12 @@ export function AreasSection() {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            Areas I{' '}
+            Probate Properties We{' '}
             <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
               Serve
             </span>
           </h2>
-          <p className="text-lg text-neutral-600">Featured Areas</p>
+          <p className="text-lg text-neutral-600">Orange County Communities</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -46,7 +46,7 @@ export function AreasSection() {
                     {community.description}
                   </p>
                   <div className="flex items-center text-primary-light text-sm font-medium">
-                    <span>Explore Area</span>
+                    <span>Probate Properties</span>
                     <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>

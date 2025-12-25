@@ -29,9 +29,9 @@ export function BrokerSection() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
-                Meet Your Real Estate{' '}
+                Meet Your Probate Real Estate{' '}
                 <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-                  Team
+                  Specialists
                 </span>
               </h2>
               <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-6">
@@ -50,10 +50,10 @@ export function BrokerSection() {
 
             <div className="space-y-4">
               <p className="text-base text-neutral-600">
-                I'm a Corporate & Military Relocation Specialist, and have completed designations including 
-                Commercial Real Estate Certification, 
-                Probate Real Estate Specialist (CPRES) & Probate Expert (CPE). 
-                Prior to residential sales, I specialized in land brokerage, investment, and development.
+                We are Certified Probate Real Estate Specialists (CPRES) and Probate Experts (CPE), 
+                dedicated exclusively to probate property sales in Orange County. Our probate expertise, 
+                combined with deep knowledge of Orange County's real estate markets, ensures families 
+                receive the specialized guidance needed to navigate probate transactions successfully.
               </p>
             </div>
 

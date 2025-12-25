@@ -27,12 +27,12 @@ export function TestimonialsSection() {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            What My{' '}
+            What Our{' '}
             <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              Clients Say
+              Probate Clients Say
             </span>
           </h2>
-          <p className="text-lg text-neutral-600">Testimonials</p>
+          <p className="text-lg text-neutral-600">Probate Client Testimonials</p>
         </div>
 
         <div className="max-w-4xl mx-auto">

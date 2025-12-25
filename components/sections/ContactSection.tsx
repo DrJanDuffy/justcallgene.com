@@ -33,10 +33,10 @@ export function ContactSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Let's{' '}
             <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              Talk
+              Discuss Your Probate Property
             </span>
           </h2>
-          <p className="text-lg text-neutral-600">Get In Touch</p>
+          <p className="text-lg text-neutral-600">Contact Our Probate Real Estate Specialists</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

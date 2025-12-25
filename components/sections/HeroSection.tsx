@@ -21,9 +21,9 @@ export function HeroSection() {
         <div className="space-y-8">
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-up">
-            Real Estate{' '}
+            Probate Real Estate{' '}
             <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">
-              AGENTS & BROKER
+              SPECIALISTS
             </span>
             <br />
             <span className="text-white">in Orange County, CA</span>
@@ -31,7 +31,7 @@ export function HeroSection() {
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl lg:text-3xl font-light text-neutral-100 max-w-3xl mx-auto animate-fade-in-up delay-200">
-            Helping You Move Forward—The Professional Way
+            Certified Probate Experts Helping Families Navigate Inherited Property Sales
           </p>
           
           {/* CTA Buttons */}
@@ -42,7 +42,7 @@ export function HeroSection() {
               size="lg"
               className="w-full sm:w-auto"
             >
-              Probate Realtor Consultation
+              Free Probate Consultation
             </Button>
             <Button
               href="/contact"
@@ -50,7 +50,7 @@ export function HeroSection() {
               size="lg"
               className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-neutral-900"
             >
-              Book Free Consultation
+              Contact Probate Specialists
             </Button>
           </div>
           
