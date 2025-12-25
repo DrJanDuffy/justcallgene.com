@@ -27,6 +27,14 @@ export const metadata: Metadata = {
     description: 'Certified Probate Real Estate Specialist helping families sell inherited properties in Orange County with expertise and compassion.',
     url: siteConfig.url,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - Probate Real Estate Specialist`,
+      },
+    ],
   },
   alternates: {
     canonical: siteConfig.url,
