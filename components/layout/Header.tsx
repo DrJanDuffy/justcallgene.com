@@ -194,7 +194,9 @@ export function Header() {
                   
                   {hasDropdown && (
                     <div
-                      ref={(el) => (dropdownRefs.current[item.id] = el)}
+                      ref={(el) => {
+                        dropdownRefs.current[item.id] = el;
+                      }}
                       id={`dropdown-${item.id}`}
                       className={`absolute left-0 mt-2 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-depth-lg py-2 border border-neutral-100/50 transition-modern ${
                         isOpen 
