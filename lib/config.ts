@@ -113,7 +113,6 @@ export const siteConfig = {
       'Real Estate Salesperson License #02282581 (Eugene Joseph Boyle)',
       'Probate Real Estate Specialist (CPRES)',
       'Probate Expert (CPE)',
-      'Commercial Real Estate Certification',
       'Registered U.S. Patent Agent (USPTO #55,018)',
       'Former CFO - AMEX-Listed Company (IPO Experience)',
       'JD/MBA in Entrepreneurship',
