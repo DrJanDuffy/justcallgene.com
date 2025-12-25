@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     title: 'Contact Just Call Gene - Probate Real Estate Specialists',
     description: `Get in touch with our probate real estate specialists. Call ${siteConfig.business.phoneFormatted} or email ${siteConfig.business.email} for your free probate consultation.`,
     url: `${siteConfig.url}/contact`,
+    images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/contact`,

@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     title: 'Probate Real Estate Specialist - Orange County, CA',
     description: 'Probate Real Estate Specialist helping families navigate probate property sales in Orange County with expertise and compassion.',
     url: `${siteConfig.url}/probate`,
+    images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/probate`,

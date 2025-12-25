@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     title: 'Probate Real Estate Services | Orange County, CA',
     description: 'Comprehensive probate real estate services for inherited property sales in Orange County.',
     url: `${siteConfig.url}/services`,
+    images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/services`,

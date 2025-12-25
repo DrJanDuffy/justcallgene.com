@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     title: 'About Our Probate Real Estate Specialists | Just Call Gene',
     description: 'Meet Orange County\'s premier probate real estate specialists with over 20 years of experience and $200M+ in probate property sales.',
     url: `${siteConfig.url}/about`,
+    images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/about`,
