@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: cleanUrl,
       lastModified: today,
       changeFrequency: 'weekly',
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: `${cleanUrl}/about`,
@@ -29,14 +29,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${cleanUrl}/probate`,
       lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
       url: `${cleanUrl}/search`,
       lastModified: today,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
     {
       url: `${cleanUrl}/search/advanced`,
@@ -60,31 +60,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${cleanUrl}/sellers/valuation`,
       lastModified: today,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${cleanUrl}/sellers/relocation`,
       lastModified: today,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${cleanUrl}/buyers/mortgage-calculator`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${cleanUrl}/blog`,
       lastModified: today,
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${cleanUrl}/media/videos`,
       lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
       url: `${cleanUrl}/media/market-updates`,
       lastModified: today,
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${cleanUrl}/login`,
@@ -117,7 +123,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${cleanUrl}/communities/${community.slug}`,
     lastModified: today,
     changeFrequency: 'monthly',
-    priority: 0.8,
+    priority: 0.9,
   }));
 
   // Blog posts (IDs 1-6)
@@ -125,15 +131,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${cleanUrl}/blog/${id}`,
     lastModified: today,
     changeFrequency: 'monthly',
-    priority: 0.7,
+    priority: 0.8,
   }));
 
   // Listing pages
   const listingPages: MetadataRoute.Sitemap = featuredListings.map((listing) => ({
     url: `${cleanUrl}/listings/${listing.id}`,
     lastModified: today,
-    changeFrequency: 'weekly',
-    priority: 0.8,
+    changeFrequency: 'daily',
+    priority: 0.9,
   }));
 
   // Market update pages (IDs 1-4)

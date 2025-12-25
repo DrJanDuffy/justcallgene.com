@@ -1,6 +1,8 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { siteConfig } from '@/lib/config';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -171,6 +173,47 @@ export async function generateStaticParams() {
   return Object.keys(blogPosts).map((id) => ({ id }));
 }
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const post = blogPosts[id];
+
+  if (!post) {
+    return {
+      title: 'Blog Post Not Found',
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    keywords: [
+      post.category.toLowerCase(),
+      'real estate tips',
+      'Orange County real estate',
+      'home buying advice',
+      'home selling tips',
+    ],
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `${siteConfig.url}/blog/${id}`,
+      type: 'article',
+      publishedTime: post.date,
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/blog/${id}`,
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { id } = await params;
   const post = blogPosts[id];
@@ -238,5 +281,6 @@ export default async function BlogPostPage({ params }: Props) {
     </div>
   );
 }
+
 
 

@@ -1,10 +1,38 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'About Us - Real Estate Team in Orange County, CA',
+  description: 'Meet Eugene Joseph Boyle (Real Estate Salesperson #02282581) and Kelly Lynn Boyle (Real Estate Broker #02012693). Expert real estate professionals serving Newport Beach, Irvine, and Corona Del Mar with over 20 years of combined experience.',
+  keywords: [
+    'real estate agent Orange County',
+    'real estate broker California',
+    'Eugene Boyle realtor',
+    'Kelly Boyle broker',
+    'Newport Beach real estate agent',
+    'Irvine real estate',
+    'Corona Del Mar real estate',
+    'probate real estate specialist',
+  ],
+  openGraph: {
+    title: 'About Just Call Gene - Real Estate Team in Orange County, CA',
+    description: 'Meet our expert real estate team serving Newport Beach, Irvine, and Corona Del Mar with over 20 years of combined experience.',
+    url: `${siteConfig.url}/about`,
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/about`,
+  },
+};
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'About', url: '/about' },
+      ]} />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">
         {/* Decorative Elements */}

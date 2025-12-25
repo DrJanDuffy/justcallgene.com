@@ -1,8 +1,10 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { communities } from '@/lib/data';
 import { Button } from '@/components/ui/Button';
+import { siteConfig } from '@/lib/config';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -12,6 +14,38 @@ export async function generateStaticParams() {
   return communities.map((community) => ({
     slug: community.slug,
   }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const community = communities.find((c) => c.slug === slug);
+
+  if (!community) {
+    return {
+      title: 'Community Not Found',
+    };
+  }
+
+  return {
+    title: `Homes for Sale in ${community.name}, CA - Real Estate Guide`,
+    description: `${community.description} Find homes for sale, market insights, and neighborhood information for ${community.name}, Orange County, CA.`,
+    keywords: [
+      `homes for sale ${community.name}`,
+      `${community.name} real estate`,
+      `${community.name} homes`,
+      `real estate ${community.name} CA`,
+      `Orange County ${community.name}`,
+      'Orange County real estate',
+    ],
+    openGraph: {
+      title: `Homes for Sale in ${community.name}, CA`,
+      description: `${community.description} Expert real estate services in ${community.name}, Orange County.`,
+      url: `${siteConfig.url}/communities/${slug}`,
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/communities/${slug}`,
+    },
+  };
 }
 
 export default async function CommunityPage({ params }: Props) {
@@ -24,6 +58,11 @@ export default async function CommunityPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Communities', url: '/communities' },
+        { name: community.name, url: `/communities/${slug}` },
+      ]} />
       {/* Hero Section */}
       <section className="relative h-96">
         <Image

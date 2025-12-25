@@ -1,8 +1,35 @@
+import { Metadata } from 'next';
 import { ContactSection } from '@/components/sections/ContactSection';
+import { siteConfig } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'Contact Us - Real Estate Team in Orange County, CA',
+  description: `Contact ${siteConfig.business.name} at ${siteConfig.business.phoneFormatted}. Real estate experts serving Newport Beach, Irvine, and Corona Del Mar. Get your free consultation today.`,
+  keywords: [
+    'contact real estate agent',
+    'Orange County realtor contact',
+    'Newport Beach real estate agent',
+    'real estate consultation',
+    'home valuation request',
+    siteConfig.business.phone,
+  ],
+  openGraph: {
+    title: 'Contact Just Call Gene - Real Estate Team',
+    description: `Get in touch with our real estate team. Call ${siteConfig.business.phoneFormatted} or email ${siteConfig.business.email} for your free consultation.`,
+    url: `${siteConfig.url}/contact`,
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/contact`,
+  },
+};
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Contact', url: '/contact' },
+      ]} />
       <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden">

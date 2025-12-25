@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { LocalBusinessSchema } from "@/components/StructuredData";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/config";
@@ -25,13 +26,23 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    'real estate',
     'real estate agent',
-    siteConfig.business.address.addressLocality || 'Las Vegas',
-    'homes for sale',
+    'real estate broker',
+    'Orange County real estate',
+    'Newport Beach real estate',
+    'Irvine real estate',
+    'Corona Del Mar real estate',
+    'homes for sale Orange County',
     'property valuation',
     'home buying',
     'home selling',
+    'probate real estate',
+    'real estate salesperson',
+    siteConfig.business.address.addressLocality,
+    'California real estate',
+    'coastal real estate',
+    'luxury homes',
+    'real estate team',
   ],
   authors: [{ name: siteConfig.business.name }],
   creator: siteConfig.business.name,
@@ -43,22 +54,23 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
-    // Add OG image when available
-    // images: [
-    //   {
-    //     url: `${siteConfig.url}/og-image.jpg`,
-    //     width: 1200,
-    //     height: 630,
-    //     alt: siteConfig.name,
-    //   },
-    // ],
+    images: [
+      {
+        url: `${siteConfig.url}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - ${siteConfig.description}`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    // Add Twitter image when available
-    // images: [`${siteConfig.url}/og-image.jpg`],
+    images: [`${siteConfig.url}/og-image.jpg`],
+  },
+  alternates: {
+    canonical: siteConfig.url,
   },
   robots: {
     index: true,

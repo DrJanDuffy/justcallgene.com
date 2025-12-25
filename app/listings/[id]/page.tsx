@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,6 +20,48 @@ function formatPrice(price: number): string {
 
 export async function generateStaticParams() {
   return featuredListings.map((listing) => ({ id: listing.id }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const listing = featuredListings.find((l) => l.id === id);
+
+  if (!listing) {
+    return {
+      title: 'Listing Not Found',
+    };
+  }
+
+  const title = `${formatPrice(listing.price)} - ${listing.address}, ${listing.city}, ${listing.state}`;
+  const description = `${listing.beds} bed, ${listing.baths} bath, ${listing.sqft.toLocaleString()} sqft home for sale in ${listing.city}, ${listing.state}. ${listing.status}. Contact ${siteConfig.business.name} for more information.`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      `homes for sale ${listing.city}`,
+      `${listing.city} real estate`,
+      `${listing.address} ${listing.city}`,
+      `property ${listing.city} CA`,
+      'Orange County real estate',
+    ],
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.url}/listings/${id}`,
+      images: [
+        {
+          url: listing.image,
+          width: 1200,
+          height: 630,
+          alt: `${listing.address}, ${listing.city}`,
+        },
+      ],
+    },
+    alternates: {
+      canonical: `${siteConfig.url}/listings/${id}`,
+    },
+  };
 }
 
 export default async function ListingDetailPage({ params }: Props) {

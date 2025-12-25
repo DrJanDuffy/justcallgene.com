@@ -1,10 +1,38 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { siteConfig } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'Probate Real Estate Specialist in Orange County, CA',
+  description: 'Certified Probate Real Estate Specialist (CPRES) and Certified Probate Expert (CPE) serving Orange County. Expert guidance for probate property sales in Newport Beach, Irvine, and Corona Del Mar.',
+  keywords: [
+    'probate real estate',
+    'probate realtor Orange County',
+    'probate property sales',
+    'CPRES certified',
+    'probate real estate specialist',
+    'Orange County probate',
+    'California probate real estate',
+    'probate home sales',
+  ],
+  openGraph: {
+    title: 'Probate Real Estate Specialist - Orange County, CA',
+    description: 'Certified Probate Real Estate Specialist helping families navigate probate property sales in Orange County with expertise and compassion.',
+    url: `${siteConfig.url}/probate`,
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/probate`,
+  },
+};
 
 export default function ProbatePage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Probate Realtor', url: '/probate' },
+      ]} />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">
         {/* Decorative Elements */}

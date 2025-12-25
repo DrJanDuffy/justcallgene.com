@@ -1,4 +1,32 @@
+import { Metadata } from 'next';
 import { SearchWidget } from '@/components/search/SearchWidget';
+import { siteConfig } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'Search Homes for Sale in Orange County, CA',
+  description: 'Search homes for sale in Newport Beach, Irvine, Corona Del Mar, and throughout Orange County, CA. Find your dream home with our comprehensive property search.',
+  keywords: [
+    'homes for sale Orange County',
+    'property search',
+    'Newport Beach homes for sale',
+    'Irvine real estate listings',
+    'Corona Del Mar homes',
+    'Orange County property search',
+    'real estate listings',
+  ],
+  openGraph: {
+    title: 'Search Homes for Sale in Orange County, CA',
+    description: 'Find your dream home in Orange County with our comprehensive property search. Browse listings in Newport Beach, Irvine, Corona Del Mar, and more.',
+    url: `${siteConfig.url}/search`,
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/search`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function SearchPage() {
   return (

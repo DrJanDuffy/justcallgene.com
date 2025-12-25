@@ -1,5 +1,29 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { siteConfig } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'Real Estate Blog - Orange County Market Insights & Tips',
+  description: 'Expert real estate insights, tips, and market updates for Orange County, CA. Learn about buying, selling, and investing in Newport Beach, Irvine, and Corona Del Mar.',
+  keywords: [
+    'real estate blog',
+    'Orange County real estate news',
+    'home buying tips',
+    'home selling advice',
+    'real estate market updates',
+    'Newport Beach real estate',
+    'Irvine market trends',
+  ],
+  openGraph: {
+    title: 'Real Estate Blog - Orange County Market Insights',
+    description: 'Expert insights and tips for buying, selling, and investing in Orange County real estate.',
+    url: `${siteConfig.url}/blog`,
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/blog`,
+  },
+};
 
 export default function BlogPage() {
   const posts = [
