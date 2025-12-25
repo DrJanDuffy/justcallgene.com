@@ -25,7 +25,7 @@ export function ServicesSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Probate Property Valuation Section */}
-          <div className="bg-white rounded-2xl shadow-soft-lg overflow-hidden group hover:shadow-soft-lg transition-all duration-300 border border-neutral-100 hover:border-primary/20 hover:-translate-y-1">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-depth overflow-hidden group hover:shadow-glow transition-modern border border-neutral-100/50 hover:border-primary/30 hover-lift">
             <div className="relative h-64 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
               <Image
@@ -39,7 +39,7 @@ export function ServicesSection() {
               <h3 className="text-xl font-semibold text-neutral-600 mb-2 uppercase tracking-wide">
                 NEED A VALUATION FOR
               </h3>
-              <h4 className="text-3xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent mb-4">
+              <h4 className="text-3xl font-bold gradient-text-modern bg-clip-text text-transparent mb-4">
                 Probate Property?
               </h4>
               <p className="text-neutral-700 mb-6 leading-relaxed">

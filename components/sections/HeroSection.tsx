@@ -3,18 +3,20 @@ import { siteConfig } from '@/lib/config';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white overflow-hidden">
-      {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/50 via-neutral-900/80 to-blue-950/50 animate-pulse"></div>
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-neutral-900 via-primary-900/20 to-neutral-900 text-white overflow-hidden">
+      {/* Animated Background Gradient - 2026 Style */}
+      <div className="absolute inset-0 bg-gradient-modern opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/30 via-neutral-900/90 to-primary-900/30"></div>
       
-      {/* Decorative Elements */}
+      {/* Decorative Elements - Enhanced */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl animate-pulse-glow"></div>
       </div>
       
-      {/* Background Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+      {/* Background Overlay - Glassmorphism */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 backdrop-blur-sm"></div>
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -22,15 +24,15 @@ export function HeroSection() {
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-up">
             Probate Real Estate{' '}
-            <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">
+            <span className="gradient-text-modern bg-clip-text text-transparent">
               SPECIALISTS
             </span>
             <br />
-            <span className="text-white">in Orange County, CA</span>
+            <span className="text-white drop-shadow-lg">in Orange County, CA</span>
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl lg:text-3xl font-light text-neutral-100 max-w-3xl mx-auto animate-fade-in-up delay-200">
+          <p className="text-xl md:text-2xl lg:text-3xl font-light text-neutral-100 max-w-3xl mx-auto animate-fade-in-up drop-shadow-md" style={{ animationDelay: '0.2s' }}>
             Certified Probate Experts Helping Families Navigate Inherited Property Sales
           </p>
           

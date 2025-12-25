@@ -59,7 +59,7 @@ export function GuidesSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Probate Process Guide Form */}
-          <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft-lg p-8 border border-neutral-100 hover:shadow-soft-lg transition-all duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-depth p-8 border border-neutral-100/50 hover:shadow-glow transition-modern hover-lift">
             <div className="flex items-center mb-6">
               <div className="bg-gradient-to-r from-primary to-primary-dark p-3 rounded-xl mr-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,7 +129,7 @@ export function GuidesSection() {
           </div>
 
           {/* Probate Property Valuation Guide Form */}
-          <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft-lg p-8 border border-neutral-100 hover:shadow-soft-lg transition-all duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-depth p-8 border border-neutral-100/50 hover:shadow-glow transition-modern hover-lift">
             <div className="flex items-center mb-6">
               <div className="bg-gradient-to-r from-primary to-primary-dark p-3 rounded-xl mr-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

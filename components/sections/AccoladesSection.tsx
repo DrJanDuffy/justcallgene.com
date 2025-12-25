@@ -23,7 +23,7 @@ export function AccoladesSection() {
           {accolades.map((accolade, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 text-center border border-neutral-100 hover:-translate-y-1 group animate-fade-in-up"
+              className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-depth hover:shadow-glow transition-modern text-center border border-neutral-100/50 hover-lift group animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">

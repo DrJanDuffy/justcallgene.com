@@ -8,7 +8,7 @@ export function BrokerSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image */}
-          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-soft-lg group">
+          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-depth-lg group hover:shadow-glow transition-modern">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
             <Image
               src="/placeholder-broker.jpg"

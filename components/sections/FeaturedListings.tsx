@@ -24,7 +24,7 @@ export function FeaturedListings() {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-2">
               Featured{' '}
-              <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+              <span className="gradient-text-modern bg-clip-text text-transparent">
                 PROBATE PROPERTIES
               </span>
             </h2>

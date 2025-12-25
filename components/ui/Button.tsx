@@ -27,12 +27,12 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     loading = false,
     'aria-label': ariaLabel,
   }, ref) => {
-    const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0';
+    const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-xl transition-modern focus:outline-none focus:ring-2 focus:ring-offset-2 hover-lift active:scale-95';
     
     const variants = {
-      primary: 'bg-gradient-to-r from-primary to-primary-dark text-white hover:from-primary-dark hover:to-primary focus:ring-primary shadow-primary/20 hover:shadow-primary/30',
-      secondary: 'bg-gradient-to-r from-secondary to-secondary-dark text-white hover:from-secondary-dark hover:to-secondary focus:ring-secondary',
-      outline: 'border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:to-primary-dark hover:text-white focus:ring-primary bg-white',
+      primary: 'bg-gradient-to-r from-primary via-primary-light to-primary-dark text-white hover:shadow-glow focus:ring-primary shadow-depth hover:shadow-glow-lg',
+      secondary: 'bg-gradient-to-r from-secondary via-secondary-light to-secondary-dark text-white hover:shadow-glow-secondary focus:ring-secondary shadow-depth',
+      outline: 'border-2 border-primary text-primary hover:bg-gradient-to-r hover:from-primary hover:via-primary-light hover:to-primary-dark hover:text-white hover:border-transparent focus:ring-primary bg-white/80 backdrop-blur-sm hover:shadow-glow',
     };
     
     const sizes = {

@@ -36,7 +36,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 md:p-12 relative shadow-soft-lg border border-neutral-100">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 relative shadow-depth-lg border border-neutral-100/50 glass">
             {/* Decorative Quote Icon */}
             <div className="absolute top-6 left-6 opacity-10">
               <svg className="w-24 h-24 text-primary" fill="currentColor" viewBox="0 0 24 24">
@@ -103,7 +103,7 @@ export function TestimonialsSection() {
 
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-soft-lg hover:shadow-glow hover:bg-primary hover:text-white transition-all duration-300 group"
+              className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/90 backdrop-blur-sm shadow-depth hover:shadow-glow hover:bg-primary hover:text-white transition-modern hover-scale group"
               aria-label="Next testimonial"
             >
               <svg

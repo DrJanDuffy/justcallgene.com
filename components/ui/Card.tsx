@@ -14,12 +14,12 @@ interface CardProps {
 
 export const Card = forwardRef<HTMLDivElement | HTMLAnchorElement, CardProps>(
   ({ children, href, className = '', style, onClick, disabled = false, variant = 'default', 'aria-label': ariaLabel }, ref) => {
-    const baseStyles = 'bg-white rounded-xl transition-all duration-300 overflow-hidden';
+    const baseStyles = 'bg-white/90 backdrop-blur-sm rounded-2xl transition-modern overflow-hidden';
     
     const variantStyles = {
-      default: 'shadow-soft hover:shadow-soft-lg border border-neutral-100 hover:border-primary/20 hover:-translate-y-1',
-      elevated: 'shadow-soft-lg hover:shadow-glow border border-neutral-200 hover:-translate-y-1',
-      outlined: 'shadow-none hover:shadow-soft border-2 border-neutral-200 hover:border-primary/30',
+      default: 'shadow-soft hover:shadow-depth-lg border border-neutral-100/50 hover:border-primary/30 hover-lift',
+      elevated: 'shadow-depth hover:shadow-glow border border-neutral-200/50 hover-lift',
+      outlined: 'shadow-none hover:shadow-soft border-2 border-neutral-200 hover:border-primary/40 bg-white/80 backdrop-blur-sm',
     };
     
     const disabledStyles = disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : '';
