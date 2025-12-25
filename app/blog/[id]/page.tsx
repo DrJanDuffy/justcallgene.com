@@ -113,7 +113,7 @@ Each of these neighborhoods offers something unique, but they all share common t
 
 **Opportunities for Buyers**: Probate sales can sometimes offer good value, as executors may prioritize a quick sale over maximum price.
 
-**Professional Help is Essential**: Working with a Certified Probate Real Estate Specialist ensures the process goes smoothly and all legal requirements are met.`,
+**Professional Help is Essential**: Working with a Probate Real Estate Specialist ensures the process goes smoothly and all legal requirements are met.`,
   },
   '5': {
     id: '5',

@@ -25,7 +25,7 @@ export const siteConfig = {
         extendedBio: 'With a unique combination of finance, law, and analytical expertise, I bring a comprehensive approach to real estate. As a former CFO who led an AMEX-listed company through IPO and SEC compliance, I understand the financial complexities of real estate transactions. My JD/MBA background provides deep insight into contracts, negotiations, and strategic planning. Combined with over 20 years of real estate experience in Orange County\'s premier coastal communities, I offer clients unparalleled expertise in both residential and commercial transactions.',
         credentials: [
           'Real Estate Salesperson License #02282581',
-          'Certified Probate Real Estate Specialist (CPRES)',
+          'Probate Real Estate Specialist (CPRES)',
           'Certified Probate Expert (CPE)',
           'Commercial Real Estate Certification',
           'Corporate & Military Relocation Specialist',
@@ -54,7 +54,7 @@ export const siteConfig = {
         credentials: [
           'Real Estate Broker License #02012693 (Licensed since 2017)',
           'License Expiration: 11/08/2029',
-          'Certified Probate Real Estate Specialist (CPRES)',
+          'Probate Real Estate Specialist (CPRES)',
           'Corporate & Military Relocation Specialist',
         ],
       },
@@ -114,7 +114,7 @@ export const siteConfig = {
     credentials: [
       'Real Estate Broker License #02012693 (Kelly Lynn Boyle - Licensed since 2017)',
       'Real Estate Salesperson License #02282581 (Eugene Joseph Boyle)',
-      'Certified Probate Real Estate Specialist (CPRES)',
+      'Probate Real Estate Specialist (CPRES)',
       'Certified Probate Expert (CPE)',
       'Commercial Real Estate Certification',
       'Corporate & Military Relocation Specialist',

@@ -5,7 +5,7 @@ import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Specialist in Orange County, CA',
-  description: 'Certified Probate Real Estate Specialist (CPRES) and Certified Probate Expert (CPE) serving Orange County. Expert guidance for probate property sales in Newport Beach, Irvine, and Corona Del Mar.',
+  description: 'Probate Real Estate Specialist (CPRES) and Certified Probate Expert (CPE) serving Orange County. Expert guidance for probate property sales in Newport Beach, Irvine, and Corona Del Mar.',
   keywords: [
     'probate real estate',
     'probate realtor Orange County',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Probate Real Estate Specialist - Orange County, CA',
-    description: 'Certified Probate Real Estate Specialist helping families navigate probate property sales in Orange County with expertise and compassion.',
+    description: 'Probate Real Estate Specialist helping families navigate probate property sales in Orange County with expertise and compassion.',
     url: `${siteConfig.url}/probate`,
   },
   alternates: {
@@ -73,11 +73,11 @@ export default function ProbatePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-neutral-900 mb-6">
-              Certified Probate Real Estate Specialist
+              Probate Real Estate Specialist
             </h2>
             <p className="text-lg text-neutral-700 leading-relaxed mb-6">
               Selling a probate property can be complex and emotionally challenging. 
-              As a Certified Probate Real Estate Specialist (CPRES) and Certified Probate Expert (CPE), 
+              As a Probate Real Estate Specialist (CPRES) and Certified Probate Expert (CPE), 
               I have the expertise and compassion to guide you through every step of the process.
             </p>
 

@@ -52,7 +52,7 @@ export function BrokerSection() {
               <p className="text-base text-neutral-600">
                 I'm a Corporate & Military Relocation Specialist, and have completed designations including 
                 Commercial Real Estate Certification, 
-                Certified Probate Real Estate Specialist (CPRES) & Certified Probate Expert (CPE). 
+                Probate Real Estate Specialist (CPRES) & Certified Probate Expert (CPE). 
                 Prior to residential sales, I specialized in land brokerage, investment, and development.
               </p>
             </div>
