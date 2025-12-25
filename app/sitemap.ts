@@ -54,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${cleanUrl}/buyers/mortgage-calculator`,
       lastModified: today,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${cleanUrl}/sellers/valuation`,
@@ -64,12 +64,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${cleanUrl}/sellers/relocation`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${cleanUrl}/buyers/mortgage-calculator`,
       lastModified: today,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -103,6 +97,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: today,
       changeFrequency: 'monthly',
       priority: 0.5,
+    },
+    {
+      url: `${cleanUrl}/forgot-password`,
+      lastModified: today,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
     {
       url: `${cleanUrl}/terms`,
