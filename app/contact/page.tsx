@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { siteConfig } from '@/lib/config';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Real Estate Team in Orange County, CA',

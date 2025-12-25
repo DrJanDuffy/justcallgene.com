@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { siteConfig } from '@/lib/config';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Specialist in Orange County, CA',

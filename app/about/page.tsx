@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'About Us - Real Estate Team in Orange County, CA',

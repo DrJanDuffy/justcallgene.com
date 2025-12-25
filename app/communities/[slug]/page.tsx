@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { communities } from '@/lib/data';
 import { Button } from '@/components/ui/Button';
 import { siteConfig } from '@/lib/config';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 type Props = {
   params: Promise<{ slug: string }>;
