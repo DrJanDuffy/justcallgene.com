@@ -63,7 +63,7 @@ export function TestimonialsSection() {
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">98%</div>
               <div className="text-slate-700">Client Satisfaction</div>
-              <div className="text-xs text-slate-600 mt-2">Based on 200+ families</div>
+              <div className="text-xs text-slate-600 mt-2">Based on proven expertise</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">4.9/5</div>

@@ -15,8 +15,8 @@ import { siteConfig } from '@/lib/config';
 import { communities, accolades } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'Orange County Probate Specialist | Gene Boyle | $200M+ Sold | Just Call Gene',
-  description: 'Orange County\'s top probate realtor. Gene Boyle has sold 200+ estates with 12% average premium. Free valuation. (949) 776-3527',
+  title: 'Orange County Probate Specialist | Gene Boyle | Expert Knowledge | Just Call Gene',
+  description: 'Orange County\'s top probate realtor. Gene Boyle brings deep probate knowledge and expertise with 12% average premium. Free valuation. (949) 776-3527',
   keywords: [
     'probate real estate specialist',
     'probate realtor Orange County',
@@ -83,7 +83,7 @@ export default function Home() {
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Our team, led by Eugene Joseph Boyle (Real Estate Salesperson License #02282581) and Kelly Lynn Boyle (Real Estate Broker License #02012693), brings over two decades of real estate experience combined with specialized probate training and certification. We understand that probate sales involve more than just real estate—they require sensitivity to family dynamics, compliance with court requirements, and expertise in navigating complex legal and financial situations.
+                Our team, led by Eugene Joseph Boyle (Real Estate Salesperson License #02282581) and Kelly Lynn Boyle (Real Estate Broker License #02012693), brings deep knowledge and expertise combined with specialized probate training and certification. We understand that probate sales involve more than just real estate—they require sensitivity to family dynamics, compliance with court requirements, and expertise in navigating complex legal and financial situations.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">100% Focus on Probate Real Estate</h3>
@@ -130,21 +130,21 @@ export default function Home() {
               <Card variant="elevated" className="p-6">
                 <h3 className="text-xl font-bold text-neutral-900 mb-3">Exclusive Probate Focus</h3>
                 <p className="text-neutral-700">
-                  100% of our business is dedicated to probate real estate. Unlike general real estate agents who may handle probate occasionally, probate is our exclusive specialty. This focus means we've developed deep expertise, refined processes, and extensive experience specifically in probate transactions.
+                  100% of our business is dedicated to probate real estate. Unlike general real estate agents who may handle probate occasionally, probate is our exclusive specialty. This focus means we've developed deep expertise, refined processes, and comprehensive knowledge specifically in probate transactions.
                 </p>
               </Card>
 
               <Card variant="elevated" className="p-6">
                 <h3 className="text-xl font-bold text-neutral-900 mb-3">Court Compliance Expertise</h3>
                 <p className="text-neutral-700">
-                  We understand probate court requirements, procedures, and timelines. We ensure all court filings, documentation, and procedures are handled correctly, avoiding delays and complications. Our experience with probate courts throughout Orange County helps ensure smooth, efficient transactions.
+                  We understand probate court requirements, procedures, and timelines. We ensure all court filings, documentation, and procedures are handled correctly, avoiding delays and complications. Our deep knowledge of probate courts throughout Orange County helps ensure smooth, efficient transactions.
                 </p>
               </Card>
 
               <Card variant="elevated" className="p-6">
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">Proven Track Record</h3>
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Proven Expertise</h3>
                 <p className="text-neutral-700">
-                  Our success is measured in results: over $200 million in probate property sales, hundreds of satisfied families, and recognition as Orange County's premier probate real estate specialists. We've successfully navigated everything from simple probate sales to complex multi-property estates.
+                  Our success is measured in results: deep knowledge of probate procedures, proven strategies, and recognition as Orange County's premier probate real estate specialists. We've successfully navigated everything from simple probate sales to complex multi-property estates.
                 </p>
               </Card>
 
@@ -158,7 +158,7 @@ export default function Home() {
               <Card variant="elevated" className="p-6">
                 <h3 className="text-xl font-bold text-neutral-900 mb-3">Attorney & Executor Coordination</h3>
                 <p className="text-neutral-700">
-                  We work seamlessly with probate attorneys, executors, administrators, and other professionals involved in the probate process. Our experience in multi-party probate transactions ensures effective coordination and communication among all parties, helping avoid delays and complications.
+                  We work seamlessly with probate attorneys, executors, administrators, and other professionals involved in the probate process. Our deep knowledge of multi-party probate transactions ensures effective coordination and communication among all parties, helping avoid delays and complications.
                 </p>
               </Card>
             </div>

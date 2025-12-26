@@ -141,7 +141,7 @@ export const faqs: FAQ[] = [
   {
     id: '5',
     question: 'What makes Just Call Gene different from other real estate agents?',
-    answer: 'Just Call Gene is 100% focused on probate real estate—it\'s our exclusive specialty. We\'re certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE) with extensive experience in Orange County probate courts. Unlike general real estate agents who may handle probate occasionally, probate is our only business, ensuring unmatched expertise and specialization.',
+    answer: 'Just Call Gene is 100% focused on probate real estate—it\'s our exclusive specialty. We\'re certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE) with deep knowledge of Orange County probate courts. Unlike general real estate agents who may handle probate occasionally, probate is our only business, ensuring unmatched expertise and specialization.',
   },
   {
     id: '6',
@@ -201,9 +201,9 @@ export const accolades = [
     icon: '🏆',
   },
   {
-    title: '$200M+ Sold',
-    subtitle: 'in probate property sales',
-    icon: '💰',
+    title: 'Expert Knowledge',
+    subtitle: 'Deep probate expertise and court procedures',
+    icon: '📚',
   },
   {
     title: 'Certified Probate Real Estate Specialist',

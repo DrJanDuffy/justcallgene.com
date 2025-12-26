@@ -25,7 +25,7 @@ export function HeroSection() {
         {/* Trust Badge */}
         <div className="mb-6 inline-block">
           <span className="px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400 text-blue-100 text-sm font-semibold">
-            🏆 Orange County's #1 Probate Expert | 20+ Years | $200M+ Sold
+            🏆 Orange County's #1 Probate Expert | Deep Court Knowledge | Proven Expertise
           </span>
         </div>
 
@@ -48,8 +48,8 @@ export function HeroSection() {
             <div className="text-sm text-blue-100 mt-1">Month Timeline</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition">
-            <div className="text-3xl font-bold text-blue-300">$200M+</div>
-            <div className="text-sm text-blue-100 mt-1">Total Sales</div>
+            <div className="text-3xl font-bold text-blue-300">Expert</div>
+            <div className="text-sm text-blue-100 mt-1">Knowledge</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition">
             <div className="text-3xl font-bold text-blue-300">12%</div>

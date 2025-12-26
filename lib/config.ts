@@ -22,7 +22,7 @@ export const siteConfig = {
         licenseNumber: '02282581',
         licenseExpiration: '04/15/2029',
         bio: 'As a Highly-trained, Professional, and Skilled Realtor, you can be confident with me helping you move into the next season of life with convenience while maximizing your sale proceeds. I\'ve supported hundreds of people & families with real property including Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land in Newport Beach, Irvine, and Corona Del Mar since 2004.',
-        extendedBio: 'With a unique combination of finance, law, and analytical expertise, I bring a comprehensive approach to real estate. As a former CFO who led an AMEX-listed company through IPO and SEC compliance, I understand the financial complexities of real estate transactions. My JD/MBA background provides deep insight into contracts, negotiations, and strategic planning. Combined with over 20 years of real estate experience in Orange County\'s premier coastal communities, I offer clients unparalleled expertise in both residential and commercial transactions.',
+        extendedBio: 'With a unique combination of finance, law, and analytical expertise, I bring a comprehensive approach to real estate. As a former CFO who led an AMEX-listed company through IPO and SEC compliance, I understand the financial complexities of real estate transactions. My JD/MBA background provides deep insight into contracts, negotiations, and strategic planning. Combined with deep knowledge of Orange County\'s premier coastal communities, I offer clients unparalleled expertise in both residential and commercial transactions.',
         credentials: [
           'Real Estate Salesperson License #02282581',
           'Probate Real Estate Specialist (PRES)',
@@ -105,7 +105,7 @@ export const siteConfig = {
     bio: 'As a Highly-trained, Professional, and Skilled Realtor, you can be confident with us helping you move into the next season of life with convenience while maximizing your sale proceeds. We\'ve supported hundreds of people & families with real property including Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land in Newport Beach, Irvine, and Corona Del Mar since 2004.',
     
     // Extended bio with professional background
-    extendedBio: 'With a unique combination of finance, law, and analytical expertise, our team brings a comprehensive approach to real estate. Combined with over 20 years of real estate experience in Orange County\'s premier coastal communities, we offer clients unparalleled expertise in both residential and commercial transactions.',
+    extendedBio: 'With a unique combination of finance, law, and analytical expertise, our team brings a comprehensive approach to real estate. Combined with deep knowledge of Orange County\'s premier coastal communities and probate court procedures, we offer clients unparalleled expertise in both residential and commercial transactions.',
     
     // Combined credentials from both agents
     credentials: [
@@ -135,7 +135,7 @@ export const siteConfig = {
       },
       {
         title: 'Orange County Coastal Market Specialist',
-        description: 'Over 20 years of experience in Newport Beach, Irvine, and Corona Del Mar probate real estate, specializing exclusively in probate property sales and court-ordered transactions.',
+        description: 'Deep expertise and comprehensive knowledge of Newport Beach, Irvine, and Corona Del Mar probate real estate markets, specializing exclusively in probate property sales and court-ordered transactions.',
       },
     ],
   },

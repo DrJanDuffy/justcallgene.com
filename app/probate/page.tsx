@@ -81,7 +81,7 @@ export default function ProbatePage() {
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                At Just Call Gene, we specialize in probate real estate throughout Orange County, including Newport Beach, Irvine, Corona Del Mar, and surrounding communities. Our team brings decades of real estate experience combined with specialized probate training and certification. We work closely with probate attorneys, executors, administrators, and family members to ensure probate sales are handled correctly, efficiently, and with the sensitivity these situations require.
+                At Just Call Gene, we specialize in probate real estate throughout Orange County, including Newport Beach, Irvine, Corona Del Mar, and surrounding communities. Our team brings deep knowledge and expertise combined with specialized probate training and certification. We work closely with probate attorneys, executors, administrators, and family members to ensure probate sales are handled correctly, efficiently, and with the sensitivity these situations require.
               </p>
 
               <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6">What is Probate Real Estate?</h2>
@@ -111,7 +111,7 @@ export default function ProbatePage() {
 
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Probate real estate transactions are fundamentally different from traditional real estate sales. They involve court oversight, specific legal requirements, unique timelines, and often require working with multiple parties including attorneys, executors, heirs, and creditors. A probate specialist understands these complexities and has the experience to navigate them effectively.
+                Probate real estate transactions are fundamentally different from traditional real estate sales. They involve court oversight, specific legal requirements, unique timelines, and often require working with multiple parties including attorneys, executors, heirs, and creditors. A probate specialist understands these complexities and has the knowledge to navigate them effectively.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Understanding Court Requirements</h3>
@@ -129,7 +129,7 @@ export default function ProbatePage() {
               <Card variant="elevated" className="p-8">
                 <h3 className="text-2xl font-bold text-neutral-900 mb-4">Court Compliance</h3>
                 <p className="text-neutral-700 mb-4">
-                  We ensure all court requirements are met, including proper documentation, court filings, and sale procedures. Our experience with probate courts helps avoid delays and complications.
+                  We ensure all court requirements are met, including proper documentation, court filings, and sale procedures. Our deep knowledge of probate courts helps avoid delays and complications.
                 </p>
                 <ul className="list-disc list-inside text-neutral-700 space-y-2">
                   <li>Court filing and documentation</li>
@@ -168,7 +168,7 @@ export default function ProbatePage() {
               <Card variant="elevated" className="p-8">
                 <h3 className="text-2xl font-bold text-neutral-900 mb-4">Estate Coordination</h3>
                 <p className="text-neutral-700 mb-4">
-                  We coordinate with attorneys, executors, heirs, and other parties to ensure the probate sale proceeds smoothly. Our experience helps manage the complexities of multi-party transactions.
+                  We coordinate with attorneys, executors, heirs, and other parties to ensure the probate sale proceeds smoothly. Our deep knowledge helps manage the complexities of multi-party transactions.
                 </p>
                 <ul className="list-disc list-inside text-neutral-700 space-y-2">
                   <li>Attorney coordination</li>
@@ -205,7 +205,7 @@ export default function ProbatePage() {
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Court-Ordered Sales</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                When property must be sold as part of probate proceedings, we handle all aspects of the court-ordered sale process. This includes preparing the necessary documentation, coordinating with the court, following required marketing procedures, and ensuring compliance with all legal requirements. Our experience with court-ordered sales helps ensure the process proceeds smoothly and efficiently.
+                When property must be sold as part of probate proceedings, we handle all aspects of the court-ordered sale process. This includes preparing the necessary documentation, coordinating with the court, following required marketing procedures, and ensuring compliance with all legal requirements. Our deep knowledge of court-ordered sales helps ensure the process proceeds smoothly and efficiently.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Property Management During Probate</h3>

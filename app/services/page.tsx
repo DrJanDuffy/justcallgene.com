@@ -60,12 +60,12 @@ export default function ServicesPage() {
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                As certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE), we understand that probate sales require specialized knowledge, court compliance, and sensitivity to family dynamics. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and extensive experience specifically in probate transactions. Every aspect of our service is designed to help you navigate the probate sale process successfully.
+                As certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE), we understand that probate sales require specialized knowledge, court compliance, and sensitivity to family dynamics. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and comprehensive knowledge specifically in probate transactions. Every aspect of our service is designed to help you navigate the probate sale process successfully.
               </p>
 
               <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6">Why Choose Our Probate Services?</h2>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                What sets our probate services apart is our exclusive focus on probate real estate, our specialized certifications, and our results-driven approach. We don't handle general real estate—probate is our only business. This focus means we understand probate court requirements, legal procedures, and the unique challenges of probate sales better than anyone else in Orange County. Our track record speaks for itself: over $200 million in successful probate property sales, hundreds of satisfied families, and recognition as Orange County's premier probate real estate specialists.
+                What sets our probate services apart is our exclusive focus on probate real estate, our specialized certifications, and our results-driven approach. We don't handle general real estate—probate is our only business. This focus means we understand probate court requirements, legal procedures, and the unique challenges of probate sales better than anyone else in Orange County. Our expertise speaks for itself: comprehensive knowledge of probate procedures, proven strategies, and recognition as Orange County's premier probate real estate specialists.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">100% Probate Focus</h3>
@@ -80,7 +80,7 @@ export default function ServicesPage() {
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Proven Results</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Our success is measured in results: over $200 million in probate property sales, hundreds of satisfied families, and recognition as Orange County's premier probate real estate specialists. We combine probate expertise, market knowledge, and strategic thinking to deliver results that exceed expectations. When you work with Just Call Gene, you're working with a team that has a proven track record of success in probate transactions.
+                Our success is measured in results: comprehensive knowledge of probate procedures, proven strategies, and recognition as Orange County's premier probate real estate specialists. We combine probate expertise, market knowledge, and strategic thinking to deliver results that exceed expectations. When you work with Just Call Gene, you're working with a team that has deep expertise and proven methodologies in probate transactions.
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function ServicesPage() {
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Court-Required Appraisals</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Many probate courts require professional appraisals to establish property values. We coordinate with certified appraisers to ensure valuations meet court requirements and legal standards. Our experience with probate appraisals helps ensure accurate valuations that satisfy court requirements while maximizing estate value.
+                Many probate courts require professional appraisals to establish property values. We coordinate with certified appraisers to ensure valuations meet court requirements and legal standards. Our deep knowledge of probate appraisals helps ensure accurate valuations that satisfy court requirements while maximizing estate value.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Estate Tax Valuation Support</h3>
@@ -150,7 +150,7 @@ export default function ServicesPage() {
 
             <div className="prose prose-lg max-w-none mb-8">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                When property must be sold as part of probate proceedings, we handle all aspects of the court-ordered sale process. This includes preparing the necessary documentation, coordinating with the court, following required marketing procedures, and ensuring compliance with all legal requirements. Our experience with court-ordered sales helps ensure the process proceeds smoothly and efficiently.
+                When property must be sold as part of probate proceedings, we handle all aspects of the court-ordered sale process. This includes preparing the necessary documentation, coordinating with the court, following required marketing procedures, and ensuring compliance with all legal requirements. Our deep knowledge of court-ordered sales helps ensure the process proceeds smoothly and efficiently.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Court Filing and Documentation</h3>

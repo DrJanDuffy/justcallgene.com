@@ -8,7 +8,7 @@ import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
   title: 'About Our Probate Real Estate Team | Just Call Gene',
-  description: 'Meet Eugene Joseph Boyle and Kelly Lynn Boyle, Orange County\'s premier probate real estate specialists. Certified Probate Real Estate Specialists (PRES) with over 20 years of experience and $200M+ in probate property sales.',
+  description: 'Meet Eugene Joseph Boyle and Kelly Lynn Boyle, Orange County\'s premier probate real estate specialists. Certified Probate Real Estate Specialists (PRES) with deep knowledge of probate procedures and court requirements.',
   keywords: [
     'probate real estate team Orange County',
     'Eugene Boyle probate specialist',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'About Our Probate Real Estate Specialists | Just Call Gene',
-    description: 'Meet Orange County\'s premier probate real estate specialists with over 20 years of experience and $200M+ in probate property sales.',
+    description: 'Meet Orange County\'s premier probate real estate specialists with deep expertise in probate procedures, court requirements, and Orange County real estate markets.',
     url: `${siteConfig.url}/about`,
     images: [`${siteConfig.url}/og-image.jpg`],
   },
@@ -59,11 +59,11 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Just Call Gene represents the pinnacle of probate real estate excellence in Orange County, California. Our team combines decades of experience, specialized probate expertise, and a commitment to client success that has resulted in over $200 million in successful probate property sales. We're not just real estate agents—we're certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE) dedicated exclusively to helping families navigate probate property sales.
+                Just Call Gene represents the pinnacle of probate real estate excellence in Orange County, California. Our team combines deep knowledge, specialized probate expertise, and a commitment to client success. We're not just real estate agents—we're certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE) dedicated exclusively to helping families navigate probate property sales.
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Founded on principles of integrity, professionalism, and results, Just Call Gene has built a reputation as Orange County's premier probate real estate specialists. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and extensive experience specifically in probate transactions. Our unique combination of financial expertise, legal knowledge, and probate specialization allows us to navigate even the most complex probate situations with confidence and success.
+                Founded on principles of integrity, professionalism, and results, Just Call Gene has built a reputation as Orange County's premier probate real estate specialists. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and comprehensive knowledge specifically in probate transactions. Our unique combination of financial expertise, legal knowledge, and probate specialization allows us to navigate even the most complex probate situations with confidence and success.
               </p>
 
               <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6">Our Mission and Values</h2>
@@ -78,7 +78,7 @@ export default function AboutPage() {
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Results-Driven Approach</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                We measure our success by your success. Our track record speaks for itself: over $200 million in probate property sales, hundreds of satisfied families, and recognition as Orange County's premier probate real estate specialists. We combine probate expertise, strategic thinking, and proven methodologies to deliver results that exceed expectations.
+                We measure our success by your success. Our expertise speaks for itself: comprehensive knowledge of probate procedures, proven strategies, and recognition as Orange County's premier probate real estate specialists. We combine probate expertise, strategic thinking, and proven methodologies to deliver results that exceed expectations.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Compassionate Service</h3>
@@ -214,9 +214,9 @@ export default function AboutPage() {
               </Card>
 
               <Card variant="elevated" className="p-6">
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">$200M+ in Probate Sales</h3>
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Deep Probate Knowledge & Expertise</h3>
                 <p className="text-neutral-700">
-                  Our track record of success is measured in probate results. Over $200 million in successful probate property sales demonstrates our ability to maximize values and navigate complex probate transactions effectively.
+                  Our success is built on comprehensive knowledge of probate procedures, court requirements, and Orange County real estate markets. We bring deep expertise and proven strategies to navigate complex probate transactions effectively.
                 </p>
               </Card>
 
@@ -230,7 +230,7 @@ export default function AboutPage() {
               <Card variant="elevated" className="p-6">
                 <h3 className="text-xl font-bold text-neutral-900 mb-3">Court Compliance Expertise</h3>
                 <p className="text-neutral-700">
-                  We understand probate court requirements, procedures, and timelines. Our experience with probate courts throughout Orange County helps ensure all filings, documentation, and procedures are handled correctly, avoiding delays and complications.
+                  We understand probate court requirements, procedures, and timelines. Our deep knowledge of probate courts throughout Orange County helps ensure all filings, documentation, and procedures are handled correctly, avoiding delays and complications.
                 </p>
               </Card>
 
@@ -244,7 +244,7 @@ export default function AboutPage() {
               <Card variant="elevated" className="p-6">
                 <h3 className="text-xl font-bold text-neutral-900 mb-3">Attorney & Executor Coordination</h3>
                 <p className="text-neutral-700">
-                  We work seamlessly with probate attorneys, executors, administrators, and other professionals involved in the probate process. Our experience in multi-party probate transactions ensures effective coordination and communication.
+                  We work seamlessly with probate attorneys, executors, administrators, and other professionals involved in the probate process. Our deep knowledge of multi-party probate transactions ensures effective coordination and communication.
                 </p>
               </Card>
             </div>

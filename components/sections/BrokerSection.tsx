@@ -46,18 +46,18 @@ export function BrokerSection() {
               <div>
                 <h3 className="text-xl font-bold mb-2">The Gene Boyle Difference</h3>
                 <p className="text-blue-100">
-                  Gene has successfully guided 200+ Orange County families through probate estates, 
+                  Gene brings deep knowledge of Orange County probate procedures and court requirements, 
                   securing an average 12% premium above initial valuations. When your inherited home 
-                  is worth $2M-$5M+, those percentages mean real money.
+                  is worth $2M-$5M+, that expertise means real money.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold mb-2">20+ Years Orange County Probate Expertise</h3>
+                <h3 className="text-xl font-bold mb-2">Deep Orange County Probate Knowledge</h3>
                 <p className="text-blue-100">
                   Gene doesn't just sell probate homes. He's mastered Orange County's court procedures, 
-                  knows the market dynamics of each community, and has relationships with the 
-                  most qualified buyers for luxury estates.
+                  understands the legal requirements, knows the market dynamics of each community, and 
+                  has the expertise to navigate complex probate transactions with confidence.
                 </p>
               </div>
 
@@ -74,12 +74,12 @@ export function BrokerSection() {
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400">
-                <div className="text-3xl font-bold">200+</div>
-                <div className="text-sm text-blue-100">Probate Estates Managed</div>
+                <div className="text-3xl font-bold">Expert</div>
+                <div className="text-sm text-blue-100">Court Knowledge</div>
               </div>
               <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400">
-                <div className="text-3xl font-bold">$200M+</div>
-                <div className="text-sm text-blue-100">Total Sales Volume</div>
+                <div className="text-3xl font-bold">Expert</div>
+                <div className="text-sm text-blue-100">Knowledge Base</div>
               </div>
               <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400">
                 <div className="text-3xl font-bold">12%</div>

@@ -26,7 +26,7 @@ export function OCValueSection() {
               Newport Beach, Corona Del Mar, Laguna Beach properties have specialized buyer networks and unique market dynamics.
             </p>
             <p className="text-sm text-slate-600">
-              <strong>Gene's Edge:</strong> 200+ coastal estate sales. Knows exactly which buyers want what.
+              <strong>Gene's Edge:</strong> Deep knowledge of coastal estate markets. Knows exactly which buyers want what.
             </p>
           </div>
 
