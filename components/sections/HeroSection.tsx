@@ -36,7 +36,7 @@ export function HeroSection() {
 
         {/* Subheading - Value-Focused */}
         <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl leading-relaxed">
-          Gene Boyle navigated 200+ probate estates through Orange County courts. 
+          Gene Boyle navigated probate estates through Orange County courts. 
           Average result: <span className="font-bold text-blue-300">12% above initial valuation.</span> 
           Your home is worth more than you think.
         </p>
