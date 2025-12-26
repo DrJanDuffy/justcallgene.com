@@ -54,7 +54,7 @@ export default function ValuationPage() {
               Get an accurate valuation for your probate property in Orange County
             </p>
             <p className="text-base text-neutral-700 mb-8">
-              As certified Probate Real Estate Specialists (CPRES), we provide professional property valuations that meet court requirements for probate proceedings. Our valuations help determine fair market value for estate tax purposes, distribution to heirs, and establishing listing prices.
+              As certified Probate Real Estate Specialists (PRES), we provide professional property valuations that meet court requirements for probate proceedings. Our valuations help determine fair market value for estate tax purposes, distribution to heirs, and establishing listing prices.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">

@@ -93,7 +93,7 @@ export function HeroSection() {
         <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-100 mb-12">
           <div className="flex items-center gap-2">
             <span className="text-blue-300 text-lg">✓</span>
-            <span>Certified CPRES Probate Specialist</span>
+            <span>Certified PRES Probate Specialist</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-blue-300 text-lg">✓</span>

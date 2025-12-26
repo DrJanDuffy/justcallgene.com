@@ -121,7 +121,7 @@ export const faqs: FAQ[] = [
   {
     id: '1',
     question: 'What is probate real estate and why do I need a specialist?',
-    answer: 'Probate real estate involves selling property that\'s part of an estate after someone passes away. Unlike traditional real estate sales, probate sales require court approval, specific legal procedures, and compliance with probate timelines. A certified Probate Real Estate Specialist (CPRES) understands these unique requirements and can help ensure the sale proceeds smoothly while maximizing property value.',
+    answer: 'Probate real estate involves selling property that\'s part of an estate after someone passes away. Unlike traditional real estate sales, probate sales require court approval, specific legal procedures, and compliance with probate timelines. A certified Probate Real Estate Specialist (PRES) understands these unique requirements and can help ensure the sale proceeds smoothly while maximizing property value.',
   },
   {
     id: '2',
@@ -141,7 +141,7 @@ export const faqs: FAQ[] = [
   {
     id: '5',
     question: 'What makes Just Call Gene different from other real estate agents?',
-    answer: 'Just Call Gene is 100% focused on probate real estate—it\'s our exclusive specialty. We\'re certified Probate Real Estate Specialists (CPRES) and Probate Experts (CPE) with extensive experience in Orange County probate courts. Unlike general real estate agents who may handle probate occasionally, probate is our only business, ensuring unmatched expertise and specialization.',
+    answer: 'Just Call Gene is 100% focused on probate real estate—it\'s our exclusive specialty. We\'re certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE) with extensive experience in Orange County probate courts. Unlike general real estate agents who may handle probate occasionally, probate is our only business, ensuring unmatched expertise and specialization.',
   },
   {
     id: '6',
@@ -207,7 +207,7 @@ export const accolades = [
   },
   {
     title: 'Certified Probate Real Estate Specialist',
-    subtitle: 'CPRES & CPE Certified',
+    subtitle: 'PRES & CPE Certified',
     icon: '✅',
   },
   {

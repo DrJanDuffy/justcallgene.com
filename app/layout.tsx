@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     'probate real estate specialist',
     'probate realtor Orange County',
     'probate property sales',
-    'CPRES certified',
+    'PRES certified',
     'probate expert',
     'Orange County probate real estate',
     'Newport Beach probate sales',

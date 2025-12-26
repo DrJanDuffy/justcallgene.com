@@ -8,14 +8,14 @@ import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
   title: 'About Our Probate Real Estate Team | Just Call Gene',
-  description: 'Meet Eugene Joseph Boyle and Kelly Lynn Boyle, Orange County\'s premier probate real estate specialists. Certified Probate Real Estate Specialists (CPRES) with over 20 years of experience and $200M+ in probate property sales.',
+  description: 'Meet Eugene Joseph Boyle and Kelly Lynn Boyle, Orange County\'s premier probate real estate specialists. Certified Probate Real Estate Specialists (PRES) with over 20 years of experience and $200M+ in probate property sales.',
   keywords: [
     'probate real estate team Orange County',
     'Eugene Boyle probate specialist',
     'Kelly Boyle probate broker',
     'Orange County probate real estate agents',
     'probate real estate specialist',
-    'CPRES certified',
+    'PRES certified',
   ],
   openGraph: {
     title: 'About Our Probate Real Estate Specialists | Just Call Gene',
@@ -59,7 +59,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Just Call Gene represents the pinnacle of probate real estate excellence in Orange County, California. Our team combines decades of experience, specialized probate expertise, and a commitment to client success that has resulted in over $200 million in successful probate property sales. We're not just real estate agents—we're certified Probate Real Estate Specialists (CPRES) and Probate Experts (CPE) dedicated exclusively to helping families navigate probate property sales.
+                Just Call Gene represents the pinnacle of probate real estate excellence in Orange County, California. Our team combines decades of experience, specialized probate expertise, and a commitment to client success that has resulted in over $200 million in successful probate property sales. We're not just real estate agents—we're certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE) dedicated exclusively to helping families navigate probate property sales.
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
@@ -223,7 +223,7 @@ export default function AboutPage() {
               <Card variant="elevated" className="p-6">
                 <h3 className="text-xl font-bold text-neutral-900 mb-3">Certified Probate Specialists</h3>
                 <p className="text-neutral-700">
-                  We hold specialized certifications as Probate Real Estate Specialists (CPRES) and Probate Experts (CPE). These certifications represent additional training and expertise specifically in probate transactions, ensuring we understand court requirements and legal procedures.
+                  We hold specialized certifications as Probate Real Estate Specialists (PRES) and Probate Experts (CPE). These certifications represent additional training and expertise specifically in probate transactions, ensuring we understand court requirements and legal procedures.
                 </p>
               </Card>
 
