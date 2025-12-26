@@ -36,7 +36,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(jpg|jpeg|png|gif|ico|svg|webp|avif|woff|woff2|ttf|eot))",
+      "source": "/:path*.(jpg|jpeg|png|gif|ico|svg|webp|avif|woff|woff2|ttf|eot)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -49,10 +49,6 @@
     {
       "source": "/sitemap.xml",
       "destination": "/sitemap"
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/robots.txt"
     }
   ]
 }
