@@ -8,12 +8,15 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { OCValueSection } from '@/components/sections/OCValueSection';
 import { BrokerSection } from '@/components/sections/BrokerSection';
+import { ProbateProcessSection } from '@/components/sections/ProbateProcessSection';
+import { ServicesPricingSection } from '@/components/sections/ServicesPricingSection';
+import { BottomCTASection } from '@/components/sections/BottomCTASection';
 import { siteConfig } from '@/lib/config';
 import { communities, accolades } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'Probate Real Estate Specialist | Orange County, CA | Just Call Gene',
-  description: 'Certified Probate Real Estate Specialist (CPRES) and Probate Expert (CPE) serving Orange County. Expert probate property sales in Newport Beach, Irvine, and Corona Del Mar. Over $200M+ in probate sales.',
+  title: 'Orange County Probate Specialist | Gene Boyle | $200M+ Sold | Just Call Gene',
+  description: 'Orange County\'s top probate realtor. Gene Boyle has sold 200+ estates with 12% average premium. Free valuation. (949) 776-3527',
   keywords: [
     'probate real estate specialist',
     'probate realtor Orange County',
@@ -406,6 +409,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Probate Process Section */}
+        <ProbateProcessSection />
+
+        {/* Services & Pricing Section */}
+        <ServicesPricingSection />
+
+        {/* Bottom CTA Section */}
+        <BottomCTASection />
       </main>
     </>
   );

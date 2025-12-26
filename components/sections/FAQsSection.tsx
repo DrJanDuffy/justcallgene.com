@@ -1,33 +1,51 @@
+'use client';
+
+import { useState } from 'react';
 import { faqs } from '@/lib/data';
-import { Accordion } from '@/components/ui/Accordion';
 
 export function FAQsSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-neutral-50 to-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-fade-in-up">
-          <div className="inline-block mb-4">
-            <span className="bg-gradient-to-r from-primary to-primary-dark text-white px-4 py-1.5 rounded-full text-sm font-semibold">
-              Questions
-            </span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            Frequently Asked{' '}
-            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              Questions
-            </span>
-          </h2>
+    <section className="py-20 bg-white">
+      <div className="max-w-4xl mx-auto px-6">
+        
+        <h2 className="text-4xl font-bold text-slate-900 text-center mb-16">
+          Frequently Asked Questions
+        </h2>
+
+        <div className="space-y-6">
+          
+          {faqs.map((faq, idx) => (
+            <details
+              key={faq.id}
+              open={openIndex === idx}
+              className="group bg-slate-50 rounded-lg p-6 border-2 border-slate-200 hover:border-blue-400 transition cursor-pointer"
+            >
+              <summary 
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleFAQ(idx);
+                }}
+                className="flex items-center justify-between font-bold text-slate-900 text-lg list-none"
+              >
+                {faq.question}
+                <span className={`transform transition text-blue-600 ${openIndex === idx ? 'rotate-180' : ''}`}>
+                  ▼
+                </span>
+              </summary>
+              <p className="mt-4 text-slate-700 text-base leading-relaxed">
+                {faq.answer}
+              </p>
+            </details>
+          ))}
+
         </div>
 
-        <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl shadow-soft-lg overflow-hidden border border-neutral-100">
-          {faqs.map((faq, index) => (
-            <div key={faq.id} className={index !== faqs.length - 1 ? 'border-b border-neutral-100' : ''}>
-              <Accordion title={faq.question}>
-                <p className="text-neutral-700 leading-relaxed">{faq.answer}</p>
-              </Accordion>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
