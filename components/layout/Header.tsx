@@ -141,14 +141,14 @@ export function Header() {
         {/* Top Bar */}
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center group flex-shrink-0">
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent group-hover:from-primary-dark group-hover:to-primary transition-all duration-300">
               {siteConfig.name}
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center space-x-2 flex-1 justify-center mx-8" role="navigation" aria-label="Main navigation">
             {navItems.map((item) => {
               const hasDropdown = !!item.dropdown;
               const isOpen = openDropdown === item.id;
@@ -163,7 +163,7 @@ export function Header() {
                   {hasDropdown ? (
                     <button
                       type="button"
-                      className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary transition-modern relative group/item flex items-center"
+                      className="px-4 py-2.5 text-sm font-medium text-neutral-700 hover:text-primary transition-modern relative group/item flex items-center whitespace-nowrap"
                       onClick={() => setOpenDropdown(isOpen ? null : item.id)}
                       onKeyDown={(e) => handleKeyDown(e, item.id, hasDropdown)}
                       aria-expanded={isOpen}
@@ -172,7 +172,7 @@ export function Header() {
                     >
                       {item.label}
                       <svg 
-                        className={`w-4 h-4 ml-1 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                        className={`w-3.5 h-3.5 ml-1.5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
@@ -185,7 +185,7 @@ export function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary transition-modern relative group/item"
+                      className="px-4 py-2.5 text-sm font-medium text-neutral-700 hover:text-primary transition-modern relative group/item whitespace-nowrap"
                     >
                       {item.label}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary-dark group-hover/item:w-full transition-all duration-300"></span>
@@ -248,23 +248,23 @@ export function Header() {
           </nav>
 
           {/* Phone Number & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-6 flex-shrink-0">
             <a
               href={`tel:${siteConfig.business.phone}`}
-              className="text-lg font-semibold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent hover:from-primary-dark hover:to-primary transition-all duration-300 flex items-center group"
+              className="text-base font-semibold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent hover:from-primary-dark hover:to-primary transition-all duration-300 flex items-center group whitespace-nowrap"
             >
-              <svg className="w-5 h-5 mr-2 text-primary group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 mr-2 text-primary group-hover:scale-110 transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
               {siteConfig.business.phoneFormatted}
             </a>
             <Link
               href="/login"
-              className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary transition-colors"
+              className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-primary transition-colors whitespace-nowrap"
             >
               Login
             </Link>
-            <Button href="/contact" size="sm">
+            <Button href="/contact" size="sm" className="whitespace-nowrap">
               Probate Consultation
             </Button>
           </div>
