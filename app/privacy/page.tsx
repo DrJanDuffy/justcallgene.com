@@ -95,7 +95,7 @@ export default function PrivacyPage() {
               <p className="text-neutral-700">
                 <strong>Just Call Gene</strong><br />
                 Email: info@justcallgene.com<br />
-                Phone: (702) 239-8400
+                Phone: (949) 776-3527
               </p>
             </div>
           </div>
@@ -104,6 +104,7 @@ export default function PrivacyPage() {
     </div>
   );
 }
+
 
 
 

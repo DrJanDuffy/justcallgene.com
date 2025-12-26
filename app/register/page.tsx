@@ -95,7 +95,7 @@ export default function RegisterPage() {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 className="appearance-none relative block w-full px-3 py-2 border border-neutral-300 placeholder-neutral-500 text-neutral-900 rounded-lg focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
-                placeholder="(702) 555-1234"
+                placeholder="(949) 776-3527"
               />
             </div>
 
@@ -173,6 +173,7 @@ export default function RegisterPage() {
     </div>
   );
 }
+
 
 
 

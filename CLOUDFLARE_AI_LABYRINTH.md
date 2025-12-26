@@ -188,3 +188,4 @@ After enabling "Block AI bots":
 **Last Updated**: December 2025  
 **Status**: ⚠️ **ACTION REQUIRED** - Enable "Block AI bots" toggle in Cloudflare Dashboard  
 **Code Status**: ✅ robots.txt blocks already configured
+

@@ -50,7 +50,7 @@ business: {
     postalCode: '89101',
     addressCountry: 'US',
   },
-  phone: '+1-702-555-1234', // Include country code
+  phone: '+1-949-776-3527', // Include country code
   // ... etc
 }
 ```
@@ -123,6 +123,7 @@ After deployment, verify these URLs work:
 - [Rich Results Test](https://search.google.com/test/rich-results)
 - [Schema.org LocalBusiness](https://schema.org/LocalBusiness)
 - [Next.js Metadata Documentation](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)
+
 
 
 

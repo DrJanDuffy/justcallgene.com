@@ -39,7 +39,7 @@ You need to create the actual image file: `public/og-image.jpg`
 │  Probate Real Estate Specialist     │
 │                                      │
 │  Orange County, CA                   │
-│  (949) 555-1234                     │
+│  (949) 776-3527                     │
 │                                      │
 │  [Optional: Professional Photo]     │
 └─────────────────────────────────────┘
@@ -113,3 +113,4 @@ openGraph: {
 
 **Status**: ✅ Metadata configured, ⚠️ Image file needs to be created  
 **Priority**: Medium - Improves social sharing appearance
+
