@@ -2,21 +2,18 @@ import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 
 export function Footer() {
-  const quickLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Probate Realtor', href: '/probate' },
-    { label: 'Probate Services', href: '/services' },
-    { label: 'Contact', href: '/contact' },
-    { label: 'sitemap', href: '/sitemap.xml' },
+  const services = [
+    { label: 'Property Valuation', href: '/sellers/valuation' },
+    { label: 'Court Navigation', href: '/services' },
+    { label: 'Marketing & Sales', href: '/services' },
+    { label: 'Family Support', href: '/services' },
   ];
 
-  const resources = [
-    { label: 'Probate Property Valuation', href: '/sellers/valuation' },
-    { label: 'Probate Process Guide', href: '/probate' },
-    { label: 'Our Services', href: '/services' },
-    { label: 'Communities', href: '/communities' },
-    { label: 'Contact', href: '/contact' },
+  const communities = [
+    { label: 'Newport Beach', href: '/communities' },
+    { label: 'Corona Del Mar', href: '/communities' },
+    { label: 'Laguna Beach', href: '/communities' },
+    { label: 'All Communities', href: '/communities' },
   ];
 
   return (
@@ -25,34 +22,22 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4 flex items-center">
-              <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-                Local Expert
-              </span>
-            </h3>
-            <p className="text-sm mb-4 leading-relaxed">
-              Eugene Joseph Boyle (Salesperson #02282581) & Kelly Lynn Boyle (BROKER #02012693): Orange County's Top Real Estate Team. 
-              Your trusted California real estate professionals.
+            <h3 className="text-xl font-bold mb-4 text-white">Just Call Gene</h3>
+            <p className="text-blue-100 text-sm mb-4">
+              Orange County's trusted probate real estate specialist since 2004.
             </p>
-            <Link href="/about" className="inline-flex items-center text-primary hover:text-primary-light text-sm font-medium group transition-colors">
-              <span>read more</span>
-              <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+            <div className="flex gap-4">
+              {/* Social icons can be added here */}
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Services */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
+            <h4 className="font-bold mb-4 text-white">Services</h4>
+            <ul className="space-y-2 text-sm text-blue-100">
+              {services.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm hover:text-primary transition-all duration-300 flex items-center group"
-                  >
-                    <span className="w-0 h-0.5 bg-primary group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                  <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -60,17 +45,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Communities */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-3">
-              {resources.map((link) => (
+            <h4 className="font-bold mb-4 text-white">Communities</h4>
+            <ul className="space-y-2 text-sm text-blue-100">
+              {communities.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm hover:text-primary transition-all duration-300 flex items-center group"
-                  >
-                    <span className="w-0 h-0.5 bg-primary group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                  <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -80,9 +61,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4 bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
-              {siteConfig.business.name}
-            </h3>
+            <h4 className="font-bold mb-4 text-white">Contact</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center">
                 <svg className="w-4 h-4 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -144,12 +123,10 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          <div className="mt-4 text-center text-sm text-neutral-500">
-            <p>
-              Protected by The Digital Millennium Copyright Act of 1998
-            </p>
+          <div className="mt-4 text-center text-sm text-blue-100">
+            <p>© {new Date().getFullYear()} Just Call Gene. Gene Boyle, CA Real Estate Salesperson License #02282581</p>
             <p className="mt-2">
-              Copyright © {new Date().getFullYear()} {siteConfig.business.name}. All Rights reserved.
+              <Link href="/privacy" className="hover:text-white">Privacy</Link> • <Link href="/terms" className="hover:text-white">Terms</Link> • <Link href="/sitemap.xml" className="hover:text-white">Sitemap</Link>
             </p>
           </div>
         </div>

@@ -21,10 +21,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default: 'Orange County Probate Specialist | Gene Boyle | $200M+ Sold',
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: 'Orange County\'s top probate realtor. Gene Boyle has sold 200+ estates with 12% average premium. Free valuation. (949) 776-3527',
   keywords: [
     'probate real estate specialist',
     'probate realtor Orange County',
