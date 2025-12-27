@@ -81,6 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${cleanUrl}/media/market-insights`,
+      lastModified: today,
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
       url: `${cleanUrl}/login`,
       lastModified: today,
       changeFrequency: 'monthly',

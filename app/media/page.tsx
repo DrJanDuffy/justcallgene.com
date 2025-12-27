@@ -174,7 +174,7 @@ export default function MediaPage() {
             Orange County Probate Real Estate <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Media Resources</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Market Updates */}
             <Card className="p-8 hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-6">
@@ -208,6 +208,24 @@ export default function MediaPage() {
               </p>
               <Button href="/media/videos" variant="primary">
                 Watch Videos
+              </Button>
+            </Card>
+
+            {/* Market Insights */}
+            <Card className="p-8 hover:shadow-xl transition-shadow">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-neutral-900">Market Insights</h3>
+              </div>
+              <p className="text-neutral-600 mb-6 leading-relaxed">
+                Latest real estate market graphs, videos, and insights from Simplifying the Market. Stay informed about housing market trends, mortgage rates, and real estate data that can help inform your probate property decisions in Orange County.
+              </p>
+              <Button href="/media/market-insights" variant="primary">
+                View Insights
               </Button>
             </Card>
           </div>
