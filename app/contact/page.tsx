@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { ContactSection } from '@/components/sections/ContactSection';
+import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -57,6 +58,37 @@ export default function ContactPage() {
         </div>
       </section>
       <ContactSection />
+      
+      {/* Related Resources */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InternalLinks
+            title="Learn More About Our Services"
+            links={[
+              {
+                href: '/probate',
+                text: 'Understanding Probate Real Estate',
+                description: 'Learn about the probate process and how we can help',
+              },
+              {
+                href: '/services',
+                text: 'Our Probate Services',
+                description: 'Comprehensive probate real estate services we offer',
+              },
+              {
+                href: '/sellers/valuation',
+                text: 'Get Property Valuation',
+                description: 'Request a free probate property valuation',
+              },
+              {
+                href: '/about',
+                text: 'About Our Team',
+                description: 'Meet our certified Probate Real Estate Specialists',
+              },
+            ]}
+          />
+        </div>
+      </section>
     </div>
   );
 }

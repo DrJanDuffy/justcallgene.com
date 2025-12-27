@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { InternalLinks } from '@/components/ui/InternalLinks';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -190,6 +191,37 @@ export default async function MarketUpdatePage({ params }: Props) {
           </Link>
         </div>
       </article>
+
+      {/* Related Resources */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InternalLinks
+            title="Related Resources"
+            links={[
+              {
+                href: '/probate',
+                text: 'Probate Real Estate Process',
+                description: 'Learn about probate property sales and court procedures',
+              },
+              {
+                href: '/services',
+                text: 'Our Probate Services',
+                description: 'Comprehensive probate real estate services',
+              },
+              {
+                href: '/blog',
+                text: 'Probate Real Estate Blog',
+                description: 'Read our latest insights and tips',
+              },
+              {
+                href: '/contact',
+                text: 'Contact Us',
+                description: 'Get in touch for a free consultation',
+              },
+            ]}
+          />
+        </div>
+      </section>
     </div>
   );
 }

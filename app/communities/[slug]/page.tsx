@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { communities } from '@/lib/data';
 import { Button } from '@/components/ui/Button';
+import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -127,6 +128,37 @@ export default async function CommunityPage({ params }: Props) {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Related Resources */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InternalLinks
+            title="Related Resources"
+            links={[
+              {
+                href: '/probate',
+                text: 'Probate Real Estate Process',
+                description: 'Learn about probate property sales and court procedures',
+              },
+              {
+                href: '/services',
+                text: 'Our Probate Services',
+                description: 'Comprehensive probate real estate services in Orange County',
+              },
+              {
+                href: '/sellers/valuation',
+                text: 'Property Valuation',
+                description: 'Get a free probate property valuation',
+              },
+              {
+                href: '/contact',
+                text: 'Contact Us',
+                description: 'Get in touch for a free consultation',
+              },
+            ]}
+          />
         </div>
       </section>
     </div>

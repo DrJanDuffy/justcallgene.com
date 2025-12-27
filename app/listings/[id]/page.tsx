@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { featuredListings } from '@/lib/data';
 import { Button } from '@/components/ui/Button';
+import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
 
 type Props = {
@@ -223,6 +224,37 @@ export default async function ListingDetailPage({ params }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Related Resources */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <InternalLinks
+            title="Learn More About Probate Properties"
+            links={[
+              {
+                href: '/probate',
+                text: 'Understanding Probate Sales',
+                description: 'Learn about the probate process and how probate sales work',
+              },
+              {
+                href: '/services',
+                text: 'Our Probate Services',
+                description: 'Comprehensive probate real estate services we offer',
+              },
+              {
+                href: '/sellers/valuation',
+                text: 'Get Property Valuation',
+                description: 'Request a professional probate property valuation',
+              },
+              {
+                href: '/contact',
+                text: 'Contact Us',
+                description: 'Schedule a viewing or get more information',
+              },
+            ]}
+          />
+        </div>
+      </section>
     </div>
   );
 }

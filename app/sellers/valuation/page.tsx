@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
+import { InternalLinks } from '@/components/ui/InternalLinks';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { siteConfig } from '@/lib/config';
 
