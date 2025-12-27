@@ -51,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${cleanUrl}/faq`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${cleanUrl}/blog`,
       lastModified: today,
       changeFrequency: 'weekly',
@@ -126,6 +132,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  // Community service pages
+  const communityServicePages: MetadataRoute.Sitemap = communities.map((community) => ({
+    url: `${cleanUrl}/services/${community.slug}`,
+    lastModified: today,
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }));
+
   // Blog posts (IDs 1-6)
   const blogPosts: MetadataRoute.Sitemap = [1, 2, 3, 4, 5, 6].map((id) => ({
     url: `${cleanUrl}/blog/${id}`,
@@ -189,6 +203,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...mainPages,
     ...communityPages,
+    ...communityServicePages,
     ...blogPosts,
     ...listingPages,
     ...marketUpdatePages,

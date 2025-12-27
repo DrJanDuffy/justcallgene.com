@@ -55,6 +55,11 @@ export function Header() {
       href: '/about',
     },
     {
+      id: 'faq',
+      label: 'FAQ',
+      href: '/faq',
+    },
+    {
       id: 'contact',
       label: 'Contact',
       href: '/contact',
