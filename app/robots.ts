@@ -47,7 +47,12 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: `${cleanUrl}/sitemap.xml`,
+    sitemap: [
+      `${cleanUrl}/sitemap-index.xml`,
+      `${cleanUrl}/sitemap.xml`,
+      `${cleanUrl}/sitemap-video.xml`,
+      `${cleanUrl}/sitemap-image.xml`,
+    ],
   };
 }
 
