@@ -9,7 +9,7 @@ import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Services | Orange County, CA | Just Call Gene',
-  description: 'Comprehensive probate real estate services in Orange County: probate property sales, court-ordered sales, property valuation, estate management, and probate transaction support. Certified Probate Real Estate Specialists.',
+  description: 'Comprehensive probate real estate services in Orange County, CA. Expert probate property sales, court-ordered sales, property valuation, and estate management. Certified Probate Real Estate Specialists serving Newport Beach, Irvine, and Corona Del Mar. Free consultation.',
   keywords: [
     'probate real estate services',
     'probate property sales',

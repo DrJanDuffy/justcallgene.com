@@ -283,9 +283,11 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="relative h-96 mb-8 rounded-lg overflow-hidden">
           <Image
             src={post.image}
-            alt={post.title}
+            alt={`${post.title} - Orange County Probate Real Estate Blog`}
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+            loading="lazy"
           />
         </div>
 
@@ -335,7 +337,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="mt-12 bg-gradient-to-r from-primary to-primary-dark text-white rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">Ready to Take the Next Step?</h2>
             <p className="mb-6 text-neutral-100">
-              Let's discuss your probate real estate needs and how we can help you achieve your goals.
+              Let&apos;s discuss your probate real estate needs and how we can help you achieve your goals.
             </p>
             <Link
               href="/contact"

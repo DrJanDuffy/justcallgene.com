@@ -78,10 +78,11 @@ export default async function ListingDetailPage({ params }: Props) {
       <div className="relative h-96 md:h-[500px] overflow-hidden">
         <Image
           src={listing.image}
-          alt={listing.address}
+          alt={`${listing.address} - Probate Property for Sale in Orange County, ${listing.city}`}
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         <div className="absolute top-4 left-4">

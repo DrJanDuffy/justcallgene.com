@@ -104,10 +104,11 @@ export default function AboutPage() {
                   <div className="relative aspect-square rounded-2xl overflow-hidden">
                     <Image
                       src="/placeholder-broker.jpg"
-                      alt={eugene.name}
+                      alt={`${eugene.name} - Orange County Probate Real Estate Specialist`}
                       fill
                       className="object-cover"
                       priority
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                   <div className="space-y-6">
@@ -145,9 +146,11 @@ export default function AboutPage() {
                   <div className="relative aspect-square rounded-2xl overflow-hidden lg:order-2">
                     <Image
                       src="/placeholder-broker.jpg"
-                      alt={kelly.name}
+                      alt={`${kelly.name} - Orange County Probate Real Estate Broker`}
                       fill
                       className="object-cover"
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                   <div className="space-y-6 lg:order-1">

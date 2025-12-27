@@ -47,7 +47,9 @@ export function FeaturedListings() {
               <div className="relative aspect-video overflow-hidden group">
                 <Image
                   src={listing.image}
-                  alt={listing.address}
+                  alt={`${listing.address} - Probate Property for Sale in Orange County`}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  loading={index < 4 ? undefined : "lazy"}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />

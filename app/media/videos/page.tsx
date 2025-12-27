@@ -55,9 +55,11 @@ export default function VideosPage() {
                 <div className="relative aspect-video bg-neutral-200">
                   <Image
                     src={video.thumbnail}
-                    alt={video.title}
+                    alt={`${video.title} - Probate Real Estate Video`}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                     <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">

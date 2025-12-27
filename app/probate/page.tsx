@@ -9,7 +9,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Specialist in Orange County, CA | Just Call Gene',
-  description: 'Probate Real Estate Specialist (Probate Real Estate Specialists) and Probate Expert (Probate Expert) serving Orange County. Expert guidance for probate property sales in Newport Beach, Irvine, and Corona Del Mar. Compassionate probate real estate services.',
+  description: 'Expert Probate Real Estate Specialist serving Orange County, CA. Comprehensive guidance for probate property sales in Newport Beach, Irvine, Corona Del Mar, and throughout Orange County. Certified Probate Real Estate Specialists with deep knowledge of court procedures. Free consultation.',
   keywords: [
     'probate real estate',
     'probate realtor Orange County',

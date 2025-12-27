@@ -16,10 +16,11 @@ export function BrokerSection() {
             <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/placeholder-broker.jpg"
-                alt="Eugene Joseph Boyle - Orange County Probate Specialist"
+                alt="Eugene Joseph Boyle - Orange County Probate Real Estate Specialist and Certified Probate Expert"
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
             </div>

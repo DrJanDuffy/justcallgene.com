@@ -178,9 +178,11 @@ export default async function VideoPage({ params }: Props) {
                   <div className="relative aspect-video">
                     <Image
                       src={relatedVideo.thumbnail}
-                      alt={relatedVideo.title}
+                      alt={`${relatedVideo.title} - Probate Real Estate Video`}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-4">

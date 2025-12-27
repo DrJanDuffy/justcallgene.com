@@ -272,9 +272,11 @@ export default function Home() {
                     <div className="relative h-48 overflow-hidden">
                       <Image
                         src={community.image}
-                        alt={community.name}
+                        alt={`${community.name} Probate Real Estate - Orange County`}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 right-4">
