@@ -7,12 +7,12 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Specialist in Orange County, CA | Just Call Gene',
-  description: 'Probate Real Estate Specialist (PRES) and Probate Expert (CPE) serving Orange County. Expert guidance for probate property sales in Newport Beach, Irvine, and Corona Del Mar. Compassionate probate real estate services.',
+  description: 'Probate Real Estate Specialist (Probate Real Estate Specialists) and Probate Expert (Probate Expert) serving Orange County. Expert guidance for probate property sales in Newport Beach, Irvine, and Corona Del Mar. Compassionate probate real estate services.',
   keywords: [
     'probate real estate',
     'probate realtor Orange County',
     'probate property sales',
-    'PRES',
+    'Probate Real Estate Specialists',
     'probate real estate specialist',
     'Orange County probate',
     'California probate real estate',
@@ -77,7 +77,7 @@ export default function ProbatePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Selling a probate property is one of the most challenging real estate transactions you may face. It combines the emotional difficulty of dealing with a loved one's estate with the complexity of legal requirements, court procedures, and real estate processes. As certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE), we understand these challenges and provide the expertise, compassion, and guidance needed to navigate probate real estate successfully.
+                Selling a probate property is one of the most challenging real estate transactions you may face. It combines the emotional difficulty of dealing with a loved one's estate with the complexity of legal requirements, court procedures, and real estate processes. As certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert), we understand these challenges and provide the expertise, compassion, and guidance needed to navigate probate real estate successfully.
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">

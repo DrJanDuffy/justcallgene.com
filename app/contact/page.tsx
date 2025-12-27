@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Contact Probate Real Estate Specialists | Orange County, CA',
-  description: `Contact ${siteConfig.business.name} at ${siteConfig.business.phoneFormatted}. Certified Probate Real Estate Specialists (PRES) serving Newport Beach, Irvine, and Corona Del Mar. Free probate consultation.`,
+  description: `Contact ${siteConfig.business.name} at ${siteConfig.business.phoneFormatted}. Certified Probate Real Estate Specialists (Probate Real Estate Specialists) serving Newport Beach, Irvine, and Corona Del Mar. Free probate consultation.`,
   keywords: [
     'contact probate real estate specialist',
     'Orange County probate realtor contact',

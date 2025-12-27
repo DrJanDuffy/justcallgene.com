@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { VideoSchema } from '@/components/schema/VideoSchema';
+import { siteConfig } from '@/lib/config';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -99,8 +101,20 @@ export default async function VideoPage({ params }: Props) {
     notFound();
   }
 
+  const videoUrl = `${siteConfig.url}/media/videos/${id}`;
+  const uploadDate = new Date().toISOString(); // You can add actual upload dates to video data
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <VideoSchema
+        name={video.title}
+        description={video.description}
+        thumbnailUrl={video.thumbnail}
+        uploadDate={uploadDate}
+        duration={`PT${video.duration.replace(':', 'M')}S`} // Convert to ISO 8601 duration
+        contentUrl={video.videoUrl}
+      />
+      <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
           href="/media/videos"
@@ -179,6 +193,7 @@ export default async function VideoPage({ params }: Props) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

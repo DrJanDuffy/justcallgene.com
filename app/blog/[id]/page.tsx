@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
+import { ArticleSchema } from '@/components/schema/ArticleSchema';
+import { SocialShare } from '@/components/ui/SocialShare';
+import { calculateReadingTime, formatReadingTime } from '@/lib/utils/readingTime';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -222,30 +225,59 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const readingTime = calculateReadingTime(post.content);
+  const postUrl = `${siteConfig.url}/blog/${id}`;
+  const publishedDate = new Date(post.date).toISOString();
+
+  // Get related posts (same category, exclude current)
+  const relatedPosts = Object.values(blogPosts)
+    .filter(p => p.category === post.category && p.id !== post.id)
+    .slice(0, 3);
+
   return (
-    <div className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="mb-8">
-          <Link
-            href="/blog"
-            className="text-primary hover:text-primary-dark font-semibold inline-flex items-center mb-4"
-          >
-            <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Back to Blog
-          </Link>
-          <div className="flex items-center space-x-4 mb-4">
-            <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
-              {post.category}
-            </span>
-            <time className="text-neutral-500">{post.date}</time>
+    <>
+      <ArticleSchema
+        title={post.title}
+        description={post.excerpt}
+        author={siteConfig.business.agents?.[0]?.name || siteConfig.business.name}
+        publishedDate={publishedDate}
+        image={post.image}
+        url={postUrl}
+        content={post.content}
+      />
+      <div className="min-h-screen bg-white">
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Header */}
+          <div className="mb-8">
+            <Link
+              href="/blog"
+              className="text-primary hover:text-primary-dark font-semibold inline-flex items-center mb-4"
+            >
+              <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Back to Blog
+            </Link>
+            <div className="flex flex-wrap items-center gap-4 mb-4">
+              <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                {post.category}
+              </span>
+              <time dateTime={publishedDate} className="text-neutral-500">
+                {post.date}
+              </time>
+              <span className="text-neutral-500">•</span>
+              <span className="text-neutral-500">{formatReadingTime(readingTime)}</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+              {post.title}
+            </h1>
+            <SocialShare 
+              url={postUrl}
+              title={post.title}
+              description={post.excerpt}
+              className="mb-6"
+            />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
-            {post.title}
-          </h1>
-        </div>
 
         {/* Featured Image */}
         <div className="relative h-96 mb-8 rounded-lg overflow-hidden">
@@ -264,21 +296,57 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-12 bg-primary text-white rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to Take the Next Step?</h2>
-          <p className="mb-6 text-neutral-100">
-            Let's discuss your real estate goals and how we can help you achieve them.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors"
-          >
-            Contact Us Today
-          </Link>
-        </div>
-      </article>
-    </div>
+          {/* Social Share Bottom */}
+          <div className="mt-12 pt-8 border-t border-neutral-200">
+            <SocialShare 
+              url={postUrl}
+              title={post.title}
+              description={post.excerpt}
+            />
+          </div>
+
+          {/* Related Posts */}
+          {relatedPosts.length > 0 && (
+            <div className="mt-12 pt-8 border-t border-neutral-200">
+              <h2 className="text-2xl font-bold text-neutral-900 mb-6">Related Articles</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedPosts.map((relatedPost) => (
+                  <Link
+                    key={relatedPost.id}
+                    href={`/blog/${relatedPost.id}`}
+                    className="group block bg-neutral-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  >
+                    <span className="text-xs font-semibold text-primary mb-2 block">
+                      {relatedPost.category}
+                    </span>
+                    <h3 className="text-lg font-bold text-neutral-900 group-hover:text-primary transition-colors mb-2">
+                      {relatedPost.title}
+                    </h3>
+                    <p className="text-sm text-neutral-600 line-clamp-2">
+                      {relatedPost.excerpt}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* CTA */}
+          <div className="mt-12 bg-gradient-to-r from-primary to-primary-dark text-white rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold mb-4">Ready to Take the Next Step?</h2>
+            <p className="mb-6 text-neutral-100">
+              Let's discuss your probate real estate needs and how we can help you achieve your goals.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-neutral-100 transition-colors"
+            >
+              Contact Us Today
+            </Link>
+          </div>
+        </article>
+      </div>
+    </>
   );
 }
 

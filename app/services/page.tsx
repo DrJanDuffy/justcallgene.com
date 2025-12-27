@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { ServiceSchema } from '@/components/schema/ServiceSchema';
 import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     'probate property valuation',
     'estate property management',
     'probate transaction support',
-    'PRES services',
+    'Probate Real Estate Specialists services',
   ],
   openGraph: {
     title: 'Probate Real Estate Services | Orange County, CA',
@@ -36,6 +37,12 @@ const breadcrumbItems = [
 export default function ServicesPage() {
   return (
     <>
+      <ServiceSchema
+        name="Probate Real Estate Services"
+        description="Comprehensive probate real estate services including probate property sales, court-ordered sales, property valuation, estate management, and probate transaction support in Orange County, California."
+        serviceType="Probate Real Estate Services"
+        areaServed={['Newport Beach', 'Irvine', 'Corona Del Mar', 'Laguna Beach', 'Costa Mesa', 'Huntington Beach', 'Orange County', 'California']}
+      />
       <BreadcrumbSchema items={breadcrumbItems} />
       <main>
         {/* Hero Section */}
@@ -60,7 +67,7 @@ export default function ServicesPage() {
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                As certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE), we understand that probate sales require specialized knowledge, court compliance, and sensitivity to family dynamics. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and comprehensive knowledge specifically in probate transactions. Every aspect of our service is designed to help you navigate the probate sale process successfully.
+                As certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert), we understand that probate sales require specialized knowledge, court compliance, and sensitivity to family dynamics. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and comprehensive knowledge specifically in probate transactions. Every aspect of our service is designed to help you navigate the probate sale process successfully.
               </p>
 
               <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6">Why Choose Our Probate Services?</h2>
@@ -75,7 +82,7 @@ export default function ServicesPage() {
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Certified Expertise</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                We hold specialized certifications as Probate Real Estate Specialists (PRES) and Probate Experts (CPE). These certifications represent additional training and expertise specifically in probate transactions, ensuring we understand court requirements, legal procedures, and the unique challenges of probate sales. Our certifications demonstrate our commitment to probate specialization and our expertise in this field.
+                We hold specialized certifications as Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert). These certifications represent additional training and expertise specifically in probate transactions, ensuring we understand court requirements, legal procedures, and the unique challenges of probate sales. Our certifications demonstrate our commitment to probate specialization and our expertise in this field.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Proven Results</h3>

@@ -5,6 +5,9 @@ import { LocalBusinessSchema } from "@/components/StructuredData";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingCTA } from "@/components/ui/FloatingCTA";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
+import { ReadingProgress } from "@/components/ui/ReadingProgress";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
     'probate real estate specialist',
     'probate realtor Orange County',
     'probate property sales',
-    'PRES certified',
+    'Probate Real Estate Specialists certified',
     'probate expert',
     'Orange County probate real estate',
     'Newport Beach probate sales',
@@ -117,13 +120,26 @@ export default function RootLayout({
           `}
         </Script>
         
+        {/* Skip to main content link for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
+        
+        <ReadingProgress />
+        
         <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="flex-grow">
+          <main id="main-content" className="flex-grow">
             {children}
           </main>
           <Footer />
         </div>
+        
+        <FloatingCTA />
+        <ScrollToTop />
       </body>
     </html>
   );

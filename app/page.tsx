@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'probate real estate specialist',
     'probate realtor Orange County',
     'probate property sales California',
-    'PRES certified',
+    'Probate Real Estate Specialists certified',
     'probate expert',
     'Orange County probate real estate',
     'probate home sales',
@@ -73,7 +73,7 @@ export default function Home() {
                 Orange County's Premier <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Probate Real Estate</span> Specialists
               </h2>
               <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-                Certified Probate Real Estate Specialists (PRES) and Probate Experts (CPE) serving families throughout Orange County
+                Certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert) serving families throughout Orange County
               </p>
             </div>
             
@@ -123,7 +123,7 @@ export default function Home() {
               <Card variant="elevated" className="p-6">
                 <h3 className="text-xl font-bold text-neutral-900 mb-3">Certified Probate Specialists</h3>
                 <p className="text-neutral-700">
-                  We hold specialized certifications as Probate Real Estate Specialists (PRES) and Probate Experts (CPE). These certifications represent additional training and expertise specifically in probate transactions, ensuring we understand court requirements, legal procedures, and the unique challenges of probate sales.
+                  We hold specialized certifications as Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert). These certifications represent additional training and expertise specifically in probate transactions, ensuring we understand court requirements, legal procedures, and the unique challenges of probate sales.
                 </p>
               </Card>
 

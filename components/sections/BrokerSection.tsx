@@ -30,8 +30,8 @@ export function BrokerSection() {
               <p className="text-xs text-slate-600">California Real Estate Salesperson</p>
               <p className="text-xs text-blue-600 font-bold">License #02282581</p>
               <div className="flex gap-1 mt-2">
-                <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded font-semibold">PRES</span>
-                <span className="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded font-semibold">CPE</span>
+                <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded font-semibold">Probate Real Estate Specialists</span>
+                <span className="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded font-semibold">Probate Expert</span>
               </div>
             </div>
           </div>
@@ -64,8 +64,8 @@ export function BrokerSection() {
               <div>
                 <h3 className="text-xl font-bold mb-2">Certified Probate Specialist</h3>
                 <p className="text-blue-100">
-                  Gene holds both PRES (Certified Probate Real Estate Specialist) and CPE 
-                  (Certified Probate Expert) certifications—ensuring he stays current on court 
+                  Gene holds both Probate Real Estate Specialists and Probate Expert 
+                  certifications—ensuring he stays current on court 
                   procedures, legal requirements, and best practices.
                 </p>
               </div>
