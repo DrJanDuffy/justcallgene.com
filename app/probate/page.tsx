@@ -74,18 +74,121 @@ export default function ProbatePage() {
           </div>
         </section>
 
-        {/* Introduction */}
+        {/* Problems & Solutions Section */}
         <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-12">
+              Solving Probate Property <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Challenges</span>
+            </h2>
+
+            <div className="space-y-8 mb-12">
+              {/* Problem 1 */}
+              <Card className="p-8 border-l-4 border-red-500">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl font-bold text-red-600">1</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: You Don't Know Where to Start</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> After losing a loved one, dealing with probate property can feel overwhelming. You may not know what documents are needed, which court to file with, or how to begin the probate sale process. Without clear guidance, families often delay probate sales, causing financial strain and emotional stress.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                      <h4 className="font-bold text-green-900 mb-2 text-lg">Our Solution:</h4>
+                      <p className="text-green-800 leading-relaxed">
+                        We start with a free probate consultation where we assess your situation, explain the probate process, and create a clear action plan. Our probate real estate specialists guide you through every step, from initial court filing through property sale and closing. We handle all documentation, coordinate with probate attorneys, and ensure you understand each phase of the process. You don't have to figure it out alone—we're here to guide you from start to finish.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Problem 2 */}
+              <Card className="p-8 border-l-4 border-red-500">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl font-bold text-red-600">2</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: Court Procedures Are Confusing</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> California probate courts have specific procedures, filing requirements, and deadlines that can be confusing for families. Missing a deadline or filing incorrect documents can delay probate sales for months. Many families struggle to understand court requirements, leading to costly mistakes and extended timelines.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                      <h4 className="font-bold text-green-900 mb-2 text-lg">Our Solution:</h4>
+                      <p className="text-green-800 leading-relaxed">
+                        Our probate real estate specialists have deep knowledge of Orange County probate court procedures. We know exactly what documents are needed, when to file them, and how to ensure court approval. We coordinate with probate attorneys, prepare all required documentation, and manage court deadlines. Our expertise means we get it right the first time, avoiding delays and ensuring smooth probate transactions. We handle all court requirements so you don't have to navigate the legal system alone.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Problem 3 */}
+              <Card className="p-8 border-l-4 border-red-500">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl font-bold text-red-600">3</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: Property Is Losing Value While Waiting</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> Probate properties often sit vacant for months, requiring maintenance, insurance, and utility payments while losing value due to deferred maintenance or market changes. Families may struggle to afford ongoing property expenses, creating financial pressure during an already difficult time.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                      <h4 className="font-bold text-green-900 mb-2 text-lg">Our Solution:</h4>
+                      <p className="text-green-800 leading-relaxed">
+                        We manage probate property timelines efficiently, ensuring properties are sold as quickly as possible while meeting all court requirements. We coordinate property maintenance, security, and preparation to preserve value. Our probate real estate specialists work to minimize delays, optimize timelines, and ensure probate sales proceed efficiently. We help families avoid unnecessary property expenses by moving probate sales forward promptly and effectively.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Problem 4 */}
+              <Card className="p-8 border-l-4 border-red-500">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                      <span className="text-2xl font-bold text-red-600">4</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: You're Worried About Getting Fair Value</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> Families often worry that probate properties will sell below market value, especially if properties need repairs or if executors lack real estate expertise. Without proper valuation and marketing, probate properties can sell for significantly less than they're worth, reducing inheritance amounts for beneficiaries.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                      <h4 className="font-bold text-green-900 mb-2 text-lg">Our Solution:</h4>
+                      <p className="text-green-800 leading-relaxed">
+                        We provide comprehensive probate property valuations that meet court requirements while maximizing estate values. Our probate real estate specialists understand Orange County market dynamics in Newport Beach, Irvine, Corona Del Mar, Laguna Beach, Costa Mesa, and Huntington Beach. We develop strategic marketing plans that reach qualified buyers, ensuring probate properties achieve optimal sale prices. Our goal is to maximize estate values for beneficiaries while ensuring court compliance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white via-neutral-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
               <div className="lg:col-span-3">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Selling a probate property is one of the most challenging real estate transactions you may face. It combines the emotional difficulty of dealing with a loved one's estate with the complexity of legal requirements, court procedures, and real estate processes. As certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert), we understand these challenges and provide the expertise, compassion, and guidance needed to navigate probate real estate successfully.
+                Selling a probate property is one of the most challenging real estate transactions you may face. It combines the emotional difficulty of dealing with a loved one's estate with the complexity of legal requirements, court procedures, and real estate processes. As certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert), we understand these challenges and provide solutions, expertise, and guidance needed to navigate probate real estate successfully.
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                At Just Call Gene, we specialize in probate real estate throughout Orange County, including Newport Beach, Irvine, Corona Del Mar, and surrounding communities. Our team brings deep knowledge and expertise combined with specialized probate training and certification. We work closely with probate attorneys, executors, administrators, and family members to ensure probate sales are handled correctly, efficiently, and with the sensitivity these situations require.
+                At Just Call Gene, we specialize in probate real estate throughout Orange County, including Newport Beach, Irvine, Corona Del Mar, Laguna Beach, Costa Mesa, and Huntington Beach. Our team brings deep knowledge and expertise combined with specialized probate training and certification. We work closely with probate attorneys, executors, administrators, and family members to solve probate challenges and ensure probate sales are handled correctly, efficiently, and with the sensitivity these situations require.
               </p>
 
               <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6">What is Probate Real Estate?</h2>

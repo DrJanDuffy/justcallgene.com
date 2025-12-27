@@ -88,15 +88,65 @@ export default async function CommunityServicePage({ params }: Props) {
           </div>
         </section>
 
-        {/* Introduction */}
+        {/* Problems & Solutions Section */}
         <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-12">
+              Solving {communityData.name} Probate Property <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Challenges</span>
+            </h2>
+
+            <div className="space-y-6 mb-12">
+              <Card className="p-6 border-l-4 border-red-500">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Problem: {communityData.name} Market Knowledge Required</h3>
+                <p className="text-neutral-700 mb-3">
+                  <strong>The Challenge:</strong> Probate properties in {communityData.name} require understanding of local market dynamics, buyer profiles, and community-specific characteristics. Without this knowledge, probate properties may be priced incorrectly or marketed ineffectively, resulting in lower sale prices and extended timelines.
+                </p>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                  <h4 className="font-bold text-green-900 mb-2">Our Solution:</h4>
+                  <p className="text-green-800">
+                    Our probate real estate specialists have extensive experience with {communityData.name} probate properties, understanding local market dynamics, buyer preferences, and community characteristics. We ensure probate properties in {communityData.name} are positioned optimally for successful sales that maximize estate values.
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-l-4 border-red-500">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Problem: Court Compliance for {communityData.name} Properties</h3>
+                <p className="text-neutral-700 mb-3">
+                  <strong>The Challenge:</strong> Probate properties in {communityData.name} must comply with California probate court requirements while maximizing estate values. Court procedures can be complex, and mistakes can delay probate sales or reduce estate values.
+                </p>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                  <h4 className="font-bold text-green-900 mb-2">Our Solution:</h4>
+                  <p className="text-green-800">
+                    Our probate real estate specialists ensure all court requirements are met for {communityData.name} probate properties, handling documentation, court filings, and compliance procedures. We coordinate with probate attorneys and court systems to ensure smooth probate transactions that maximize estate values while maintaining court compliance.
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-l-4 border-red-500">
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">Problem: Finding Qualified Buyers for {communityData.name} Properties</h3>
+                <p className="text-neutral-700 mb-3">
+                  <strong>The Challenge:</strong> Probate properties in {communityData.name} require reaching qualified buyers who understand probate timelines and are interested in {communityData.name} properties. Without proper marketing and buyer outreach, probate properties may sit on the market longer, reducing estate values.
+                </p>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                  <h4 className="font-bold text-green-900 mb-2">Our Solution:</h4>
+                  <p className="text-green-800">
+                    We develop comprehensive marketing strategies tailored to {communityData.name}'s market, ensuring probate properties reach qualified buyers seeking properties in {communityData.name}. Our probate real estate specialists understand buyer profiles and preferences in {communityData.name}, ensuring probate properties are marketed effectively to achieve optimal sale prices.
+                  </p>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white via-neutral-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                {communityData.name} represents one of Orange County's premier communities, and probate properties in {communityData.name} require specialized expertise to ensure successful court-ordered sales. Our probate real estate specialists at Just Call Gene provide comprehensive probate services throughout {communityData.name}, helping families navigate inherited property sales with expertise and compassion.
+                {communityData.name} represents one of Orange County's premier communities, and probate properties in {communityData.name} require specialized expertise to solve probate challenges and ensure successful court-ordered sales. Our probate real estate specialists at Just Call Gene provide comprehensive probate services throughout {communityData.name}, helping families navigate inherited property sales with expertise and compassion.
               </p>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Whether you're dealing with a probate property in {communityData.name} that's a coastal estate, family home, or luxury property, our probate real estate specialists understand {communityData.name}'s unique market dynamics, buyer profiles, and probate court requirements. We ensure probate properties in {communityData.name} achieve optimal sale prices while maintaining strict compliance with California probate court procedures.
+                Whether you're dealing with a probate property in {communityData.name} that's a coastal estate, family home, or luxury property, our probate real estate specialists understand {communityData.name}'s unique market dynamics, buyer profiles, and probate court requirements. We solve probate challenges and ensure probate properties in {communityData.name} achieve optimal sale prices while maintaining strict compliance with California probate court procedures.
               </p>
               <p className="text-lg text-neutral-700 leading-relaxed">
                 Our office is located at 1 TECHNOLOGY DRIVE Suite I829G in Irvine, CA 92618, centrally positioned to serve {communityData.name} and all Orange County communities. For probate property consultations in {communityData.name}, call us at <a href="tel:949-776-3527" className="text-primary font-semibold hover:underline">(949) 776-3527</a> or email <a href="mailto:Probate@JustCallGene.com" className="text-primary font-semibold hover:underline">Probate@JustCallGene.com</a>.

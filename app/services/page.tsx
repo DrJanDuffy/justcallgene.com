@@ -59,16 +59,142 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Introduction */}
+        {/* Problems & Solutions Section */}
         <section className="py-16 md:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-neutral-900 mb-12">
+              Common Probate Property <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Problems & Solutions</span>
+            </h2>
+
+            <div className="space-y-8 mb-12">
+              {/* Problem 1 */}
+              <Card className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: Court Requirements Are Overwhelming</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> Probate property sales require extensive court documentation, specific filing procedures, and compliance with California probate court requirements. Many families struggle with understanding what documents are needed, when to file them, and how to ensure court approval. Missing deadlines or incorrect documentation can delay probate sales for months, costing families time and money.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                      <h4 className="font-bold text-green-900 mb-2">Our Solution:</h4>
+                      <p className="text-green-800">
+                        Our probate real estate specialists handle all court documentation and filing requirements. We coordinate with probate attorneys, prepare all necessary documents, and ensure compliance with Orange County probate court procedures. Our deep knowledge of court requirements means we get it right the first time, avoiding delays and ensuring smooth probate transactions. We manage all court deadlines and requirements so families can focus on healing.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Problem 2 */}
+              <Card className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: Property Values Are Undervalued</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> Probate properties often sell below market value because executors may lack real estate expertise, properties may need repairs, or families may rush to sell. Without proper valuation and marketing, probate properties can sell for significantly less than they're worth, reducing estate values and inheritance amounts for beneficiaries.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                      <h4 className="font-bold text-green-900 mb-2">Our Solution:</h4>
+                      <p className="text-green-800">
+                        We provide comprehensive probate property valuations that meet court requirements while maximizing estate values. Our probate real estate specialists understand Orange County market dynamics, ensuring probate properties are priced appropriately for Newport Beach, Irvine, Corona Del Mar, and other communities. We develop strategic marketing plans that reach qualified buyers, ensuring probate properties achieve optimal sale prices that maximize estate values for beneficiaries.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Problem 3 */}
+              <Card className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: Probate Sales Take Too Long</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> Probate property sales can take 9-18 months or longer, causing financial strain on families who need to pay estate expenses, property maintenance costs, and other obligations. Delays can occur due to court backlogs, missing documentation, or lack of probate expertise, leaving families waiting months for probate sales to complete.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                      <h4 className="font-bold text-green-900 mb-2">Our Solution:</h4>
+                      <p className="text-green-800">
+                        Our probate real estate specialists manage timelines efficiently, ensuring all court requirements are met promptly and probate sales proceed without unnecessary delays. We coordinate with probate attorneys, court schedules, and property preparation to optimize probate timelines. Our expertise means we anticipate requirements, prepare documentation in advance, and ensure probate sales move forward efficiently, reducing wait times and financial strain on families.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Problem 4 */}
+              <Card className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: Family Conflicts and Disagreements</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> Probate property sales often involve multiple heirs with different opinions about property values, sale timing, and estate distribution. Family conflicts can delay probate sales, create legal disputes, and make the probate process emotionally difficult. Without proper mediation and communication, family disagreements can derail probate sales entirely.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                      <h4 className="font-bold text-green-900 mb-2">Our Solution:</h4>
+                      <p className="text-green-800">
+                        Our probate real estate specialists provide compassionate support and clear communication throughout the probate process. We work with all parties, including executors, administrators, beneficiaries, and probate attorneys, ensuring everyone understands the process and feels heard. We provide objective market analysis and professional guidance that helps families make informed decisions together, reducing conflicts and ensuring probate sales proceed smoothly.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Problem 5 */}
+              <Card className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-neutral-900 mb-3">Problem: General Real Estate Agents Lack Probate Expertise</h3>
+                    <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                      <strong>The Challenge:</strong> Most real estate agents handle probate sales occasionally, lacking specialized knowledge of probate court procedures, court requirements, and probate-specific challenges. This inexperience can lead to mistakes, delays, and suboptimal outcomes. General agents may not understand probate timelines, court approval processes, or how to maximize probate property values while ensuring court compliance.
+                    </p>
+                    <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                      <h4 className="font-bold text-green-900 mb-2">Our Solution:</h4>
+                      <p className="text-green-800">
+                        Just Call Gene specializes exclusively in probate real estate—it's our only business. We're certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert) with deep knowledge of Orange County probate courts and procedures. Our exclusive probate focus means we understand probate requirements, court procedures, and probate-specific challenges better than general real estate agents. This specialization ensures probate sales proceed smoothly and achieve optimal outcomes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white via-neutral-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                At Just Call Gene, we provide comprehensive probate real estate services exclusively focused on helping families sell inherited properties in Orange County, California. Our services are designed to handle the unique requirements of probate transactions while providing the support and guidance families need during this difficult time.
+                At Just Call Gene, we provide comprehensive probate real estate services exclusively focused on helping families sell inherited properties in Orange County, California. Our services are designed to solve the unique challenges of probate transactions while providing the support and guidance families need during this difficult time.
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                As certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert), we understand that probate sales require specialized knowledge, court compliance, and sensitivity to family dynamics. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and comprehensive knowledge specifically in probate transactions. Every aspect of our service is designed to help you navigate the probate sale process successfully.
+                As certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert), we understand that probate sales require specialized knowledge, court compliance, and sensitivity to family dynamics. Our exclusive focus on probate real estate means we've developed deep expertise, refined processes, and comprehensive knowledge specifically in probate transactions. Every aspect of our service is designed to solve probate challenges and help you navigate the probate sale process successfully.
               </p>
 
               <h2 className="text-3xl font-bold text-neutral-900 mt-12 mb-6">Why Choose Our Probate Services?</h2>
