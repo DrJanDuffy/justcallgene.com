@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { InternalLinks } from '@/components/ui/InternalLinks';
+import { TableOfContents } from '@/components/ui/TableOfContents';
 import { siteConfig } from '@/lib/config';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
@@ -75,6 +77,8 @@ export default function ProbatePage() {
         {/* Introduction */}
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+              <div className="lg:col-span-3">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
                 Selling a probate property is one of the most challenging real estate transactions you may face. It combines the emotional difficulty of dealing with a loved one's estate with the complexity of legal requirements, court procedures, and real estate processes. As certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert), we understand these challenges and provide the expertise, compassion, and guidance needed to navigate probate real estate successfully.
@@ -98,6 +102,11 @@ export default function ProbatePage() {
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
                 The probate process begins when someone files a petition with the probate court. The court appoints an executor (if there's a will) or an administrator (if there's no will) to manage the estate. This person is responsible for identifying assets, paying debts, and distributing property to heirs. If real estate needs to be sold, the executor or administrator must obtain court approval before listing and selling the property. The entire process can take several months to over a year, depending on the complexity of the estate.
               </p>
+            </div>
+              </div>
+              <div className="lg:col-span-1">
+                <TableOfContents />
+              </div>
             </div>
           </div>
         </section>
@@ -308,6 +317,37 @@ export default function ProbatePage() {
             >
               Schedule Free Consultation
             </Button>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-16 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <InternalLinks
+              title="Related Resources"
+              links={[
+                {
+                  href: '/services',
+                  text: 'Probate Real Estate Services',
+                  description: 'Comprehensive probate services including property valuation, court-ordered sales, and estate management',
+                },
+                {
+                  href: '/sellers/valuation',
+                  text: 'Probate Property Valuation',
+                  description: 'Professional property valuations that meet court requirements for probate proceedings',
+                },
+                {
+                  href: '/about',
+                  text: 'About Our Probate Specialists',
+                  description: 'Learn about our team\'s expertise and commitment to probate real estate',
+                },
+                {
+                  href: '/contact',
+                  text: 'Contact Us',
+                  description: 'Get in touch for a free probate consultation',
+                },
+              ]}
+            />
           </div>
         </section>
       </main>

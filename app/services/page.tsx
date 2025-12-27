@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { InternalLinks } from '@/components/ui/InternalLinks';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { ServiceSchema } from '@/components/schema/ServiceSchema';
 import { siteConfig } from '@/lib/config';
@@ -371,6 +372,37 @@ export default function ServicesPage() {
                 Learn About Probate Process
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Related Resources */}
+        <section className="py-16 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <InternalLinks
+              title="Related Resources"
+              links={[
+                {
+                  href: '/probate',
+                  text: 'Understanding Probate Real Estate',
+                  description: 'Learn about the probate process and how it affects real estate transactions',
+                },
+                {
+                  href: '/sellers/valuation',
+                  text: 'Probate Property Valuation',
+                  description: 'Professional property valuations that meet court requirements',
+                },
+                {
+                  href: '/about',
+                  text: 'About Our Team',
+                  description: 'Meet our certified Probate Real Estate Specialists',
+                },
+                {
+                  href: '/contact',
+                  text: 'Get Started',
+                  description: 'Contact us for a free probate consultation',
+                },
+              ]}
+            />
           </div>
         </section>
       </main>

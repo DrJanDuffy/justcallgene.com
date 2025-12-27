@@ -20,7 +20,7 @@ export function FloatingCTA() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
+    <div className="fixed bottom-6 right-6 z-50 animate-fade-in no-print">
       <Link
         href={`tel:${siteConfig.business.phone}`}
         className="group flex items-center gap-3 bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-glow-lg transition-all duration-300 hover:scale-105 active:scale-95"

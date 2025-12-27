@@ -50,7 +50,7 @@ export function SocialShare({
   };
 
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div className={`flex items-center gap-2 no-print ${className}`}>
       <span className="text-sm text-neutral-600 mr-2">Share:</span>
       <button
         onClick={() => handleShare('facebook')}
