@@ -16,7 +16,7 @@ export function BrokerSection() {
             <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/placeholder-broker.jpg"
-                alt="Eugene Joseph Boyle - Orange County Probate Real Estate Specialist and Certified Probate Expert"
+                alt="Gene Boyle - Orange County Probate Real Estate Specialist and Certified Probate Expert"
                 fill
                 className="object-cover"
                 priority
@@ -27,7 +27,7 @@ export function BrokerSection() {
             
             {/* Credential Badge */}
             <div className="absolute bottom-4 left-4 right-4 bg-white/95 rounded-lg p-4 backdrop-blur-sm">
-              <p className="text-sm text-slate-700 font-semibold">Eugene Joseph Boyle</p>
+              <p className="text-sm text-slate-700 font-semibold">Gene Boyle</p>
               <p className="text-xs text-slate-600">California Real Estate Salesperson</p>
               <p className="text-xs text-blue-600 font-bold">License #02282581</p>
               <div className="flex gap-1 mt-2">

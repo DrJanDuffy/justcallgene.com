@@ -16,7 +16,7 @@ export const siteConfig = {
     agentName: 'Gene',
     agents: [
       {
-        name: 'Eugene Joseph Boyle',
+        name: 'Gene Boyle',
         nickname: 'Gene',
         role: 'Real Estate Salesperson',
         licenseNumber: '02282581',
@@ -110,7 +110,7 @@ export const siteConfig = {
     // Combined credentials from both agents
     credentials: [
       'Real Estate Broker License #02012693 (Kelly Lynn Boyle - Licensed since 2017)',
-      'Real Estate Salesperson License #02282581 (Eugene Joseph Boyle)',
+      'Real Estate Salesperson License #02282581 (Gene Boyle)',
       'Probate Real Estate Specialist (Probate Real Estate Specialists)',
       'Probate Expert (Probate Expert)',
       'Registered U.S. Patent Agent (USPTO #55,018)',

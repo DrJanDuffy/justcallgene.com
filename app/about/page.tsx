@@ -9,7 +9,7 @@ import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
   title: 'About Our Probate Real Estate Team | Just Call Gene',
-  description: 'Meet Eugene Joseph Boyle and Kelly Lynn Boyle, Orange County\'s premier probate real estate specialists. Certified Probate Real Estate Specialists (Probate Real Estate Specialists) with deep knowledge of probate procedures and court requirements.',
+  description: 'Meet Gene Boyle and Kelly Lynn Boyle, Orange County\'s premier probate real estate specialists. Certified Probate Real Estate Specialists (Probate Real Estate Specialists) with deep knowledge of probate procedures and court requirements.',
   keywords: [
     'probate real estate team Orange County',
     'Eugene Boyle probate specialist',

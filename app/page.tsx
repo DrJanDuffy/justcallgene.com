@@ -83,7 +83,7 @@ export default function Home() {
               </p>
               
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Our team, led by Eugene Joseph Boyle (Real Estate Salesperson License #02282581) and Kelly Lynn Boyle (Real Estate Broker License #02012693), brings deep knowledge and expertise combined with specialized probate training and certification. We understand that probate sales involve more than just real estate—they require sensitivity to family dynamics, compliance with court requirements, and expertise in navigating complex legal and financial situations.
+                Our team, led by Gene Boyle (Real Estate Salesperson License #02282581) and Kelly Lynn Boyle (Real Estate Broker License #02012693), brings deep knowledge and expertise combined with specialized probate training and certification. We understand that probate sales involve more than just real estate—they require sensitivity to family dynamics, compliance with court requirements, and expertise in navigating complex legal and financial situations.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">100% Focus on Probate Real Estate</h3>
