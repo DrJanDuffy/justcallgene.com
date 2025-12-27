@@ -63,10 +63,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${cleanUrl}/media`,
+      lastModified: today,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${cleanUrl}/media/market-updates`,
       lastModified: today,
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    {
+      url: `${cleanUrl}/media/probate-guides`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${cleanUrl}/login`,
@@ -124,13 +136,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Market update pages (IDs 1-4)
-  const marketUpdatePages: MetadataRoute.Sitemap = [1, 2, 3, 4].map((id) => ({
+  // Market update pages (IDs 1-9)
+  const marketUpdatePages: MetadataRoute.Sitemap = [1, 2, 3, 4, 5, 6, 7, 8, 9].map((id) => ({
     url: `${cleanUrl}/media/market-updates/${id}`,
     lastModified: today,
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
+
+  // Probate guide pages
+  const probateGuidePages: MetadataRoute.Sitemap = [
+    {
+      url: `${cleanUrl}/media/probate-guides/coastal-probate-properties`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${cleanUrl}/media/probate-guides/probate-process-timeline`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${cleanUrl}/media/probate-guides/luxury-probate-properties`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${cleanUrl}/media/probate-guides/master-planned-community-probate`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ];
 
   // Video pages (IDs 1-4)
   const videoPages: MetadataRoute.Sitemap = [1, 2, 3, 4].map((id) => ({
@@ -147,6 +187,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...listingPages,
     ...marketUpdatePages,
     ...videoPages,
+    ...probateGuidePages,
   ];
 }
 
