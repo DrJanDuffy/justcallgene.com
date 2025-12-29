@@ -12,8 +12,8 @@ export function middleware(request: NextRequest) {
   const needsRedirect = 
     // HTTP to HTTPS redirect
     request.nextUrl.protocol === 'http:' ||
-    // non-www to www redirect
-    (hostname === 'justcallgene.com' && !hostname.startsWith('www.'));
+    // non-www to www redirect (exact match or any non-www variant)
+    (hostname !== canonicalHost && (hostname === 'justcallgene.com' || !hostname.includes('www.')));
   
   if (needsRedirect) {
     // Build canonical URL
@@ -27,6 +27,7 @@ export function middleware(request: NextRequest) {
       status: 301, // Permanent redirect
       headers: {
         'Cache-Control': 'public, max-age=31536000, immutable',
+        'X-Redirect-Reason': 'Canonical URL enforcement',
       },
     });
   }

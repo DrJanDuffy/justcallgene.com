@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://justcallgene.com';
+  // Always use canonical www HTTPS URL
+  const baseUrl = 'https://www.justcallgene.com';
   
   // Ensure baseUrl doesn't have trailing slash
   const cleanUrl = baseUrl.replace(/\/$/, '');
