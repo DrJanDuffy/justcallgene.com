@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { InternalLinks } from '@/components/ui/InternalLinks';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { ServiceSchema } from '@/components/schema/ServiceSchema';
 import { siteConfig } from '@/lib/config';
 
@@ -44,7 +44,11 @@ export default function ServicesPage() {
         serviceType="Probate Real Estate Services"
         areaServed={['Newport Beach', 'Irvine', 'Corona Del Mar', 'Laguna Beach', 'Costa Mesa', 'Huntington Beach', 'Orange County', 'California']}
       />
-      <BreadcrumbSchema items={breadcrumbItems} />
+      <PageSchemas
+        breadcrumbs={breadcrumbItems}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <main>
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white">
