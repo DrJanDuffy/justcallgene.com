@@ -140,18 +140,26 @@ export function LocalBusinessSchema() {
     worstRating: '1',
   } : null;
 
-  // FAQ Schema
+  // FAQ Schema (only on pages where it makes sense, not on FAQ page itself)
   const faqSchema = faqs.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
+    '@id': `${siteConfig.url}#faq`,
+    mainEntity: faqs.map((faq, index) => ({
       '@type': 'Question',
+      '@id': `${siteConfig.url}#question-${index + 1}`,
       name: faq.question,
       acceptedAnswer: {
         '@type': 'Answer',
+        '@id': `${siteConfig.url}#answer-${index + 1}`,
         text: faq.answer,
       },
     })),
+    about: {
+      '@type': 'LocalBusiness',
+      '@id': `${siteConfig.url}#organization`,
+      name: business.name,
+    },
   } : null;
 
   // Review Schema from testimonials
