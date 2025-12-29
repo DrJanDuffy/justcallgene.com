@@ -30,6 +30,9 @@ export function LocalBusinessSchema() {
       postalCode: business.address.postalCode,
       addressCountry: business.address.addressCountry,
     },
+    ...(aggregateRating && {
+      aggregateRating: aggregateRating,
+    }),
     openingHoursSpecification: business.openingHours
       .filter((hours) => hours.includes('-'))
       .map((hours) => {
@@ -167,8 +170,24 @@ export function LocalBusinessSchema() {
     },
     reviewBody: testimonial.text,
     itemReviewed: {
-      '@type': 'LocalBusiness',
+      '@type': ['LocalBusiness', 'RealEstateAgent'],
+      '@id': `${siteConfig.url}#organization`,
       name: business.name,
+      url: siteConfig.url,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: business.address.streetAddress,
+        addressLocality: business.address.addressLocality,
+        addressRegion: business.address.addressRegion,
+        postalCode: business.address.postalCode,
+        addressCountry: business.address.addressCountry,
+      },
+      telephone: business.phone,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: business.name,
+      '@id': `${siteConfig.url}#organization`,
     },
   }));
 
