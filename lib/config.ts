@@ -6,7 +6,8 @@
 export const siteConfig = {
   // Site Information
   name: 'Just Call Gene',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://justcallgene.com',
+  // Always use canonical www HTTPS URL
+  url: 'https://www.justcallgene.com',
   description: 'Probate Real Estate Specialist in Orange County, CA - Certified Probate Real Estate Specialists (Probate Real Estate Specialists) Helping Families Navigate Inherited Property Sales',
   
   // Business Information (NAP - Name, Address, Phone)

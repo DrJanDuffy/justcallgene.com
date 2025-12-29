@@ -2,7 +2,8 @@ import { MetadataRoute } from 'next';
 import { communities, featuredListings } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://justcallgene.com';
+  // Always use canonical www HTTPS URL
+  const baseUrl = 'https://www.justcallgene.com';
   const cleanUrl = baseUrl.replace(/\/$/, '');
   const today = new Date();
 

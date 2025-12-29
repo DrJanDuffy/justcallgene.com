@@ -26,6 +26,24 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['framer-motion'],
   },
   
+  // Redirects for SEO - Canonical URL enforcement
+  async redirects() {
+    return [
+      // Redirect non-www to www (canonical)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'justcallgene.com',
+          },
+        ],
+        destination: 'https://www.justcallgene.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
+
   // Headers for SEO, security, and performance
   async headers() {
     return [
