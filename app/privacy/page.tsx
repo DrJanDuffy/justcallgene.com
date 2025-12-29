@@ -1,6 +1,27 @@
+import { Metadata } from 'next';
+import { PageSchemas } from '@/components/schema/PageSchemas';
+import { siteConfig } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Just Call Gene',
+  description: 'Privacy policy for Just Call Gene. Learn how we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: `${siteConfig.url}/privacy`,
+  },
+};
+
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Privacy Policy', url: '/privacy' },
+        ]}
+        includeFAQ={false}
+        includeReviews={false}
+      />
+      <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -101,7 +122,8 @@ export default function PrivacyPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

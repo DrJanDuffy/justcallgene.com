@@ -1,6 +1,27 @@
+import { Metadata } from 'next';
+import { PageSchemas } from '@/components/schema/PageSchemas';
+import { siteConfig } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'Terms of Use | Just Call Gene',
+  description: 'Terms of use for Just Call Gene website. Read our terms and conditions for using our probate real estate services.',
+  alternates: {
+    canonical: `${siteConfig.url}/terms`,
+  },
+};
+
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Terms of Use', url: '/terms' },
+        ]}
+        includeFAQ={false}
+        includeReviews={false}
+      />
+      <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -73,7 +94,8 @@ export default function TermsPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

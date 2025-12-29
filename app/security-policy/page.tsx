@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 
 export const metadata: Metadata = {
   title: 'Security Policy | Just Call Gene',
@@ -17,10 +17,14 @@ export const metadata: Metadata = {
 export default function SecurityPolicyPage() {
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: '/' },
-        { name: 'Security Policy', url: '/security-policy' },
-      ]} />
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Security Policy', url: '/security-policy' },
+        ]}
+        includeFAQ={false}
+        includeReviews={false}
+      />
       <div className="min-h-screen bg-neutral-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-depth-lg p-8 md:p-12">

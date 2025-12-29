@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { featuredListings } from '@/lib/data';
 import { Button } from '@/components/ui/Button';
 import { InternalLinks } from '@/components/ui/InternalLinks';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { siteConfig } from '@/lib/config';
 
 type Props = {
@@ -73,8 +74,20 @@ export default async function ListingDetailPage({ params }: Props) {
     notFound();
   }
 
+  const listingUrl = `${siteConfig.url}/listings/${id}`;
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Listings', url: '/listings' },
+          { name: `${listing.address}, ${listing.city}`, url: listingUrl },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
+      <div className="min-h-screen bg-white">
       {/* Hero Image */}
       <div className="relative h-96 md:h-[500px] overflow-hidden">
         <Image
@@ -255,7 +268,8 @@ export default async function ListingDetailPage({ params }: Props) {
           />
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 
