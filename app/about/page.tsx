@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { InternalLinks } from '@/components/ui/InternalLinks';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -40,7 +40,11 @@ export default function AboutPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
+      <PageSchemas
+        breadcrumbs={breadcrumbItems}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <main>
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white">

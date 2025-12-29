@@ -1,6 +1,17 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
+import { PageSchemas } from '@/components/schema/PageSchemas';
+import { siteConfig } from '@/lib/config';
+
+export const metadata: Metadata = {
+  title: 'Probate Real Estate Videos | Orange County Probate Insights',
+  description: 'Educational videos about probate real estate, Orange County community insights, and probate market analysis. Learn about probate property sales and court procedures.',
+  alternates: {
+    canonical: `${siteConfig.url}/media/videos`,
+  },
+};
 
 export default function VideosPage() {
   const videos = [
@@ -35,7 +46,17 @@ export default function VideosPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Media', url: '/media' },
+          { name: 'Videos', url: '/media/videos' },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
+      <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -88,7 +109,8 @@ export default function VideosPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

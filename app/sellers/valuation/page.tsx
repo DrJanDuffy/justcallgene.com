@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { InternalLinks } from '@/components/ui/InternalLinks';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { siteConfig } from '@/lib/config';
 
 export default function ValuationPage() {
@@ -41,10 +41,14 @@ export default function ValuationPage() {
 
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: '/' },
-        { name: 'Probate Property Valuation', url: '/sellers/valuation' },
-      ]} />
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Probate Property Valuation', url: '/sellers/valuation' },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <div className="min-h-screen bg-neutral-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-md p-8">

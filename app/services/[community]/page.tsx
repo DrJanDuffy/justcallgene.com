@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { ServiceSchema } from '@/components/schema/ServiceSchema';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { communities } from '@/lib/data';
 import { siteConfig } from '@/lib/config';
 
@@ -73,7 +73,11 @@ export default async function CommunityServicePage({ params }: Props) {
         serviceType="Probate Real Estate Services"
         areaServed={[communityData.name, 'Orange County', 'California']}
       />
-      <BreadcrumbSchema items={breadcrumbItems} />
+      <PageSchemas
+        breadcrumbs={breadcrumbItems}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white">

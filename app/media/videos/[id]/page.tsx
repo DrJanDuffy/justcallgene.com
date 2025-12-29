@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { VideoSchema } from '@/components/schema/VideoSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
 
@@ -115,6 +116,16 @@ export default async function VideoPage({ params }: Props) {
         duration={`PT${video.duration.replace(':', 'M')}S`} // Convert to ISO 8601 duration
         contentUrl={video.videoUrl}
       />
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Media', url: '/media' },
+          { name: 'Videos', url: '/media/videos' },
+          { name: video.title, url: videoUrl },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <div className="min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
@@ -226,7 +237,7 @@ export default async function VideoPage({ params }: Props) {
           />
         </div>
       </section>
-    </div>
+      </div>
     </>
   );
 }

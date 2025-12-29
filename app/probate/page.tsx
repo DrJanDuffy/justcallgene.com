@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/Card';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { TableOfContents } from '@/components/ui/TableOfContents';
 import { siteConfig } from '@/lib/config';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Specialist in Orange County, CA | Just Call Gene',
@@ -41,7 +41,11 @@ const breadcrumbItems = [
 export default function ProbatePage() {
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
+      <PageSchemas
+        breadcrumbs={breadcrumbItems}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
 
@@ -26,7 +27,18 @@ export const metadata: Metadata = {
 
 export default function ProbateProcessTimelinePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Media', url: '/media' },
+          { name: 'Probate Guides', url: '/media/probate-guides' },
+          { name: 'Probate Process Timeline', url: '/media/probate-guides/probate-process-timeline' },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
+      <div className="min-h-screen bg-white">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
           href="/media/probate-guides"
@@ -285,7 +297,8 @@ export default function ProbateProcessTimelinePage() {
           />
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

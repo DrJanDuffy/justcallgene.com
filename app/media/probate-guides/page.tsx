@@ -58,7 +58,17 @@ const guides = [
 
 export default function ProbateGuidesPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Media', url: '/media' },
+          { name: 'Probate Guides', url: '/media/probate-guides' },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -197,7 +207,8 @@ export default function ProbateGuidesPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { communities } from '@/lib/data';
 import { siteConfig } from '@/lib/config';
 
@@ -37,7 +37,11 @@ const breadcrumbItems = [
 export default function CommunitiesPage() {
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
+      <PageSchemas
+        breadcrumbs={breadcrumbItems}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <main>
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white">

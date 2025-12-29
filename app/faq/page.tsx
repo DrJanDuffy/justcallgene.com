@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { FAQsSection } from '@/components/sections/FAQsSection';
 import { faqs } from '@/lib/data';
 import { siteConfig } from '@/lib/config';
-import { FAQPageSchema } from '@/components/schema/FAQPageSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 
 export const metadata: Metadata = {
@@ -29,7 +29,15 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return (
     <>
-      <FAQPageSchema faqs={faqs} />
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'FAQ', url: '/faq' },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+        faqs={faqs}
+      />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-20">

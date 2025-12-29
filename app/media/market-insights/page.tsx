@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { fetchRSSFeed } from '@/lib/rss-feed';
 import { siteConfig } from '@/lib/config';
 
@@ -29,7 +30,17 @@ export default async function MarketInsightsPage() {
   const feedItems = await fetchRSSFeed();
   
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Media', url: '/media' },
+          { name: 'Market Insights', url: '/media/market-insights' },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -232,7 +243,8 @@ export default async function MarketInsightsPage() {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

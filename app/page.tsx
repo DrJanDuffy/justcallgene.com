@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { OCValueSection } from '@/components/sections/OCValueSection';
 import { BrokerSection } from '@/components/sections/BrokerSection';
@@ -54,7 +54,11 @@ const breadcrumbItems = [
 export default function Home() {
   return (
     <>
-      <BreadcrumbSchema items={breadcrumbItems} />
+      <PageSchemas
+        breadcrumbs={breadcrumbItems}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <main>
         {/* Hero Section */}
         <HeroSection />

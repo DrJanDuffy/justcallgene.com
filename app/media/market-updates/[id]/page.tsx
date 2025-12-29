@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { PageSchemas } from '@/components/schema/PageSchemas';
+import { ArticleSchema } from '@/components/schema/ArticleSchema';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
 
@@ -842,9 +844,31 @@ export default async function MarketUpdatePage({ params }: Props) {
     notFound();
   }
 
+  const updateUrl = `${siteConfig.url}/media/market-updates/${id}`;
+  const publishedDate = new Date(update.date).toISOString();
+
   return (
-    <div className="min-h-screen bg-white">
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <>
+      <ArticleSchema
+        title={update.title}
+        description={update.excerpt}
+        author={siteConfig.business.agents?.[0]?.name || siteConfig.business.name}
+        publishedDate={publishedDate}
+        url={updateUrl}
+        content={update.content}
+      />
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Media', url: '/media' },
+          { name: 'Market Updates', url: '/media/market-updates' },
+          { name: update.title, url: updateUrl },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
+      <div className="min-h-screen bg-white">
+        <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
           href="/media/market-updates"
           className="text-primary hover:text-primary-dark font-semibold inline-flex items-center mb-6"
@@ -941,7 +965,8 @@ export default async function MarketUpdatePage({ params }: Props) {
           />
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
 

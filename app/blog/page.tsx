@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Blog - Orange County Probate Insights & Tips',
@@ -27,7 +28,33 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const posts = [
+  return (
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Blog', url: '/blog' },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
+      <main className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="relative py-20 md:py-28 bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
+              Probate Real Estate <span className="bg-gradient-to-r from-blue-400 via-primary-light to-blue-300 bg-clip-text text-transparent">Blog</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-center text-neutral-100 max-w-3xl mx-auto">
+              Expert insights and tips for probate property sales in Orange County
+            </p>
+          </div>
+        </section>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {(() => {
+            const posts = [
     {
       id: '1',
       title: '10 Things to Know Before Buying a Home in Las Vegas',
@@ -78,8 +105,8 @@ export default function BlogPage() {
     },
   ];
 
-  return (
-    <div className="min-h-screen bg-white">
+            return (
+              <>
       <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -179,7 +206,12 @@ export default function BlogPage() {
           />
         </div>
       </section>
-    </div>
+              </>
+            );
+          })()}
+        </div>
+      </main>
+    </>
   );
 }
 

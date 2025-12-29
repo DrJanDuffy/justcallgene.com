@@ -6,7 +6,7 @@ import { communities } from '@/lib/data';
 import { Button } from '@/components/ui/Button';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -60,11 +60,15 @@ export default async function CommunityPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-white">
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: '/' },
-        { name: 'Communities', url: '/communities' },
-        { name: community.name, url: `/communities/${slug}` },
-      ]} />
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Communities', url: '/communities' },
+          { name: community.name, url: `/communities/${slug}` },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       {/* Hero Section */}
       <section className="relative h-96">
         <Image

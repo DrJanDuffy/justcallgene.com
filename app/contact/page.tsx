@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { siteConfig } from '@/lib/config';
-import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 
 export const metadata: Metadata = {
   title: 'Contact Probate Real Estate Specialists | Orange County, CA',
@@ -29,10 +29,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
-      <BreadcrumbSchema items={[
-        { name: 'Home', url: '/' },
-        { name: 'Contact', url: '/contact' },
-      ]} />
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Contact', url: '/contact' },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
+      />
       <section className="relative bg-gradient-to-br from-neutral-900 via-blue-900 to-neutral-900 text-white py-24 overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 overflow-hidden">

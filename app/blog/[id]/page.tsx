@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 import { ArticleSchema } from '@/components/schema/ArticleSchema';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { SocialShare } from '@/components/ui/SocialShare';
 import { calculateReadingTime, formatReadingTime } from '@/lib/utils/readingTime';
 
@@ -244,6 +245,15 @@ export default async function BlogPostPage({ params }: Props) {
         image={post.image}
         url={postUrl}
         content={post.content}
+      />
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Blog', url: '/blog' },
+          { name: post.title, url: postUrl },
+        ]}
+        includeFAQ={true}
+        includeReviews={true}
       />
       <div className="min-h-screen bg-white">
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
