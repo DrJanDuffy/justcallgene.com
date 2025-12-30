@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -16,7 +17,16 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <>
+      <PageSchemas
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Login', url: '/login' },
+        ]}
+        includeFAQ={false}
+        includeReviews={false}
+      />
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-bold text-neutral-900">
@@ -98,7 +108,8 @@ export default function LoginPage() {
           </div>
         </form>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 

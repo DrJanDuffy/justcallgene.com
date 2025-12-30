@@ -12,6 +12,15 @@ export function LocalBusinessSchema() {
   const primaryAgent = business.agents?.[0];
   const broker = business.agents?.find(agent => agent.role === 'Real Estate Broker') || business.agents?.[1];
 
+  // AggregateRating from testimonials (define before use)
+  const aggregateRating = testimonials.length > 0 ? {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: testimonials.length.toString(),
+    bestRating: '5',
+    worstRating: '1',
+  } : null;
+
   // Main LocalBusiness/RealEstateAgent schema
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -32,6 +41,40 @@ export function LocalBusinessSchema() {
     },
     ...(aggregateRating && {
       aggregateRating: aggregateRating,
+    }),
+    // Enhanced RealEstateAgent fields
+    ...(primaryAgent && {
+      jobTitle: primaryAgent.role,
+      description: primaryAgent.bio || business.bio,
+      hasCredential: [
+        {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'California Real Estate License',
+          credentialCategory: `#${primaryAgent.licenseNumber}`,
+        },
+        ...(primaryAgent.credentials || []).filter((cred: string) => 
+          cred.includes('Probate') || cred.includes('Specialist')
+        ).map((cred: string) => ({
+          '@type': 'EducationalOccupationalCredential',
+          name: cred,
+          credentialCategory: 'Professional Certification',
+        })),
+      ],
+      knowsAbout: [
+        'Probate Real Estate Sales',
+        'Probate Property Valuation',
+        'Court-Ordered Sales',
+        'Orange County Probate Real Estate',
+        'Newport Beach Probate Properties',
+        'Irvine Probate Sales',
+        'Corona Del Mar Probate Real Estate',
+        'Laguna Beach Probate Properties',
+        'Costa Mesa Probate Sales',
+        'Huntington Beach Probate Real Estate',
+        'Inherited Property Sales',
+        'Estate Property Management',
+        'Probate Court Compliance',
+      ],
     }),
     openingHoursSpecification: business.openingHours
       .filter((hours) => hours.includes('-'))
@@ -58,6 +101,30 @@ export function LocalBusinessSchema() {
       {
         '@type': 'City',
         name: 'Corona Del Mar',
+      },
+      {
+        '@type': 'City',
+        name: 'Laguna Beach',
+      },
+      {
+        '@type': 'City',
+        name: 'Costa Mesa',
+      },
+      {
+        '@type': 'City',
+        name: 'Huntington Beach',
+      },
+      {
+        '@type': 'City',
+        name: 'Tustin',
+      },
+      {
+        '@type': 'City',
+        name: 'Fountain Valley',
+      },
+      {
+        '@type': 'County',
+        name: 'Orange County',
       },
       {
         '@type': 'State',
@@ -129,15 +196,6 @@ export function LocalBusinessSchema() {
       name: business.name,
       '@id': `${siteConfig.url}#organization`,
     },
-  } : null;
-
-  // AggregateRating from testimonials
-  const aggregateRating = testimonials.length > 0 ? {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    reviewCount: testimonials.length.toString(),
-    bestRating: '5',
-    worstRating: '1',
   } : null;
 
   // FAQ Schema (only on pages where it makes sense, not on FAQ page itself)
