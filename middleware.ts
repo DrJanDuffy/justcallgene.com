@@ -12,8 +12,8 @@ export function middleware(request: NextRequest) {
   const needsRedirect = 
     // HTTP to HTTPS redirect
     request.nextUrl.protocol === 'http:' ||
-    // non-www to www redirect (exact match or any non-www variant)
-    (hostname !== canonicalHost && (hostname === 'justcallgene.com' || !hostname.includes('www.')));
+    // non-www to www redirect (exact match for justcallgene.com)
+    hostname === 'justcallgene.com';
   
   if (needsRedirect) {
     // Build canonical URL
