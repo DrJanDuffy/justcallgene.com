@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
+import { PageSchemas } from '@/components/schema/PageSchemas';
 import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
