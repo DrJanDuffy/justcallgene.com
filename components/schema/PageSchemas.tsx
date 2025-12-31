@@ -34,7 +34,13 @@ export function PageSchemas({
 
       {/* FAQ Schema */}
       {includeFAQ && faqsToUse.length > 0 && (
-        <FAQPageSchema faqs={faqsToUse} />
+        <FAQPageSchema 
+          faqs={faqsToUse} 
+          url={breadcrumbs && breadcrumbs.length > 0 
+            ? breadcrumbs[breadcrumbs.length - 1].url 
+            : undefined
+          }
+        />
       )}
 
       {/* Review Schema */}

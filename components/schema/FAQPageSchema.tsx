@@ -3,20 +3,27 @@ import { siteConfig } from '@/lib/config';
 
 interface FAQPageSchemaProps {
   faqs: FAQ[];
+  url?: string; // Optional page URL, defaults to /faq
 }
 
-export function FAQPageSchema({ faqs }: FAQPageSchemaProps) {
+export function FAQPageSchema({ faqs, url }: FAQPageSchemaProps) {
+  // Use provided URL or default to /faq
+  // Build full URL: if url is absolute, use it; if relative, prepend siteConfig.url
+  const baseUrl = url 
+    ? (url.startsWith('http') ? url : `${siteConfig.url}${url.startsWith('/') ? url : `/${url}`}`)
+    : `${siteConfig.url}/faq`;
+  
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    '@id': `${siteConfig.url}/faq#webpage`,
+    '@id': `${baseUrl}#webpage`,
     mainEntity: faqs.map((faq, index) => ({
       '@type': 'Question',
-      '@id': `${siteConfig.url}/faq#question-${index + 1}`,
+      '@id': `${baseUrl}#question-${index + 1}`,
       name: faq.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        '@id': `${siteConfig.url}/faq#answer-${index + 1}`,
+        '@id': `${baseUrl}#answer-${index + 1}`,
         text: faq.answer,
       },
     })),
