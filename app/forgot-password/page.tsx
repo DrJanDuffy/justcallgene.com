@@ -42,7 +42,6 @@ export default function ForgotPasswordPage() {
           </Link>
         </div>
       </div>
-      </div>
     </>
     );
   }
