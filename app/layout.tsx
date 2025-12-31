@@ -23,9 +23,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.justcallgene.com'),
-  alternates: {
-    canonical: 'https://www.justcallgene.com',
-  },
   title: {
     default: 'Orange County Probate Specialist | Gene Boyle | Expert Knowledge',
     template: `%s | ${siteConfig.name}`,
