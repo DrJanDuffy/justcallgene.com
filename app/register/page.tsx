@@ -37,9 +37,9 @@ export default function RegisterPage() {
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-bold text-neutral-900">
+          <h1 className="mt-6 text-center text-3xl font-bold text-neutral-900">
             Create your account
-          </h2>
+          </h1>
           <p className="mt-2 text-center text-sm text-neutral-600">
             Join to save searches, favorite properties, and more
           </p>

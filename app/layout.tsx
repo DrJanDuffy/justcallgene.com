@@ -107,6 +107,8 @@ export default function RootLayout({
         {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload critical resources for better performance */}
+        <link rel="preload" href={`${siteConfig.url}/og-image.jpg`} as="image" type="image/jpeg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

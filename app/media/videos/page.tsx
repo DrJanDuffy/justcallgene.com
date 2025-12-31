@@ -8,6 +8,19 @@ import { siteConfig } from '@/lib/config';
 export const metadata: Metadata = {
   title: 'Probate Real Estate Videos | Orange County Probate Insights',
   description: 'Educational videos about probate real estate, Orange County community insights, and probate market analysis. Learn about probate property sales and court procedures.',
+  keywords: [
+    'probate real estate videos',
+    'Orange County probate insights',
+    'probate property education',
+    'probate market analysis videos',
+    'probate real estate tutorials',
+  ],
+  openGraph: {
+    title: 'Probate Real Estate Videos | Orange County Probate Insights',
+    description: 'Educational videos about probate real estate and Orange County market insights.',
+    url: `${siteConfig.url}/media/videos`,
+    images: [`${siteConfig.url}/og-image.jpg`],
+  },
   alternates: {
     canonical: `${siteConfig.url}/media/videos`,
   },

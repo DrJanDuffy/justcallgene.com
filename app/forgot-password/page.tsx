@@ -33,7 +33,7 @@ export default function ForgotPasswordPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-neutral-900 mb-4">Check Your Email</h2>
+          <h1 className="text-2xl font-bold text-neutral-900 mb-4">Check Your Email</h1>
           <p className="text-neutral-600 mb-6">
             We've sent password reset instructions to {email}
           </p>
@@ -59,9 +59,9 @@ export default function ForgotPasswordPage() {
       <div className="min-h-screen bg-neutral-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-bold text-neutral-900">
+          <h1 className="mt-6 text-center text-3xl font-bold text-neutral-900">
             Forgot Password?
-          </h2>
+          </h1>
           <p className="mt-2 text-center text-sm text-neutral-600">
             Enter your email address and we'll send you instructions to reset your password
           </p>
