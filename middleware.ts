@@ -1,6 +1,12 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// Note: Next.js 16 shows a deprecation warning for middleware in favor of "proxy"
+// This middleware is still functional and necessary for handling HTTP → HTTPS redirects
+// at the application level. Vercel handles HTTPS redirects at edge level, but this
+// provides an additional layer of protection and handles edge cases.
+// TODO: Monitor Next.js updates for proxy migration when stable documentation is available
+
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get('host') || '';

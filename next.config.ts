@@ -27,9 +27,11 @@ const nextConfig: NextConfig = {
   },
   
   // Redirects for SEO - Canonical URL enforcement
+  // Note: Vercel automatically handles HTTP → HTTPS redirects
+  // These redirects handle non-www → www for HTTPS requests
   async redirects() {
     return [
-      // Redirect non-www to www (canonical)
+      // Redirect non-www HTTPS to www HTTPS (canonical)
       {
         source: '/:path*',
         has: [
