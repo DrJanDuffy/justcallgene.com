@@ -7,27 +7,32 @@ export function middleware(request: NextRequest) {
   
   // Canonical domain: https://www.justcallgene.com (www)
   const canonicalHost = 'www.justcallgene.com';
+  const canonicalProtocol = 'https:';
   
-  // Check if request needs redirect
-  const needsRedirect = 
-    // HTTP to HTTPS redirect
-    request.nextUrl.protocol === 'http:' ||
-    // non-www to www redirect (exact match for justcallgene.com)
-    hostname === 'justcallgene.com';
+  // Determine if redirect is needed
+  const isHttp = request.nextUrl.protocol === 'http:';
+  const isNonWww = hostname === 'justcallgene.com';
+  
+  // Redirect needed if:
+  // 1. HTTP (any hostname) → HTTPS www
+  // 2. HTTPS non-www → HTTPS www
+  const needsRedirect = isHttp || isNonWww;
   
   if (needsRedirect) {
-    // Build canonical URL
-    url.protocol = 'https:';
+    // Build canonical URL - always https://www.justcallgene.com
+    url.protocol = canonicalProtocol;
     url.hostname = canonicalHost;
     
     // Preserve pathname and search params
     const redirectUrl = url.toString();
     
     return NextResponse.redirect(redirectUrl, {
-      status: 301, // Permanent redirect
+      status: 301, // Permanent redirect (SEO-friendly)
       headers: {
         'Cache-Control': 'public, max-age=31536000, immutable',
-        'X-Redirect-Reason': 'Canonical URL enforcement',
+        'X-Redirect-Reason': isHttp 
+          ? 'HTTP to HTTPS and www enforcement' 
+          : 'Non-www to www enforcement',
       },
     });
   }
