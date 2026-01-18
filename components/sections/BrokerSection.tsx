@@ -6,14 +6,20 @@ export function BrokerSection() {
   const primaryAgent = siteConfig.business.agents?.[0];
   
   return (
-    <section id="meet-agent" className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="meet-agent" className="section-padding bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto container-padding relative z-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* Left: Gene's Photo + Credentials */}
-          <div className="relative">
-            <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
+          {/* Left: Gene's Photo + Credentials - Enhanced */}
+          <div className="relative animate-fade-in-up">
+            <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl hover:shadow-glow-lg transition-all duration-300 hover:scale-[1.02]">
               <Image
                 src="/placeholder-broker.jpg"
                 alt="Gene Boyle - Orange County Probate Real Estate Specialist and Certified Probate Expert"
@@ -22,25 +28,25 @@ export function BrokerSection() {
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent" />
             </div>
             
-            {/* Credential Badge */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white/95 rounded-lg p-4 backdrop-blur-sm">
-              <p className="text-sm text-slate-700 font-semibold">Gene Boyle</p>
-              <p className="text-xs text-slate-600">California Real Estate Salesperson</p>
-              <p className="text-xs text-blue-600 font-bold">License #02282581</p>
-              <div className="flex gap-1 mt-2">
-                <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded font-semibold">Probate Real Estate Specialists</span>
-                <span className="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded font-semibold">Probate Expert</span>
+            {/* Credential Badge - Enhanced */}
+            <div className="absolute bottom-6 left-6 right-6 glass rounded-xl p-5 backdrop-blur-md border border-white/30 shadow-xl">
+              <p className="text-base text-slate-900 font-bold mb-1">Gene Boyle</p>
+              <p className="text-sm text-slate-700 mb-1">California Real Estate Salesperson</p>
+              <p className="text-sm text-blue-600 font-bold mb-3">License #02282581</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-block px-3 py-1.5 bg-blue-100 text-blue-700 text-xs rounded-lg font-semibold border border-blue-200">Probate Real Estate Specialists</span>
+                <span className="inline-block px-3 py-1.5 bg-green-100 text-green-700 text-xs rounded-lg font-semibold border border-green-200">Probate Expert</span>
               </div>
             </div>
           </div>
 
-          {/* Right: Gene's Bio + Authority */}
-          <div>
-            <h2 className="text-4xl font-bold mb-6">
-              Orange County's Probate Expert
+          {/* Right: Gene's Bio + Authority - Enhanced */}
+          <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight leading-tight">
+              Orange County's <span className="text-gradient-secondary">Probate Expert</span>
             </h2>
             
             <div className="space-y-6 mb-8">
@@ -72,32 +78,32 @@ export function BrokerSection() {
               </div>
             </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400">
-                <div className="text-3xl font-bold">Expert</div>
-                <div className="text-sm text-blue-100">Court Knowledge</div>
+            {/* Stats Grid - Enhanced */}
+            <div className="grid grid-cols-2 gap-4 mb-10">
+              <div className="glass rounded-xl p-5 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-300 to-primary-light bg-clip-text mb-2">Expert</div>
+                <div className="text-sm text-blue-100/90 font-medium">Court Knowledge</div>
               </div>
-              <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400">
-                <div className="text-3xl font-bold">Expert</div>
-                <div className="text-sm text-blue-100">Knowledge Base</div>
+              <div className="glass rounded-xl p-5 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-300 to-primary-light bg-clip-text mb-2">Expert</div>
+                <div className="text-sm text-blue-100/90 font-medium">Knowledge Base</div>
               </div>
-              <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400">
-                <div className="text-3xl font-bold">12%</div>
-                <div className="text-sm text-blue-100">Average Premium Above Estimate</div>
+              <div className="glass rounded-xl p-5 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-300 to-primary-light bg-clip-text mb-2">12%</div>
+                <div className="text-sm text-blue-100/90 font-medium">Average Premium Above Estimate</div>
               </div>
-              <div className="bg-blue-500/20 rounded-lg p-4 border border-blue-400">
-                <div className="text-3xl font-bold">98%</div>
-                <div className="text-sm text-blue-100">Client Satisfaction Rate</div>
+              <div className="glass rounded-xl p-5 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-transparent bg-gradient-to-r from-blue-300 to-primary-light bg-clip-text mb-2">98%</div>
+                <div className="text-sm text-blue-100/90 font-medium">Client Satisfaction Rate</div>
               </div>
             </div>
 
-            {/* CTA */}
+            {/* CTA - Enhanced */}
             <a
               href={`tel:${siteConfig.business.phone}`}
-              className="inline-block px-6 py-3 bg-blue-400 hover:bg-blue-300 text-slate-900 font-bold rounded-lg transition-all duration-200"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-400 via-primary-light to-blue-500 hover:from-blue-500 hover:via-primary hover:to-blue-600 text-slate-900 font-bold text-lg rounded-xl transition-all duration-300 shadow-glow hover:shadow-glow-lg hover:scale-105 focus-ring-dark"
             >
-              Speak Directly with Gene
+              📞 Speak Directly with Gene
             </a>
           </div>
 

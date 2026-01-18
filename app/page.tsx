@@ -69,14 +69,14 @@ export default function Home() {
         {/* Meet Gene Section */}
         <BrokerSection />
 
-        {/* Introduction Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-neutral-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-                Orange County's Premier <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Probate Real Estate</span> Specialists
+        {/* Introduction Section - Enhanced */}
+        <section className="section-padding bg-gradient-to-b from-white to-neutral-50">
+          <div className="max-w-7xl mx-auto container-padding">
+            <div className="text-center mb-16 animate-fade-in-up">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6 tracking-tight">
+                Orange County's Premier <span className="text-gradient-primary">Probate Real Estate</span> Specialists
               </h2>
-              <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
                 Certified Probate Real Estate Specialists (Probate Real Estate Specialists) and Probate Experts (Probate Expert) serving families throughout Orange County
               </p>
             </div>
@@ -113,17 +113,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-neutral-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-                Why Choose <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Just Call Gene</span> for Probate Sales?
+        {/* Why Choose Us Section - Enhanced */}
+        <section className="section-padding bg-gradient-to-b from-neutral-50 to-white">
+          <div className="max-w-7xl mx-auto container-padding">
+            <div className="text-center mb-16 animate-fade-in-up">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6 tracking-tight">
+                Why Choose <span className="text-gradient-primary">Just Call Gene</span> for Probate Sales?
               </h2>
-              <p className="text-lg text-neutral-600">The Probate Real Estate Specialist Advantage</p>
+              <p className="text-xl md:text-2xl text-neutral-600">The Probate Real Estate Specialist Advantage</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
               <Card variant="elevated" className="p-6">
                 <h3 className="text-xl font-bold text-neutral-900 mb-3">Certified Probate Specialists</h3>
                 <p className="text-neutral-700">
