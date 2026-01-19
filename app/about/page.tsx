@@ -151,7 +151,7 @@ export default function AboutPage() {
             <div>
               <Card variant="elevated" className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-                  <div className="relative aspect-square rounded-2xl overflow-hidden lg:order-2">
+                  <div className="relative aspect-square max-w-[280px] mx-auto lg:max-w-[320px] rounded-2xl overflow-hidden lg:order-2">
                     <Image
                       src="/placeholder-broker.jpg"
                       alt={`${kelly.name} - Orange County Probate Real Estate Broker`}
