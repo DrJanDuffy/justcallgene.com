@@ -105,7 +105,7 @@ export default function AboutPage() {
             <div className="mb-16">
               <Card variant="elevated" className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-                  <div className="relative aspect-square max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden">
+                  <div className="relative aspect-square max-w-[280px] mx-auto lg:max-w-[320px] rounded-2xl overflow-hidden">
                     <Image
                       src="/images/agents/gene-boyle.jpg"
                       alt={`${eugene.name} - Orange County Probate Real Estate Specialist`}

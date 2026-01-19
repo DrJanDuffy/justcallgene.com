@@ -24,7 +24,7 @@ export function BrokerSection() {
           
           {/* Left: Gene's Photo + Credentials - Enhanced */}
           <div className="relative animate-fade-in-up">
-            <div className="relative w-full max-w-xs mx-auto lg:max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl hover:shadow-glow-lg transition-all duration-300 hover:scale-[1.02]">
+            <div className="relative w-full max-w-[280px] mx-auto lg:max-w-[320px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl hover:shadow-glow-lg transition-all duration-300 hover:scale-[1.02]">
               {/* Gradient background fallback - shows if image fails to load */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-slate-800 z-0" />
               <Image
