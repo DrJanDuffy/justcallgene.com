@@ -26,6 +26,17 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['framer-motion'],
   },
   
+  // Compiler options to reduce polyfills
+  compiler: {
+    // Remove console.log in production
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  
+  // SWC minification (faster than Terser)
+  swcMinify: true,
+  
   // Redirects for SEO - Canonical URL enforcement
   // Note: Vercel automatically handles HTTP → HTTPS redirects
   // These redirects handle non-www → www for HTTPS requests

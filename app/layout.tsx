@@ -14,11 +14,17 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // Prevent FOIT (Flash of Invisible Text)
+  preload: true, // Preload critical font
+  fallback: ["system-ui", "-apple-system", "sans-serif"], // Immediate fallback
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap", // Prevent FOIT
+  preload: false, // Only preload primary font
+  fallback: ["monospace"], // Immediate fallback
 });
 
 export const metadata: Metadata = {
@@ -104,11 +110,29 @@ export default function RootLayout({
         {/* DNS Prefetch for external resources */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Preconnect to Google Fonts */}
+        {/* Preconnect to Google Fonts - Early connection */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Preload critical resources for better performance */}
         <link rel="preload" href={`${siteConfig.url}/og-image.jpg`} as="image" type="image/jpeg" />
+        {/* Critical CSS hint - inline critical styles for faster LCP */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical CSS for LCP element (h1) */
+            h1 {
+              font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+              font-weight: 700;
+              line-height: 1.1;
+              letter-spacing: -0.03em;
+              color: white;
+            }
+            /* Prevent layout shift */
+            body {
+              margin: 0;
+              padding: 0;
+            }
+          `
+        }} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -116,17 +140,19 @@ export default function RootLayout({
         {/* LocalBusiness Schema Markup */}
         <LocalBusinessSchema />
         
-        {/* Google Analytics */}
+        {/* Google Analytics - Deferred to improve LCP */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GW4Z2Z186L"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-GW4Z2Z186L');
+            gtag('config', 'G-GW4Z2Z186L', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
         
