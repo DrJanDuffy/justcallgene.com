@@ -368,7 +368,6 @@ export default function GlossaryPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <InternalLinks
               title="Explore More Probate Resources"
-              description="Continue learning about probate real estate in Orange County."
               links={[
                 {
                   href: '/probate',
