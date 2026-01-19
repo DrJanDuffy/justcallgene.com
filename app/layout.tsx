@@ -137,25 +137,18 @@ export default function RootLayout({
         <LocalBusinessSchema />
         
         {/* Google Analytics - Loaded after page is fully interactive to improve LCP */}
-        {/* Using onLoad to ensure it only loads after page is ready */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GW4Z2Z186L"
           strategy="lazyOnload"
-          onLoad={() => {
-            // Initialize analytics after script loads
-            if (typeof window !== 'undefined' && window.dataLayer) {
-              window.dataLayer.push(['js', new Date()]);
-              window.dataLayer.push(['config', 'G-GW4Z2Z186L', {
-                page_path: window.location.pathname,
-              }]);
-            }
-          }}
         />
-        <Script id="google-analytics-init" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            // Don't call gtag immediately - wait for script to load
+            gtag('js', new Date());
+            gtag('config', 'G-GW4Z2Z186L', {
+              page_path: window.location.pathname,
+            });
           `}
         </Script>
         
