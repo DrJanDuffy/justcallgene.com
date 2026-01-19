@@ -2,7 +2,7 @@
  * Community/neighborhood type definitions
  */
 
-import type { BaseEntity } from './common';
+import type { BaseEntity, Coordinates } from './common';
 
 export interface Community extends BaseEntity {
   name: string;
@@ -19,11 +19,6 @@ export interface Community extends BaseEntity {
   amenities?: string[];
   demographics?: Demographics;
   marketStats?: MarketStats;
-}
-
-export interface Coordinates {
-  latitude: number;
-  longitude: number;
 }
 
 export interface School {

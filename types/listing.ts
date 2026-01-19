@@ -2,7 +2,7 @@
  * Real estate listing type definitions
  */
 
-import type { BaseEntity, PropertyType } from './common';
+import type { BaseEntity, PropertyType, Coordinates } from './common';
 
 export interface Listing extends BaseEntity {
   mlsNumber?: string;
@@ -45,11 +45,6 @@ export interface ListingImage {
   alt: string;
   isPrimary: boolean;
   order: number;
-}
-
-export interface Coordinates {
-  latitude: number;
-  longitude: number;
 }
 
 export interface ListingSearchParams {

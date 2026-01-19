@@ -46,3 +46,11 @@ export type PropertyType =
   | 'commercial'
   | 'land'
   | 'other';
+
+/**
+ * Geographic coordinates - shared across listing and community types
+ */
+export interface Coordinates {
+  latitude: number;
+  longitude: number;
+}
