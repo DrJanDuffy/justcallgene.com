@@ -109,9 +109,14 @@ export default function Home() {
                 Probate real estate transactions are fundamentally different from traditional real estate sales. They require court approval, specific legal procedures, compliance with probate timelines, and often involve multiple heirs, executors, and attorneys. The process can be emotionally challenging for families while also requiring technical expertise in probate law, court procedures, and real estate. Our exclusive focus on probate means we've mastered every aspect of this specialized field.
               </p>
 
+              <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Property Types We Handle</h3>
+              <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                I've supported hundreds of people & families with real property including <strong>Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land</strong> in <strong>Newport Beach, Irvine, and Corona Del Mar</strong> since 2004. Our experience across all property types means we understand the unique considerations for each—from luxury high-rise condominiums to single-family estates to investment properties.
+              </p>
+
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Our Service Areas</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                We specialize in probate property sales throughout Orange County's most prestigious communities, including Newport Beach, Irvine, Corona Del Mar, Laguna Beach, Costa Mesa, and Huntington Beach. Our deep knowledge of these markets, combined with our probate expertise, allows us to maximize property values while ensuring compliance with all court requirements and legal procedures.
+                We specialize in probate property sales throughout Orange County's most prestigious communities, with deep expertise in <strong>Newport Beach, Irvine, and Corona Del Mar</strong>. We also serve Laguna Beach, Costa Mesa, Huntington Beach, and surrounding Orange County communities. Our deep knowledge of these markets, combined with our probate expertise, allows us to maximize property values while ensuring compliance with all court requirements and legal procedures.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Comprehensive Probate Services</h3>

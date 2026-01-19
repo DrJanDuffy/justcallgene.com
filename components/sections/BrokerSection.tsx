@@ -85,6 +85,15 @@ export function BrokerSection() {
               </div>
 
               <div>
+                <h3 className="text-xl font-bold mb-2">Experience Across All Property Types</h3>
+                <p className="text-blue-100">
+                  Gene has supported hundreds of people & families with real property including Single Family Homes, 
+                  High-Rise Units, Multi-Family Properties, Condos, and Land in Newport Beach, Irvine, and Corona Del Mar 
+                  since 2004. This diverse experience means he understands the unique considerations for each property type.
+                </p>
+              </div>
+
+              <div>
                 <h3 className="text-xl font-bold mb-2">Certified Probate Specialist</h3>
                 <p className="text-blue-100">
                   Gene holds both Probate Real Estate Specialists and Probate Expert 
