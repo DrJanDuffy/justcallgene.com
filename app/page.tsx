@@ -30,18 +30,26 @@ export const metadata: Metadata = {
     'inherited property sales',
   ],
   openGraph: {
-    title: 'Probate Real Estate Specialist | Orange County, CA',
-    description: 'Certified Probate Real Estate Specialist helping families sell inherited properties in Orange County with expertise and compassion.',
+    title: 'Orange County Probate Real Estate Specialist | Gene Boyle | Just Call Gene',
+    description: 'Orange County\'s top probate realtor. Gene Boyle brings deep probate knowledge and expertise with 12% average premium. Free valuation. (949) 776-3527',
     url: siteConfig.url,
     siteName: siteConfig.name,
+    type: 'website',
     images: [
       {
         url: `${siteConfig.url}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - Probate Real Estate Specialist`,
+        alt: 'Just Call Gene - Orange County Probate Real Estate Specialist | Gene Boyle',
+        type: 'image/jpeg',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Orange County Probate Real Estate Specialist | Gene Boyle',
+    description: 'Orange County\'s top probate realtor. 12% average premium. Free valuation. (949) 776-3527',
+    images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
     canonical: siteConfig.url,

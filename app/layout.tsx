@@ -62,22 +62,22 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: 'Orange County Probate Real Estate Specialist | Gene Boyle | Just Call Gene',
+    description: 'Orange County\'s top probate realtor. Gene Boyle brings deep probate knowledge and expertise with 12% average premium. Free valuation. (949) 776-3527',
     images: [
       {
         url: `${siteConfig.url}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} - ${siteConfig.description}`,
+        alt: 'Just Call Gene - Orange County Probate Real Estate Specialist | Gene Boyle',
         type: 'image/jpeg',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: 'Orange County Probate Real Estate Specialist | Gene Boyle',
+    description: 'Orange County\'s top probate realtor. 12% average premium. Free valuation. (949) 776-3527',
     images: [`${siteConfig.url}/og-image.jpg`],
   },
   alternates: {
