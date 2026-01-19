@@ -148,6 +148,7 @@ export function LocalBusinessSchema() {
         '@type': 'RealEstateAgent',
         name: primaryAgent.name,
         jobTitle: primaryAgent.role,
+        image: `${siteConfig.url}/images/agents/gene-boyle.jpg`,
         address: {
           '@type': 'PostalAddress',
           streetAddress: business.address.streetAddress,
@@ -158,6 +159,7 @@ export function LocalBusinessSchema() {
         },
         telephone: business.phone,
         email: business.email || undefined,
+        priceRange: '$$',
         identifier: {
           '@type': 'PropertyValue',
           name: 'Real Estate License Number',
