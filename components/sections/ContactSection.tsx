@@ -106,17 +106,33 @@ export function ContactSection() {
               </p>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="relative h-64 bg-gradient-to-br from-neutral-100 to-neutral-200 rounded-xl overflow-hidden border border-neutral-200 shadow-soft">
-              <div className="absolute inset-0 flex items-center justify-center text-neutral-500">
-                <div className="text-center">
-                  <svg className="w-16 h-16 mx-auto mb-2 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <p className="text-sm">Map placeholder - Add Google Maps embed</p>
-                </div>
-              </div>
+            {/* Google Maps Embed */}
+            <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden border border-neutral-200 shadow-soft">
+              <iframe
+                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyBFw0Qbyq9zTFTd-tUY6d-s6Y4cUKu7gJQ'}&q=${encodeURIComponent(
+                  `${siteConfig.business.address.streetAddress}, ${siteConfig.business.address.addressLocality}, ${siteConfig.business.address.addressRegion} ${siteConfig.business.address.postalCode}`
+                )}`}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Just Call Gene Office Location - 1 TECHNOLOGY DRIVE Suite I829G, Irvine, CA 92618"
+                className="w-full h-full"
+              />
+              {/* Fallback link if iframe fails to load */}
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  `${siteConfig.business.address.streetAddress}, ${siteConfig.business.address.addressLocality}, ${siteConfig.business.address.addressRegion} ${siteConfig.business.address.postalCode}`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg text-sm font-semibold text-primary hover:bg-neutral-50 transition-colors"
+                aria-label="Open location in Google Maps"
+              >
+                Open in Google Maps
+              </a>
             </div>
           </div>
 
