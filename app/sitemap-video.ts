@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next';
 
 export default function videoSitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://justcallgene.com';
+  // Always use canonical www HTTPS URL
+  const baseUrl = 'https://www.justcallgene.com';
   const cleanUrl = baseUrl.replace(/\/$/, '');
   const today = new Date();
 

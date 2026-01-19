@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://justcallgene.com';
+  // Always use canonical www HTTPS URL
+  const baseUrl = 'https://www.justcallgene.com';
   const cleanUrl = baseUrl.replace(/\/$/, '');
   const today = new Date().toISOString();
 
