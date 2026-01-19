@@ -125,12 +125,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Blog posts (IDs 1-6)
-  const blogPosts: MetadataRoute.Sitemap = [1, 2, 3, 4, 5, 6].map((id) => ({
-    url: `${cleanUrl}/blog/${id}`,
-    lastModified: today,
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  }));
+      const blogPosts: MetadataRoute.Sitemap = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((id) => ({
+        url: `${cleanUrl}/blog/${id}`,
+        lastModified: today,
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      }));
 
   // Listing pages
   const listingPages: MetadataRoute.Sitemap = featuredListings.map((listing) => ({

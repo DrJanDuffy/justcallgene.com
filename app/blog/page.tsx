@@ -103,6 +103,38 @@ export default function BlogPage() {
       date: 'December 8, 2024',
       category: 'Buying',
     },
+    {
+      id: '7',
+      title: 'How Long Does Probate Take in Orange County? A Complete Timeline Guide',
+      excerpt: 'Understanding probate timelines in Orange County, CA. Learn what factors affect probate duration and how to navigate the process efficiently.',
+      image: '/placeholder-blog.jpg',
+      date: 'January 20, 2026',
+      category: 'Probate',
+    },
+    {
+      id: '8',
+      title: 'Selling Inherited Property in California: Tax Implications and Strategies',
+      excerpt: 'Complete guide to California tax implications when selling inherited property. Learn about step-up basis, capital gains, and tax-saving strategies.',
+      image: '/placeholder-blog.jpg',
+      date: 'January 22, 2026',
+      category: 'Probate',
+    },
+    {
+      id: '9',
+      title: 'Orange County Probate Court Forms: Complete Guide for Executors and Administrators',
+      excerpt: 'Essential Orange County probate court forms explained. Learn which forms you need, when to file them, and how to navigate the probate process.',
+      image: '/placeholder-blog.jpg',
+      date: 'January 24, 2026',
+      category: 'Probate',
+    },
+    {
+      id: '10',
+      title: 'Do I Need to Go Through Probate to Sell an Inherited House in California?',
+      excerpt: 'Learn when probate is required to sell inherited property in California and when you can avoid it. Understand your options and legal requirements.',
+      image: '/placeholder-blog.jpg',
+      date: 'January 26, 2026',
+      category: 'Probate',
+    },
   ];
 
             return (
