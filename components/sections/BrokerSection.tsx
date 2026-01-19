@@ -34,6 +34,7 @@ export function BrokerSection() {
                 className="object-cover relative z-10"
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={95}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent z-20" />
             </div>

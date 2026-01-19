@@ -113,6 +113,10 @@ export default function AboutPage() {
                       className="object-cover"
                       priority
                       sizes="(max-width: 1024px) 100vw, 50vw"
+                      quality={95}
+                      style={{
+                        imageRendering: 'crisp-edges',
+                      }}
                     />
                   </div>
                   <div className="space-y-6">
