@@ -109,9 +109,9 @@ export function ContactSection() {
             {/* Google Maps Embed */}
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden border border-neutral-200 shadow-soft">
               <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyBFw0Qbyq9zTFTd-tUY6d-s6Y4cUKu7gJQ'}&q=${encodeURIComponent(
+                src={`https://www.google.com/maps?q=${encodeURIComponent(
                   `${siteConfig.business.address.streetAddress}, ${siteConfig.business.address.addressLocality}, ${siteConfig.business.address.addressRegion} ${siteConfig.business.address.postalCode}`
-                )}`}
+                )}&output=embed`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -121,14 +121,14 @@ export function ContactSection() {
                 title="Just Call Gene Office Location - 1 TECHNOLOGY DRIVE Suite I829G, Irvine, CA 92618"
                 className="w-full h-full"
               />
-              {/* Fallback link if iframe fails to load */}
+              {/* Fallback link to open in Google Maps */}
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                   `${siteConfig.business.address.streetAddress}, ${siteConfig.business.address.addressLocality}, ${siteConfig.business.address.addressRegion} ${siteConfig.business.address.postalCode}`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg text-sm font-semibold text-primary hover:bg-neutral-50 transition-colors"
+                className="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg text-sm font-semibold text-primary hover:bg-neutral-50 transition-colors z-10"
                 aria-label="Open location in Google Maps"
               >
                 Open in Google Maps
