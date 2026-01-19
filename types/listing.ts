@@ -2,7 +2,7 @@
  * Real estate listing type definitions
  */
 
-import type { BaseEntity } from './common';
+import type { BaseEntity, PropertyType } from './common';
 
 export interface Listing extends BaseEntity {
   mlsNumber?: string;
@@ -29,15 +29,6 @@ export interface Listing extends BaseEntity {
   hoaFee?: number;
   taxes?: number;
 }
-
-export type PropertyType =
-  | 'single-family'
-  | 'condo'
-  | 'townhouse'
-  | 'multi-family'
-  | 'commercial'
-  | 'land'
-  | 'other';
 
 export type ListingType = 'sale' | 'rent' | 'lease';
 

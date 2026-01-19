@@ -2,6 +2,8 @@
  * Lead-related type definitions
  */
 
+import type { BaseEntity, PropertyType } from './common';
+
 export interface Lead extends BaseEntity {
   firstName: string;
   lastName: string;
@@ -32,15 +34,6 @@ export type LeadStatus =
   | 'nurturing'
   | 'converted'
   | 'lost';
-
-export type PropertyType =
-  | 'single-family'
-  | 'condo'
-  | 'townhouse'
-  | 'multi-family'
-  | 'commercial'
-  | 'land'
-  | 'other';
 
 export interface LeadFormData {
   firstName: string;

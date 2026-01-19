@@ -34,3 +34,15 @@ export interface SortParams {
   field: string;
   order: SortOrder;
 }
+
+/**
+ * Property type definitions - shared across lead and listing types
+ */
+export type PropertyType =
+  | 'single-family'
+  | 'condo'
+  | 'townhouse'
+  | 'multi-family'
+  | 'commercial'
+  | 'land'
+  | 'other';
