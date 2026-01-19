@@ -475,6 +475,52 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        {/* Office Location Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+                Visit Our <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Office</span>
+              </h2>
+              <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+                Our office is centrally located in Irvine to serve all Orange County communities.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-soft">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-4">Office Address</h3>
+                  <p className="text-lg text-neutral-700 mb-2">
+                    {siteConfig.business.address.streetAddress}
+                  </p>
+                  <p className="text-lg text-neutral-700">
+                    {siteConfig.business.address.addressLocality}, {siteConfig.business.address.addressRegion} {siteConfig.business.address.postalCode}
+                  </p>
+                </div>
+                
+                <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-soft">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-4">Contact Information</h3>
+                  <p className="text-lg text-neutral-700 mb-2">
+                    <a href={`tel:${siteConfig.business.phone}`} className="text-primary hover:underline font-semibold">
+                      {siteConfig.business.phoneFormatted}
+                    </a>
+                  </p>
+                  <p className="text-lg text-neutral-700">
+                    <a href={`mailto:${siteConfig.business.email}`} className="text-primary hover:underline">
+                      {siteConfig.business.email}
+                    </a>
+                  </p>
+                </div>
+              </div>
+              
+              <div>
+                <GoogleMap title="Just Call Gene Office Location" />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 md:py-24 bg-gradient-to-r from-primary via-primary-dark to-primary text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

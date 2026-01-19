@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { siteConfig } from '@/lib/config';
 import { Button } from '@/components/ui/Button';
+import { GoogleMap } from '@/components/ui/GoogleMap';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -107,33 +108,7 @@ export function ContactSection() {
             </div>
 
             {/* Google Maps Embed */}
-            <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden border border-neutral-200 shadow-soft">
-              <iframe
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                  `${siteConfig.business.address.streetAddress}, ${siteConfig.business.address.addressLocality}, ${siteConfig.business.address.addressRegion} ${siteConfig.business.address.postalCode}`
-                )}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Just Call Gene Office Location - 1 TECHNOLOGY DRIVE Suite I829G, Irvine, CA 92618"
-                className="w-full h-full"
-              />
-              {/* Fallback link to open in Google Maps */}
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  `${siteConfig.business.address.streetAddress}, ${siteConfig.business.address.addressLocality}, ${siteConfig.business.address.addressRegion} ${siteConfig.business.address.postalCode}`
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg text-sm font-semibold text-primary hover:bg-neutral-50 transition-colors z-10"
-                aria-label="Open location in Google Maps"
-              >
-                Open in Google Maps
-              </a>
-            </div>
+            <GoogleMap title="Just Call Gene Office Location" />
           </div>
 
           {/* Contact Form */}
