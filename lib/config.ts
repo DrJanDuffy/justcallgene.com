@@ -22,7 +22,7 @@ export const siteConfig = {
         role: 'Real Estate Salesperson',
         licenseNumber: '02282581',
         licenseExpiration: '04/15/2029',
-        bio: 'As a Highly-trained, Professional, and Skilled Realtor, you can be confident with me helping you move into the next season of life with convenience while maximizing your sale proceeds. I\'ve supported hundreds of people & families with real property including Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land in Newport Beach, Irvine, and Corona Del Mar since 2004.',
+        bio: 'As a Highly-trained, Professional, and Skilled Realtor, you can be confident with me helping you move into the next season of life with convenience while maximizing your sale proceeds. I support people & families with real property including Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land in Newport Beach, Irvine, and Corona Del Mar.',
         extendedBio: 'With a unique combination of finance, law, and analytical expertise, I bring a comprehensive approach to real estate. As a former CFO who led an AMEX-listed company through IPO and SEC compliance, I understand the financial complexities of real estate transactions. My JD/MBA background provides deep insight into contracts, negotiations, and strategic planning. Combined with deep knowledge of Orange County\'s premier coastal communities, I offer clients unparalleled expertise in both residential and commercial transactions.',
         credentials: [
           'Real Estate Salesperson License #02282581',
@@ -103,7 +103,7 @@ export const siteConfig = {
     ],
     
     // Bio information (for backward compatibility - uses Eugene's bio)
-    bio: 'As a Highly-trained, Professional, and Skilled Realtor, you can be confident with us helping you move into the next season of life with convenience while maximizing your sale proceeds. We\'ve supported hundreds of people & families with real property including Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land in Newport Beach, Irvine, and Corona Del Mar since 2004.',
+    bio: 'As a Highly-trained, Professional, and Skilled Realtor, you can be confident with us helping you move into the next season of life with convenience while maximizing your sale proceeds. We support people & families with real property including Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land in Newport Beach, Irvine, and Corona Del Mar.',
     
     // Extended bio with professional background
     extendedBio: 'With a unique combination of finance, law, and analytical expertise, our team brings a comprehensive approach to real estate. Combined with deep knowledge of Orange County\'s premier coastal communities and probate court procedures, we offer clients unparalleled expertise in both residential and commercial transactions.',

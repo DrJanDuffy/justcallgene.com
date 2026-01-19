@@ -111,7 +111,7 @@ export default function Home() {
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Property Types We Handle</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                I've supported hundreds of people & families with real property including <strong>Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land</strong> in <strong>Newport Beach, Irvine, and Corona Del Mar</strong> since 2004. Our experience across all property types means we understand the unique considerations for each—from luxury high-rise condominiums to single-family estates to investment properties.
+                I support people & families with real property including <strong>Single Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land</strong> in <strong>Newport Beach, Irvine, and Corona Del Mar</strong>. Our experience across all property types means we understand the unique considerations for each—from luxury high-rise condominiums to single-family estates to investment properties.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Our Service Areas</h3>
