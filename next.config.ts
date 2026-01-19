@@ -26,6 +26,10 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['framer-motion'],
   },
   
+  // Reduce legacy JavaScript polyfills
+  // Next.js will use modern JavaScript features without transpiling
+  transpilePackages: [],
+  
   // Compiler options to reduce polyfills
   compiler: {
     // Remove console.log in production
