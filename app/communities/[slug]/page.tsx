@@ -2,9 +2,10 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { communities } from '@/lib/data';
+import { communities, getCommunityFAQs } from '@/lib/data';
 import { Button } from '@/components/ui/Button';
 import { InternalLinks } from '@/components/ui/InternalLinks';
+import { FAQsSection } from '@/components/sections/FAQsSection';
 import { siteConfig } from '@/lib/config';
 import { PageSchemas } from '@/components/schema/PageSchemas';
 
@@ -58,6 +59,8 @@ export default async function CommunityPage({ params }: Props) {
     notFound();
   }
 
+  const communityFAQs = getCommunityFAQs(community.name);
+
   return (
     <div className="min-h-screen bg-white">
       <PageSchemas
@@ -68,6 +71,7 @@ export default async function CommunityPage({ params }: Props) {
         ]}
         includeFAQ={true}
         includeReviews={true}
+        faqs={communityFAQs}
       />
       {/* Hero Section */}
       <section className="relative h-96">
@@ -134,6 +138,12 @@ export default async function CommunityPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* Location-Specific FAQ Section */}
+      <FAQsSection 
+        faqs={communityFAQs}
+        title={`Probate Real Estate FAQs for ${community.name}`}
+      />
 
       {/* Related Resources */}
       <section className="py-16 bg-neutral-50">
