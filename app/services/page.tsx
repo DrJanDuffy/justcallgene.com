@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { GoogleMap } from '@/components/ui/GoogleMap';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { PageSchemas } from '@/components/schema/PageSchemas';
 import { ServiceSchema } from '@/components/schema/ServiceSchema';
