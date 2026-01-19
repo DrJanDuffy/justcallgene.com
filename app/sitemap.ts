@@ -93,24 +93,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.8,
     },
-    {
-      url: `${cleanUrl}/login`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${cleanUrl}/register`,
-      lastModified: today,
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
-      url: `${cleanUrl}/forgot-password`,
-      lastModified: today,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
+    // Note: /login, /register, /forgot-password are excluded - they have noindex
     {
       url: `${cleanUrl}/terms`,
       lastModified: today,
