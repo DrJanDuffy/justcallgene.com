@@ -30,7 +30,8 @@ export function HeroSection() {
         </div>
 
         {/* Main Headline - Enhanced Typography */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-[1.1] max-w-5xl animate-fade-in-up tracking-tight">
+        {/* Note: Removed animate-fade-in-up from h1 to improve LCP - LCP element should render immediately */}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-[1.1] max-w-5xl tracking-tight">
           Sell Your Inherited <span className="bg-gradient-to-r from-blue-300 via-primary-light to-blue-300 bg-clip-text text-transparent">Orange County Home</span> With Confidence
         </h1>
 
