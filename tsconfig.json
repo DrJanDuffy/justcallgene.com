@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2020", // Modern target to reduce polyfills
+    "target": "ES2022", // Modern target - supports Array.at, Object.hasOwn, String.trimStart/End natively
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,

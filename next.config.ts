@@ -38,6 +38,11 @@ const nextConfig: NextConfig = {
     } : false,
   },
   
+  // SWC configuration to target modern browsers
+  // This prevents transpiling of baseline features (Array.at, Object.fromEntries, etc.)
+  // These features are natively supported in modern browsers (Chrome 92+, Firefox 90+, Safari 15.4+)
+  swcMinify: true, // SWC minification (enabled by default, but explicit for clarity)
+  
   // SWC minification is enabled by default in Next.js 13+
   // Removed swcMinify as it's deprecated in Next.js 16
   
