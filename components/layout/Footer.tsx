@@ -24,7 +24,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">Just Call Gene</h3>
             <p className="text-blue-100 text-sm mb-4">
-              Orange County's trusted probate real estate specialist since 2004.
+              Orange County's trusted probate real estate specialist.
             </p>
             <div className="flex gap-4">
               {/* Social icons can be added here */}

@@ -25,7 +25,7 @@ export function HeroSection() {
         {/* Trust Badge - Enhanced */}
         <div className="mb-4 inline-block animate-fade-in-up">
           <span className="px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-500/20 to-primary/20 border border-blue-400/30 text-blue-100 text-sm font-semibold backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            🏆 20+ Years Experience | Certified Probate Specialist | Orange County Expert
+            🏆 Certified Probate Specialist | Orange County Expert
           </span>
         </div>
 
@@ -98,10 +98,6 @@ export function HeroSection() {
 
         {/* Quick Trust Indicators - Enhanced */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-sm md:text-base text-blue-100/90 mb-16 max-w-4xl animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-          <div className="flex items-center gap-2.5 glass px-4 py-2 rounded-lg border border-white/10 hover:border-white/30 transition-all">
-            <span className="text-blue-300 text-xl">⭐</span>
-            <span className="font-medium">20+ Years in Orange County</span>
-          </div>
           <div className="flex items-center gap-2.5 glass px-4 py-2 rounded-lg border border-white/10 hover:border-white/30 transition-all">
             <span className="text-blue-300 text-xl">✓</span>
             <span className="font-medium">Certified Probate Real Estate Specialists</span>
