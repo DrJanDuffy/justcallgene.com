@@ -1,8 +1,14 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 
+/**
+ * AgentSection - Displays Gene Boyle (Real Estate Salesperson/Agent)
+ * Note: Gene Boyle is a Real Estate Salesperson (Agent), not a broker.
+ * The broker is Kelly Lynn Boyle (Real Estate Broker License #02012693)
+ */
 export function BrokerSection() {
-  const primaryAgent = siteConfig.business.agents?.[0];
+  const primaryAgent = siteConfig.business.agents?.[0]; // Gene Boyle - Real Estate Salesperson
   
   return (
     <section id="meet-agent" className="section-padding bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
