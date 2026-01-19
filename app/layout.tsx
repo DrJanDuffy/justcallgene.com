@@ -115,6 +115,7 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{
           __html: `
             /* Critical CSS for LCP element (h1) and hero section */
+            /* Ensure h1 renders immediately without animation delay */
             h1 {
               font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
               font-weight: 700;
@@ -122,6 +123,8 @@ export default function RootLayout({
               letter-spacing: -0.03em;
               color: white;
               font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+              opacity: 1 !important; /* Force immediate visibility for LCP */
+              transform: none !important; /* Remove any transform delays */
             }
             @media (min-width: 768px) {
               h1 { font-size: clamp(3.5rem, 6vw + 1rem, 5.5rem); }
@@ -144,6 +147,12 @@ export default function RootLayout({
             body {
               margin: 0;
               padding: 0;
+            }
+            /* Ensure LCP element is immediately visible - override animations */
+            section:first-of-type h1 {
+              opacity: 1 !important;
+              animation: none !important;
+              transform: none !important;
             }
           `
         }} />
