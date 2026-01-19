@@ -91,7 +91,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // HTML pages - cache with revalidation
+        // HTML pages - security headers and cache
         source: '/:path*',
         headers: [
           {
@@ -117,6 +117,44 @@ const nextConfig: NextConfig = {
           {
             key: 'Strict-Transport-Security',
             value: 'max-age=31536000; includeSubDomains; preload',
+          },
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin-allow-popups',
+          },
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'unsafe-none',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              // Scripts: Allow self, Next.js inline scripts, Google Analytics
+              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com",
+              // Styles: Allow self, inline styles (for critical CSS), Google Fonts
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+              // Fonts: Allow self, Google Fonts, data URIs
+              "font-src 'self' https://fonts.gstatic.com data:",
+              // Images: Allow self, data URIs, HTTPS images, blob
+              "img-src 'self' data: https: blob:",
+              // Connections: Allow self, Google Analytics
+              "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.google-analytics.com/g/collect",
+              // Frames: Allow self only
+              "frame-src 'self'",
+              // No objects
+              "object-src 'none'",
+              // Base URI: Self only
+              "base-uri 'self'",
+              // Form actions: Self only
+              "form-action 'self'",
+              // Frame ancestors: Self only
+              "frame-ancestors 'self'",
+              // Upgrade insecure requests
+              "upgrade-insecure-requests",
+              // Trusted Types for DOM XSS protection
+              "require-trusted-types-for 'script'",
+            ].join('; '),
           },
           {
             key: 'Cache-Control',
