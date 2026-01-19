@@ -107,15 +107,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* DNS Prefetch for external resources */}
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {/* Preconnect to Google Fonts - Early connection */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preload critical resources for better performance */}
-        {/* Note: og-image.jpg needs to be created and placed in public/ folder */}
-        {/* <link rel="preload" href={`${siteConfig.url}/og-image.jpg`} as="image" type="image/jpeg" /> */}
+        {/* Note: Removed DNS prefetch for Google Analytics to prevent early connection */}
         {/* Critical CSS hint - inline critical styles for faster LCP */}
         <style dangerouslySetInnerHTML={{
           __html: `
@@ -141,19 +136,26 @@ export default function RootLayout({
         {/* LocalBusiness Schema Markup */}
         <LocalBusinessSchema />
         
-        {/* Google Analytics - Deferred to improve LCP */}
+        {/* Google Analytics - Loaded after page is fully interactive to improve LCP */}
+        {/* Using onLoad to ensure it only loads after page is ready */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GW4Z2Z186L"
           strategy="lazyOnload"
+          onLoad={() => {
+            // Initialize analytics after script loads
+            if (typeof window !== 'undefined' && window.dataLayer) {
+              window.dataLayer.push(['js', new Date()]);
+              window.dataLayer.push(['config', 'G-GW4Z2Z186L', {
+                page_path: window.location.pathname,
+              }]);
+            }
+          }}
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-GW4Z2Z186L', {
-              page_path: window.location.pathname,
-            });
+            // Don't call gtag immediately - wait for script to load
           `}
         </Script>
         
