@@ -112,10 +112,7 @@ export default function AboutPage() {
                       src="/placeholder-broker.jpg"
                       alt={`${eugene.name} - Orange County Probate Real Estate Specialist`}
                       fill
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                      }}
-                      className="object-cover"
+                      className="object-cover relative z-10"
                       priority
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
