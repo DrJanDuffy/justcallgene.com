@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/Card';
 import { GoogleMap } from '@/components/ui/GoogleMap';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { PageSchemas } from '@/components/schema/PageSchemas';
+import { PersonSchema } from '@/components/schema/PersonSchema';
 import { siteConfig } from '@/lib/config';
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <PersonSchema personName="Gene Boyle" />
       <PageSchemas
         breadcrumbs={breadcrumbItems}
         includeFAQ={true}

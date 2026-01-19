@@ -123,6 +123,82 @@ export function LocalBusinessSchema() {
         name: 'Fountain Valley',
       },
       {
+        '@type': 'City',
+        name: 'Orange',
+      },
+      {
+        '@type': 'City',
+        name: 'Santa Ana',
+      },
+      {
+        '@type': 'City',
+        name: 'Anaheim',
+      },
+      {
+        '@type': 'City',
+        name: 'Fullerton',
+      },
+      {
+        '@type': 'City',
+        name: 'Mission Viejo',
+      },
+      {
+        '@type': 'City',
+        name: 'San Clemente',
+      },
+      {
+        '@type': 'City',
+        name: 'Dana Point',
+      },
+      {
+        '@type': 'City',
+        name: 'Laguna Niguel',
+      },
+      {
+        '@type': 'City',
+        name: 'Aliso Viejo',
+      },
+      {
+        '@type': 'City',
+        name: 'Lake Forest',
+      },
+      {
+        '@type': 'City',
+        name: 'Rancho Santa Margarita',
+      },
+      {
+        '@type': 'City',
+        name: 'Coto de Caza',
+      },
+      {
+        '@type': 'City',
+        name: 'Ladera Ranch',
+      },
+      {
+        '@type': 'City',
+        name: 'San Juan Capistrano',
+      },
+      {
+        '@type': 'City',
+        name: 'Silverado',
+      },
+      {
+        '@type': 'City',
+        name: 'Trabuco Canyon',
+      },
+      {
+        '@type': 'GeoCircle',
+        geoMidpoint: {
+          '@type': 'GeoCoordinates',
+          latitude: '33.6846',
+          longitude: '-117.8265',
+        },
+        geoRadius: {
+          '@type': 'Distance',
+          name: 'Orange County, California',
+        },
+      },
+      {
         '@type': 'County',
         name: 'Orange County',
       },

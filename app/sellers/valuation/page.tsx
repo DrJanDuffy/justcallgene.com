@@ -1,10 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { InternalLinks } from '@/components/ui/InternalLinks';
 import { PageSchemas } from '@/components/schema/PageSchemas';
 import { siteConfig } from '@/lib/config';
+
+// Note: Metadata export doesn't work in client components
+// This page uses client-side form handling, so metadata is set via layout or parent
 
 export default function ValuationPage() {
   const [formData, setFormData] = useState({
