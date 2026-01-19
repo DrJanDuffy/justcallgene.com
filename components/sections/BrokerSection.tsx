@@ -28,7 +28,7 @@ export function BrokerSection() {
               {/* Gradient background fallback - shows if image fails to load */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-slate-800 z-0" />
               <Image
-                src="/images/agents/EugeneBoyle large .jpg"
+                src="/images/agents/gene-boyle.jpg"
                 alt="Gene Boyle - Orange County Probate Real Estate Specialist and Certified Probate Expert"
                 fill
                 className="object-cover relative z-10"
