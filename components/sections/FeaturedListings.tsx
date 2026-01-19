@@ -45,9 +45,15 @@ export function FeaturedListings() {
           {featuredListings.map((listing, index) => (
             <Card key={listing.id} href={`/listings/${listing.id}`} className="cursor-pointer animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
               <div className="relative aspect-video overflow-hidden group">
+                {/* Gradient placeholder - replace with actual listing image when available */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-blue-600" />
                 <Image
                   src={listing.image}
                   alt={`${listing.address} - Probate Property for Sale in Orange County`}
+                  onError={(e) => {
+                    // Hide Image component if it fails to load, gradient background will show
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   loading={index < 4 ? undefined : "lazy"}
                   fill

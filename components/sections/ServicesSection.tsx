@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 
@@ -27,13 +26,8 @@ export function ServicesSection() {
           {/* Probate Property Valuation Section */}
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-depth overflow-hidden group hover:shadow-glow transition-modern border border-neutral-100/50 hover:border-primary/30 hover-lift">
             <div className="relative h-64 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-blue-600"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
-              <Image
-                src="/placeholder-service-sell-home.jpg"
-                alt="Probate Property Valuation"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
             </div>
             <div className="p-8">
               <h3 className="text-xl font-semibold text-neutral-600 mb-2 uppercase tracking-wide">
@@ -56,13 +50,8 @@ export function ServicesSection() {
           {/* Probate Sale Services Section */}
           <div className="bg-white rounded-2xl shadow-soft-lg overflow-hidden group hover:shadow-soft-lg transition-all duration-300 border border-neutral-100 hover:border-primary/20 hover:-translate-y-1">
             <div className="relative h-64 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-primary to-primary-dark"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
-              <Image
-                src="/placeholder-service-new-home.jpg"
-                alt="Probate Sale Services"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
             </div>
             <div className="p-8">
               <h3 className="text-xl font-semibold text-neutral-600 mb-2 uppercase tracking-wide">
