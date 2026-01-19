@@ -34,8 +34,8 @@ const nextConfig: NextConfig = {
     } : false,
   },
   
-  // SWC minification (faster than Terser)
-  swcMinify: true,
+  // SWC minification is enabled by default in Next.js 13+
+  // Removed swcMinify as it's deprecated in Next.js 16
   
   // Redirects for SEO - Canonical URL enforcement
   // Note: Vercel automatically handles HTTP → HTTPS redirects

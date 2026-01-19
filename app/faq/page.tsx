@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { FAQsSection } from '@/components/sections/FAQsSection';
 import { faqs } from '@/lib/data';
 import { siteConfig } from '@/lib/config';
