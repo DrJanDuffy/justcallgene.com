@@ -78,7 +78,7 @@ export default function FAQPage() {
             <div className="prose prose-lg max-w-none mb-12">
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Understanding Probate Property Sales in Orange County</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Probate property sales in Orange County require specialized expertise due to court requirements, legal procedures, and unique market considerations. Each Orange County community, from Newport Beach to Irvine, Corona Del Mar to Laguna Beach, has distinct characteristics that affect probate property sales. Our probate real estate specialists understand these community-specific dynamics, ensuring successful probate transactions throughout Orange County.
+                Probate property sales in Orange County require specialized expertise due to court requirements, legal procedures, and unique market considerations. Each Orange County community, from <Link href="/communities/newport-beach" className="text-primary font-semibold hover:underline">Newport Beach</Link> to <Link href="/communities/irvine" className="text-primary font-semibold hover:underline">Irvine</Link>, <Link href="/communities/corona-del-mar" className="text-primary font-semibold hover:underline">Corona Del Mar</Link> to <Link href="/communities/laguna-beach" className="text-primary font-semibold hover:underline">Laguna Beach</Link>, has distinct characteristics that affect probate property sales. Our probate real estate specialists understand these community-specific dynamics, ensuring successful probate transactions throughout Orange County. Learn more about our <Link href="/services" className="text-primary font-semibold hover:underline">probate services</Link> and the <Link href="/probate" className="text-primary font-semibold hover:underline">probate process</Link>.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Court Procedures and Compliance</h3>
@@ -88,7 +88,7 @@ export default function FAQPage() {
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Probate Property Valuation</h3>
               <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                Accurate probate property valuation is critical for court purposes, estate distribution, and establishing sale prices. Our probate real estate specialists coordinate with certified appraisers to ensure valuations meet court requirements while maximizing estate values. Whether the probate property is in Newport Beach, Irvine, Corona Del Mar, Laguna Beach, Costa Mesa, or Huntington Beach, we ensure accurate valuations that reflect current market conditions.
+                Accurate probate property valuation is critical for court purposes, estate distribution, and establishing sale prices. Our probate real estate specialists coordinate with certified appraisers to ensure valuations meet court requirements while maximizing estate values. Whether the probate property is in Newport Beach, Irvine, Corona Del Mar, Laguna Beach, Costa Mesa, or Huntington Beach, we ensure accurate valuations that reflect current market conditions. <Link href="/sellers/valuation" className="text-primary font-semibold hover:underline">Request a free probate property valuation</Link> to get started.
               </p>
 
               <h3 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">Timeline Expectations</h3>

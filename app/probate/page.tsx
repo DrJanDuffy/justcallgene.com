@@ -102,7 +102,7 @@ export default function ProbatePage() {
                     <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
                       <h4 className="font-bold text-green-900 mb-2 text-lg">Our Solution:</h4>
                       <p className="text-green-800 leading-relaxed">
-                        We start with a free probate consultation where we assess your situation, explain the probate process, and create a clear action plan. Our probate real estate specialists guide you through every step, from initial court filing through property sale and closing. We handle all documentation, coordinate with probate attorneys, and ensure you understand each phase of the process. You don't have to figure it out alone—we're here to guide you from start to finish.
+                        We start with a <Link href="/contact" className="text-primary font-semibold hover:underline">free probate consultation</Link> where we assess your situation, explain the probate process, and create a clear action plan. Our probate real estate specialists guide you through every step, from initial court filing through property sale and closing. We handle all documentation, coordinate with probate attorneys, and ensure you understand each phase of the process. You don't have to figure it out alone—we're here to guide you from start to finish. Learn more about our <Link href="/services" className="text-primary font-semibold hover:underline">comprehensive probate services</Link>.
                       </p>
                     </div>
                   </div>
@@ -125,7 +125,7 @@ export default function ProbatePage() {
                     <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
                       <h4 className="font-bold text-green-900 mb-2 text-lg">Our Solution:</h4>
                       <p className="text-green-800 leading-relaxed">
-                        Our probate real estate specialists have deep knowledge of Orange County probate court procedures. We know exactly what documents are needed, when to file them, and how to ensure court approval. We coordinate with probate attorneys, prepare all required documentation, and manage court deadlines. Our expertise means we get it right the first time, avoiding delays and ensuring smooth probate transactions. We handle all court requirements so you don't have to navigate the legal system alone.
+                        Our probate real estate specialists have deep knowledge of Orange County probate court procedures. We know exactly what documents are needed, when to file them, and how to ensure court approval. We coordinate with probate attorneys, prepare all required documentation, and manage court deadlines. Our expertise means we get it right the first time, avoiding delays and ensuring smooth probate transactions. We handle all court requirements so you don't have to navigate the legal system alone. See our <Link href="/about" className="text-primary font-semibold hover:underline">team's credentials</Link> and <Link href="/faq" className="text-primary font-semibold hover:underline">frequently asked questions</Link> about probate procedures.
                       </p>
                     </div>
                   </div>

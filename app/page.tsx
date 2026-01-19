@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import { InternalLinks } from '@/components/ui/InternalLinks';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { PageSchemas } from '@/components/schema/PageSchemas';
 import { HeroSection } from '@/components/sections/HeroSection';
@@ -421,6 +422,52 @@ export default function Home() {
 
         {/* Services & Pricing Section */}
         <ServicesPricingSection />
+
+        {/* Related Resources */}
+        <section className="py-16 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <InternalLinks
+              title="Explore Our Probate Real Estate Services"
+              links={[
+                {
+                  href: '/probate',
+                  text: 'Understanding Probate Real Estate',
+                  description: 'Learn about the probate process and how it affects real estate transactions',
+                },
+                {
+                  href: '/services',
+                  text: 'Our Probate Services',
+                  description: 'Comprehensive probate real estate services throughout Orange County',
+                },
+                {
+                  href: '/sellers/valuation',
+                  text: 'Get Property Valuation',
+                  description: 'Request a free probate property valuation',
+                },
+                {
+                  href: '/communities',
+                  text: 'Orange County Communities',
+                  description: 'Probate property sales in Newport Beach, Irvine, Corona Del Mar, and more',
+                },
+                {
+                  href: '/about',
+                  text: 'About Our Team',
+                  description: 'Meet our certified Probate Real Estate Specialists',
+                },
+                {
+                  href: '/faq',
+                  text: 'Frequently Asked Questions',
+                  description: 'Answers to common probate real estate questions',
+                },
+                {
+                  href: '/contact',
+                  text: 'Contact Us',
+                  description: 'Get in touch for a free probate consultation',
+                },
+              ]}
+            />
+          </div>
+        </section>
 
         {/* Bottom CTA Section */}
         <BottomCTASection />
