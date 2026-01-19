@@ -1,12 +1,34 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 export function ScrollToTop() {
+  // Fallback for browsers without scroll-triggered animation support
+  const [isVisible, setIsVisible] = useState(false);
+  const supportsScrollTimeline = typeof CSS !== 'undefined' && CSS.supports('animation-timeline', 'view()');
+
+  useEffect(() => {
+    if (!supportsScrollTimeline) {
+      const handleScroll = () => {
+        setIsVisible(window.scrollY > 400);
+      };
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Check initial state
+      return () => window.removeEventListener('scroll', handleScroll);
+    } else {
+      // CSS handles it, always visible
+      setIsVisible(true);
+    }
+  }, [supportsScrollTimeline]);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
   };
+
+  if (!isVisible) return null;
 
   return (
     <button
