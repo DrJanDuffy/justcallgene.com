@@ -43,9 +43,10 @@ export function BrokerSection() {
             <div className="absolute bottom-6 left-6 right-6 glass rounded-xl p-5 backdrop-blur-md border border-white/30 shadow-xl">
               <p className="text-base text-slate-900 font-bold mb-1">Gene Boyle</p>
               <p className="text-sm text-slate-700 mb-1">California Real Estate Salesperson</p>
+              <p className="text-xs text-slate-600 mb-1">20+ Years Experience | Since 2004</p>
               <p className="text-sm text-blue-600 font-bold mb-3">License #02282581</p>
               <div className="flex flex-wrap gap-2">
-                <span className="inline-block px-3 py-1.5 bg-blue-100 text-blue-700 text-xs rounded-lg font-semibold border border-blue-200">Probate Real Estate Specialists</span>
+                <span className="inline-block px-3 py-1.5 bg-blue-100 text-blue-700 text-xs rounded-lg font-semibold border border-blue-200">Certified Probate Specialist</span>
                 <span className="inline-block px-3 py-1.5 bg-green-100 text-green-700 text-xs rounded-lg font-semibold border border-green-200">Probate Expert</span>
               </div>
             </div>
