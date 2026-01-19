@@ -107,7 +107,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
                   <div className="relative aspect-square rounded-2xl overflow-hidden">
                     <Image
-                      src="/images/agents/gene-boyle.jpg"
+                      src="/images/agents/EugeneBoyle large .jpg"
                       alt={`${eugene.name} - Orange County Probate Real Estate Specialist`}
                       fill
                       className="object-cover"

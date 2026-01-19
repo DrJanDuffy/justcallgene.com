@@ -18,7 +18,7 @@ export async function GET() {
   // Homepage images
   imageUrls.push({
     url: cleanUrl,
-    image: `${cleanUrl}/images/agents/gene-boyle.jpg`,
+    image: `${cleanUrl}/images/agents/EugeneBoyle%20large%20.jpg`,
     title: 'Gene Boyle - Orange County Probate Real Estate Specialist',
     caption: 'Gene Boyle, Certified Probate Real Estate Specialist',
   });
