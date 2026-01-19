@@ -109,9 +109,9 @@ export function ContactSection() {
             {/* Google Maps Embed */}
             <div className="relative h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden border border-neutral-200 shadow-soft">
               <iframe
-                src={`https://www.google.com/maps?q=${encodeURIComponent(
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(
                   `${siteConfig.business.address.streetAddress}, ${siteConfig.business.address.addressLocality}, ${siteConfig.business.address.addressRegion} ${siteConfig.business.address.postalCode}`
-                )}&output=embed`}
+                )}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
