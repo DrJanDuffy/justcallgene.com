@@ -1,7 +1,6 @@
 'use client';
 
 export function ScrollToTop() {
-  // Using CSS scroll-triggered animations instead of JavaScript for better performance
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -12,14 +11,7 @@ export function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-24 right-6 z-40 p-3 bg-white/90 backdrop-blur-md text-primary rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 no-print scroll-fade-in"
-      style={{
-        // CSS scroll-triggered animation with fallback
-        opacity: 0,
-        animation: 'fade-in 0.3s ease-out forwards',
-        animationTimeline: 'scroll()',
-        animationRange: 'entry 400px',
-      } as React.CSSProperties}
+      className="fixed bottom-24 right-6 z-40 p-3 bg-white/90 backdrop-blur-md text-primary rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 no-print scroll-triggered-top"
       aria-label="Scroll to top"
     >
       <svg 
