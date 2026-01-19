@@ -106,10 +106,15 @@ export default function AboutPage() {
               <Card variant="elevated" className="overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
                   <div className="relative aspect-square rounded-2xl overflow-hidden">
+                    {/* Gradient placeholder - replace with actual image when available */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-slate-800" />
                     <Image
                       src="/placeholder-broker.jpg"
                       alt={`${eugene.name} - Orange County Probate Real Estate Specialist`}
                       fill
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
                       className="object-cover"
                       priority
                       sizes="(max-width: 1024px) 100vw, 50vw"
