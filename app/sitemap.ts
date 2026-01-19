@@ -58,6 +58,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${cleanUrl}/glossary`,
+      lastModified: today,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${cleanUrl}/blog`,
       lastModified: today,
       changeFrequency: 'weekly',
