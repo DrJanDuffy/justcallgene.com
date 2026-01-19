@@ -294,19 +294,7 @@ export function LocalBusinessSchema() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(cleanSchema(review)) }}
         />
       ))}
-      {aggregateRating && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ 
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
-              '@id': `${siteConfig.url}#organization`,
-              aggregateRating: cleanSchema(aggregateRating),
-            })
-          }}
-        />
-      )}
+      {/* AggregateRating is already included in the LocalBusiness schema above - no need for separate script */}
     </>
   );
 }

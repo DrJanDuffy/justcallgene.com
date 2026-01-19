@@ -90,24 +90,7 @@ export function PageSchemas({
               }}
             />
           ))}
-          {/* Aggregate Rating */}
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'LocalBusiness',
-                '@id': `${siteConfig.url}#organization`,
-                aggregateRating: {
-                  '@type': 'AggregateRating',
-                  ratingValue: '5',
-                  reviewCount: testimonials.length.toString(),
-                  bestRating: '5',
-                  worstRating: '1',
-                },
-              }),
-            }}
-          />
+          {/* AggregateRating is already included in LocalBusinessSchema (root layout) - no need for duplicate */}
         </>
       )}
     </>
