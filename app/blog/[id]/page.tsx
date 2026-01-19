@@ -825,16 +825,68 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  // Enhanced keywords based on post content
+  const getKeywords = (postId: string, category: string) => {
+    const baseKeywords = [
+      post.category.toLowerCase(),
+      'Orange County real estate',
+      'probate real estate',
+    ];
+    
+    // Add long-tail keywords for specific posts
+    if (postId === '7') {
+      return [
+        ...baseKeywords,
+        'how long does probate take in Orange County',
+        'Orange County probate timeline',
+        'probate duration California',
+        'Orange County Superior Court probate',
+        'probate process timeline',
+      ];
+    }
+    if (postId === '8') {
+      return [
+        ...baseKeywords,
+        'selling inherited property in California taxes',
+        'inherited property capital gains tax',
+        'step-up basis California',
+        'California property tax inheritance',
+        'inherited house tax implications',
+      ];
+    }
+    if (postId === '9') {
+      return [
+        ...baseKeywords,
+        'Orange County probate court forms',
+        'California probate forms',
+        'probate forms Orange County',
+        'executor probate forms',
+        'probate court documents',
+      ];
+    }
+    if (postId === '10') {
+      return [
+        ...baseKeywords,
+        'do I need to go through probate to sell inherited house California',
+        'selling inherited house without probate',
+        'probate required California',
+        'avoid probate California',
+        'inherited property probate requirements',
+      ];
+    }
+    
+    return [
+      ...baseKeywords,
+      'real estate tips',
+      'home buying advice',
+      'home selling tips',
+    ];
+  };
+
   return {
     title: post.title,
     description: post.excerpt,
-    keywords: [
-      post.category.toLowerCase(),
-      'real estate tips',
-      'Orange County real estate',
-      'home buying advice',
-      'home selling tips',
-    ],
+    keywords: getKeywords(id, post.category),
     openGraph: {
       title: post.title,
       description: post.excerpt,
