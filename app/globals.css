@@ -115,6 +115,50 @@ html {
   animation: fade-in 0.3s ease-out;
 }
 
+/* Scroll-Triggered Animations (2026 Chrome Feature) */
+/* Native CSS scroll animations - no JavaScript needed, better performance */
+@supports (animation-timeline: scroll()) {
+  .scroll-fade-in {
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+  
+  .scroll-slide-up {
+    animation: slide-up linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .scroll-scale-in {
+    animation: scale-in linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+  }
+  
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
 /* Print styles */
 @media print {
   .no-print {

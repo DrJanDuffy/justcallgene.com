@@ -1,26 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 
 export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Show after scrolling 300px
-      setIsVisible(window.scrollY > 300);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  if (!isVisible) return null;
+  // Using CSS scroll-triggered animations instead of JavaScript for better performance
+  // The component is always rendered but uses CSS to show/hide based on scroll position
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 animate-fade-in no-print">
+    <div className="fixed bottom-6 right-6 z-50 no-print scroll-fade-in" style={{ 
+      // CSS scroll-triggered animation with fallback
+      opacity: 0,
+      animation: 'fade-in 0.3s ease-out forwards',
+      animationTimeline: 'scroll()',
+      animationRange: 'entry 300px',
+    } as React.CSSProperties}>
       <Link
         href={`tel:${siteConfig.business.phone}`}
         className="group flex items-center gap-3 bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-glow-lg transition-all duration-300 hover:scale-105 active:scale-95"
