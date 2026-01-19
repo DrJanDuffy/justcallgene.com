@@ -111,16 +111,34 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Note: Removed DNS prefetch for Google Analytics to prevent early connection */}
-        {/* Critical CSS hint - inline critical styles for faster LCP */}
+        {/* Critical CSS - Inline hero section styles for faster LCP */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            /* Critical CSS for LCP element (h1) */
+            /* Critical CSS for LCP element (h1) and hero section */
             h1 {
               font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
               font-weight: 700;
               line-height: 1.1;
               letter-spacing: -0.03em;
               color: white;
+              font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+            }
+            @media (min-width: 768px) {
+              h1 { font-size: clamp(3.5rem, 6vw + 1rem, 5.5rem); }
+            }
+            @media (min-width: 1024px) {
+              h1 { font-size: clamp(4.5rem, 7vw + 1rem, 6.5rem); }
+            }
+            /* Hero section background - prevent flash */
+            section:first-of-type {
+              background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #0f172a);
+              min-height: 700px;
+            }
+            /* Gradient text for hero */
+            .bg-clip-text {
+              -webkit-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
             }
             /* Prevent layout shift */
             body {
