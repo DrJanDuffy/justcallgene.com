@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 /* Image sharpening for agent photos */
-img[src*="/images/agents/"] {
+img[src*="/images/agents/"],
+[src*="/images/agents/"] img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
-  image-rendering: auto;
-  filter: contrast(1.1) sharpness(1.1);
-  -webkit-filter: contrast(1.1);
+  filter: contrast(1.15) saturate(1.1);
+  -webkit-filter: contrast(1.15) saturate(1.1);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 :root {
