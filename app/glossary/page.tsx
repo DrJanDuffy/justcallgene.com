@@ -290,10 +290,13 @@ export default function GlossaryPage() {
                     {letter}
                   </h2>
                   <div className="space-y-8">
-                    {terms.map((item, index) => (
+                    {terms.map((item, index) => {
+                      const termId = item.term.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                      return (
                       <div
                         key={`${item.term}-${index}`}
-                        className="bg-white rounded-xl p-6 border-2 border-neutral-200 hover:border-primary transition-all duration-300 shadow-soft hover:shadow-soft-lg"
+                        id={termId}
+                        className="bg-white rounded-xl p-6 border-2 border-neutral-200 hover:border-primary transition-all duration-300 shadow-soft hover:shadow-soft-lg scroll-mt-24"
                       >
                         <h3 className="text-2xl font-bold text-primary mb-3">
                           {item.term}
@@ -309,10 +312,11 @@ export default function GlossaryPage() {
                             <div className="flex flex-wrap gap-2">
                               {item.relatedTerms.map((relatedTerm) => {
                                 const termExists = glossaryTerms.some((t) => t.term === relatedTerm);
+                                const relatedTermId = relatedTerm.toLowerCase().replace(/[^a-z0-9]+/g, '-');
                                 return termExists ? (
                                   <a
                                     key={relatedTerm}
-                                    href={`#${relatedTerm.toLowerCase().replace(/\s+/g, '-')}`}
+                                    href={`#${relatedTermId}`}
                                     className="px-3 py-1 bg-primary/10 text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-colors"
                                   >
                                     {relatedTerm}
@@ -330,7 +334,8 @@ export default function GlossaryPage() {
                           </div>
                         )}
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               );
