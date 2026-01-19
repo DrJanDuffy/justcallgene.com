@@ -57,6 +57,13 @@ export function BrokerSection() {
               Orange County's <span className="text-gradient-secondary">Probate Expert</span>
             </h2>
             
+            {/* Years of Experience Badge */}
+            <div className="mb-6 inline-block">
+              <span className="px-4 py-2 bg-gradient-to-r from-blue-500/30 to-primary/30 border border-blue-400/50 text-blue-100 text-base font-bold rounded-lg">
+                20+ Years Experience | Since 2004
+              </span>
+            </div>
+            
             <div className="space-y-6 mb-8">
               <div>
                 <h3 className="text-xl font-bold mb-2">The Gene Boyle Difference</h3>
