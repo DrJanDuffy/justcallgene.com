@@ -23,31 +23,31 @@ export function BrokerSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left: Gene's Photo + Credentials - Enhanced */}
-          <div className="relative animate-fade-in-up">
-            <div className="relative w-full max-w-[280px] mx-auto lg:max-w-[320px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl hover:shadow-glow-lg transition-all duration-300 hover:scale-[1.02]">
+          <div className="relative animate-fade-in-up flex justify-center lg:justify-start">
+            <div className="relative w-full max-w-[280px] lg:max-w-[320px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl hover:shadow-glow-lg transition-all duration-300 hover:scale-[1.02]">
               {/* Gradient background fallback - shows if image fails to load */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-slate-800 z-0" />
               <Image
                 src="/images/agents/gene-boyle.jpg"
                 alt="Gene Boyle - Orange County Probate Real Estate Specialist and Certified Probate Expert"
                 fill
-                className="object-cover relative z-10"
+                className="object-cover relative z-10 agent-photo-sharpen"
                 priority
                 sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 40vw, 35vw"
                 quality={95}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent z-20" />
-            </div>
-            
-            {/* Credential Badge - Enhanced */}
-            <div className="absolute bottom-6 left-6 right-6 glass rounded-xl p-5 backdrop-blur-md border border-white/30 shadow-xl">
-              <p className="text-base text-slate-900 font-bold mb-1">Gene Boyle</p>
-              <p className="text-sm text-slate-700 mb-1">California Real Estate Salesperson</p>
-              <p className="text-xs text-slate-600 mb-1">20+ Years Experience | Since 2004</p>
-              <p className="text-sm text-blue-600 font-bold mb-3">License #02282581</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="inline-block px-3 py-1.5 bg-blue-100 text-blue-700 text-xs rounded-lg font-semibold border border-blue-200">Certified Probate Specialist</span>
-                <span className="inline-block px-3 py-1.5 bg-green-100 text-green-700 text-xs rounded-lg font-semibold border border-green-200">Probate Expert</span>
+              
+              {/* Credential Badge - Positioned inside photo container */}
+              <div className="absolute bottom-4 left-4 right-4 glass rounded-xl p-4 backdrop-blur-md border border-white/30 shadow-xl z-30">
+                <p className="text-sm text-slate-900 font-bold mb-1">Gene Boyle</p>
+                <p className="text-xs text-slate-700 mb-1">California Real Estate Salesperson</p>
+                <p className="text-xs text-slate-600 mb-1">20+ Years Experience | Since 2004</p>
+                <p className="text-xs text-blue-600 font-bold mb-2">License #02282581</p>
+                <div className="flex flex-wrap gap-1.5">
+                  <span className="inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg font-semibold border border-blue-200">Certified Probate Specialist</span>
+                  <span className="inline-block px-2 py-1 bg-green-100 text-green-700 text-xs rounded-lg font-semibold border border-green-200">Probate Expert</span>
+                </div>
               </div>
             </div>
           </div>
