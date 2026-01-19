@@ -19,8 +19,14 @@ export function BrokerSection() {
           {/* Left: Gene's Photo + Credentials - Enhanced */}
           <div className="relative animate-fade-in-up">
             <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl hover:shadow-glow-lg transition-all duration-300 hover:scale-[1.02]">
-              {/* Gradient placeholder - image will be added later */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-slate-800" />
+              <Image
+                src="/images/agents/gene-boyle.jpg"
+                alt="Gene Boyle - Orange County Probate Real Estate Specialist and Certified Probate Expert"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent" />
             </div>
             
