@@ -114,7 +114,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Preload critical resources for better performance */}
-        <link rel="preload" href={`${siteConfig.url}/og-image.jpg`} as="image" type="image/jpeg" />
+        {/* Note: og-image.jpg needs to be created and placed in public/ folder */}
+        {/* <link rel="preload" href={`${siteConfig.url}/og-image.jpg`} as="image" type="image/jpeg" /> */}
         {/* Critical CSS hint - inline critical styles for faster LCP */}
         <style dangerouslySetInnerHTML={{
           __html: `

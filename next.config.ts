@@ -131,6 +131,7 @@ const nextConfig: NextConfig = {
             value: [
               "default-src 'self'",
               // Scripts: Allow self, Next.js inline scripts, Google Analytics
+              // Note: 'unsafe-inline' required for Next.js hydration
               "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com",
               // Styles: Allow self, inline styles (for critical CSS), Google Fonts
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -152,8 +153,8 @@ const nextConfig: NextConfig = {
               "frame-ancestors 'self'",
               // Upgrade insecure requests
               "upgrade-insecure-requests",
-              // Trusted Types for DOM XSS protection
-              "require-trusted-types-for 'script'",
+              // Note: Trusted Types removed - incompatible with Next.js dynamic script creation
+              // Next.js requires dynamic script.src and script.textContent assignment
             ].join('; '),
           },
           {
