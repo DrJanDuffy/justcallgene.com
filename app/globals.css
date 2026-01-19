@@ -116,18 +116,36 @@ html {
 }
 
 /* Scroll-Triggered Animations (2026 Chrome Feature) */
-/* Native CSS scroll animations - no JavaScript needed, better performance */
-@supports (animation-timeline: scroll()) {
-  .scroll-fade-in {
+/* Native CSS scroll animations - no JavaScript needed, runs on compositor thread */
+@supports (animation-timeline: view()) {
+  .scroll-triggered-cta {
+    opacity: 0;
     animation: fade-in linear;
     animation-timeline: view();
-    animation-range: entry 0% entry 50%;
+    animation-range: entry 300px;
+    animation-fill-mode: forwards;
+  }
+  
+  .scroll-triggered-top {
+    opacity: 0;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: entry 400px;
+    animation-fill-mode: forwards;
+  }
+  
+  .scroll-fade-in {
+    animation: fade-in-up linear;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+    animation-fill-mode: both;
   }
   
   .scroll-slide-up {
     animation: slide-up linear;
     animation-timeline: view();
     animation-range: entry 0% entry 50%;
+    animation-fill-mode: both;
   }
   
   @keyframes slide-up {
@@ -140,22 +158,13 @@ html {
       transform: translateY(0);
     }
   }
-  
-  .scroll-scale-in {
-    animation: scale-in linear;
-    animation-timeline: view();
-    animation-range: entry 0% entry 50%;
-  }
-  
-  @keyframes scale-in {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+}
+
+/* Fallback for browsers without scroll-triggered animation support */
+@supports not (animation-timeline: view()) {
+  .scroll-triggered-cta,
+  .scroll-triggered-top {
+    opacity: 0;
   }
 }
 
